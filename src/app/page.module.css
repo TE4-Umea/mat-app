@@ -6,6 +6,19 @@
   min-height: 100vh;
 }
 
-.test {
-  color: red;
+.StartText{
+  text-align: center;
 }
+
+.StartChoice{
+  text-align: center;
+  padding: 2rem;
+}
+
+.StartChoiceText {
+  margin: 5rem;
+  background-color: black;
+  color: white;
+  corn
+}
+
