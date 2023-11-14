@@ -1,5 +1,13 @@
+import styles from '../meals/page.module.css'
+
 export default function Meals() {
     return (
-        <h1>meals</h1>
+        <main>
+            <ul className='styles.ul'>
+                <li>
+                    makaroner och korv
+                </li>
+            </ul>
+        </main>
     )
 }
