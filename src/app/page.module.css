@@ -12,11 +12,12 @@
 
 .StartChoice{
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .StartChoiceText {
   margin: 5rem;
+  padding: 0.25rem;
   background-color: black;
   color: white;
   border-radius: 10px;
