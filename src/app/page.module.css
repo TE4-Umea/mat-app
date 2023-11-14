@@ -11,15 +11,17 @@
 }
 
 .StartChoice{
+  display: flex;
   text-align: center;
   padding: 1rem;
 }
 
 .StartChoiceText {
-  margin: 5rem;
+  margin: 1rem;
   padding: 0.25rem;
   background-color: black;
   color: white;
   border-radius: 10px;
+  width: 10rem;
 }
 
