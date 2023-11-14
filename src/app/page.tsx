@@ -1,10 +1,8 @@
 import Image from 'next/image'
 import styles from './page.module.css'
-import Layout from './layout'
 
 export default function Home() {
   return (
-    <Layout>
       <main>
         <div className={styles.StartText}>
           Välkommen tillbaka REDACTED
@@ -21,6 +19,5 @@ export default function Home() {
           </div>
         </div>
       </main>
-    </Layout>
   )
 }
