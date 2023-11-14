@@ -1,5 +1,14 @@
+import styles from '../meals/page.module.css'
+import Layout from '../layout'
+
 export default function Meals() {
     return (
-        <h1>meals</h1>
+        <Layout>
+            <ul>
+                <li>
+
+                </li>
+            </ul>
+        </Layout>
     )
 }
