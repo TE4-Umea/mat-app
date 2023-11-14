@@ -6,6 +6,7 @@ export default function Home() {
     <main>
       <div >
         <h1>Storken</h1>
+        <p>loading...</p>
       </div>
     </main>
   )
