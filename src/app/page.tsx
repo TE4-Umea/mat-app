@@ -1,12 +1,12 @@
 import Image from 'next/image'
-import styles from './page.module.css'
 
 export default function Home() {
   return (
     <main>
-      <div >
-        <h1>Storken</h1>
-        <p>loading...</p>
+      <div className='ChoiceBoxes'>
+        <p>Måltider</p>
+        <p>Maträtter</p>
+        <p>Profil</p>
       </div>
     </main>
   )
