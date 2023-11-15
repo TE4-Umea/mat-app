@@ -4,6 +4,7 @@
 Funktioner och Variabler: camelCase \
 Klasser: PascalCase \
 CSS: camelCase \
+FilNamn och MappNamn: camelCase \
 HTML och Typescript: 4 spaces
 
 ### Vad används?
