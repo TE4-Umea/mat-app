@@ -27,6 +27,13 @@ export default function Home() {
           <span className="">Favoritiserade rätter</span>{' '}
         </Link>
       </div>
+      <div>
+        Utvalda måltider
+        Lorem ipsum dolor sit amet, consectetur
+        {/* Scroll funktion med bilder på mat */}
+
+      </div>
+
       <NavBar />
     </main>
   )
