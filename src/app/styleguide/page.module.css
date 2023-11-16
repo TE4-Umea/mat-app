@@ -1,0 +1,88 @@
+.main {
+    color: var(--color-fg);
+    background-color: var(--color-bg);
+}
+
+.title {
+    font-family: var(--font-title);
+    font-weight: 600;
+}
+
+.h1 {
+    font-size: var(--step-4);
+}
+
+.h2 {
+    font-size: var(--step-3)
+}
+
+.step2 {
+    font-size: var(--step-2);
+}
+
+.stepM2 {
+    font-size: var(--step--2);
+}
+
+.colorbg {
+    background-color: var(--color-bg);
+    width: 80%;
+}
+
+.colorfg {
+    color: var(--color-bg);
+    background-color: var(--color-fg);
+    width: 80%;
+}
+
+.colorpr {
+    background-color: var(--color-primary);
+    width: 80%;
+}
+
+.colorse {
+    background-color: var(--color-secondary);
+    width: 80%;
+}
+
+.colorte {
+    background-color: var(--color-tertiary);
+    width: 80%;
+}
+
+.colorde {
+    background-color: var(--color-delete);
+    width: 80%;
+}
+
+.colorgr {
+    background-image: linear-gradient(to right, var(--color-gradient-d), var(--color-gradient-l));
+    width: 80%;
+}
+
+.shadowBox1 {
+    margin-top: 10px;
+    width: 80%;
+    background-color: var(--color-primary);
+    box-shadow: var(--shadow1);
+}
+
+.shadowBox2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    background-color: var(--color-primary);
+    box-shadow: var(--shadow2);
+}
+
+.button {
+    border-radius: 12px;
+    width: 80%;
+    padding-top: var(--space-xs);
+    padding-bottom: var(--space-xs);
+    margin-bottom: var(--space-2xs);
+}
+
+.margin {
+    margin-top: var(--space-2xl);
+}

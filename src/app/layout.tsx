@@ -1,10 +1,18 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Lexend_Deca, Karla } from 'next/font/google';
 import './globals.css'
 
 import { useTranslation } from 'next-i18next';
 
-const inter = Inter({ subsets: ['latin'] })
+
+import Footer from './components/footer';
+import Header from './components/header';
+import NavBar from './components/navBar';
+
+export const lexendDeca = Lexend_Deca({ weight: ['200', '300', '400', '500', '600', '700', '800'], subsets: ['latin'] });
+
+export const karla = Karla({ weight: ['200', '300', '400', '500', '600', '700', '800'], subsets: ['latin'] });
+
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -18,7 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={karla.className}>
         {children}
       </body>
     </html>
