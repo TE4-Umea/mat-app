@@ -1,9 +1,12 @@
 import styles from './navBar.module.css';
 
-export default function Header() {
+export default function NavBar() {
     return (
-
-        <h1>Navbar</h1>
-
+        <div className={styles.navBar}>
+            <button>Hem</button>
+            <button>Planering</button>
+            <button>Historik</button>
+            <button>Profil</button>
+        </div>
     )
 }
