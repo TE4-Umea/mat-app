@@ -4,9 +4,9 @@ import './globals.css'
 
 import { useTranslation } from 'next-i18next';
 
-
 import Footer from './components/footer';
 import Header from './components/header';
+import NavBar from './components/navBar';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {children}
-
+        <NavBar />
       </body>
     </html>
   )
