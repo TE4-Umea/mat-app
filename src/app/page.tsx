@@ -8,14 +8,18 @@ export default function Home() {
       <div className={styles.StartText}>
         Välkommen tillbaka REDACTED
       </div>
-      <div className={styles.StartChoice}>
-        <div className={styles.StartChoiceText}>
-          <p>Måltider</p>
-        </div>
-        <div className={styles.StartChoiceText}>
-          <p>Maträtter</p>
-        </div>
-      </div>
+      <Link
+        href="/"
+      //   className=
+      >
+        <span className="">Sparade rätter</span>{' '}
+      </Link>
+      <Link
+        href="/"
+      //   className=
+      >
+        <span className="">Favoritiserade rätter</span>{' '}
+      </Link>
       <NavBar />
     </main>
   )
