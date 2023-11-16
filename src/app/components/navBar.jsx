@@ -1,12 +1,33 @@
 import styles from './navBar.module.css';
+import Link from 'next/link';
 
 export default function NavBar() {
     return (
         <div className={styles.navBar}>
-            <button>Hem</button>
-            <button>Planering</button>
-            <button>Historik</button>
-            <button>Profil</button>
+            <Link
+                href="/"
+            //   className=
+            >
+                <span className="">Hem</span>{' '}
+            </Link>
+            <Link
+                href="/pages/planering"
+            //   className=
+            >
+                <span className="">Planering</span>{' '}
+            </Link>
+            <Link
+                href="/pages/historik"
+            //   className=
+            >
+                <span className="">Historik</span>{' '}
+            </Link>
+            <Link
+                href="/pages/profil"
+            //   className=
+            >
+                <span className="">Profil</span>{' '}
+            </Link>
         </div>
     )
 }
