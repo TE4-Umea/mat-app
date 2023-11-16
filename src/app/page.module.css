@@ -6,22 +6,12 @@
   min-height: 100vh;
 }
 
-.StartText{
+.startText {
   text-align: center;
 }
 
-.StartChoice{
+.buttonsSaved {
   display: flex;
+  flex-direction: column;
   text-align: center;
-  padding: 1rem;
 }
-
-.StartChoiceText {
-  margin: 1rem;
-  padding: 0.25rem;
-  background-color: black;
-  color: white;
-  border-radius: 10px;
-  width: 10rem;
-}
-
