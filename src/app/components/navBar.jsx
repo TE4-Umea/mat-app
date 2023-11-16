@@ -11,19 +11,19 @@ export default function NavBar() {
                 <span className="">Hem</span>{' '}
             </Link>
             <Link
-                href="/pages/planering"
+                href="/pages/planning"
             //   className=
             >
                 <span className="">Planering</span>{' '}
             </Link>
             <Link
-                href="/pages/historik"
+                href="/pages/history"
             //   className=
             >
                 <span className="">Historik</span>{' '}
             </Link>
             <Link
-                href="/pages/profil"
+                href="/pages/profile"
             //   className=
             >
                 <span className="">Profil</span>{' '}
