@@ -24,3 +24,29 @@ function test() {
   console.log("notice the blank line before this function?")
 }
 ```
+
+
+### Uppsätning av filer och mappar
+```
+src(
+  app(
+    api(
+      api koppling
+    )
+    components(
+      navbar och andra komponenter
+    )
+    lib(
+      databas saker
+    )
+    pages(
+      mapp för olika sidor
+    )
+    styleguide(
+      sida för style instruktioner
+    )
+    pages.tsx : landing page
+    layout.tsx : global layout för alla sidor
+  )
+)
+```
