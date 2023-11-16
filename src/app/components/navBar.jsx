@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function NavBar() {
     return (
-        <div className={styles.navBar}>
+        <nav className={styles.navBar}>
             <Link
                 href="/"
             //   className=
@@ -28,6 +28,6 @@ export default function NavBar() {
             >
                 <span className="">Profil</span>{' '}
             </Link>
-        </div>
+        </nav>
     )
 }

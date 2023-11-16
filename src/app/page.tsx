@@ -1,21 +1,39 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 import NavBar from './components/navBar'
+import Link from 'next/link'
 
 export default function Home() {
   return (
     <main>
-      <div className={styles.StartText}>
-        Välkommen tillbaka REDACTED
+      <div className={styles.startText}>
+        God morgon,
+        Kerstkristina! Idag ska du äta
       </div>
-      <div className={styles.StartChoice}>
-        <div className={styles.StartChoiceText}>
-          <p>Måltider</p>
-        </div>
-        <div className={styles.StartChoiceText}>
-          <p>Maträtter</p>
-        </div>
+
+      {/* Scroll funktion med bilder på mat */}
+
+      <div className={styles.buttonsSaved}>
+        <Link
+          href="/"
+        //   className=
+        >
+          <span className="">Sparade rätter</span>{' '}
+        </Link>
+        <Link
+          href="/"
+        //   className=
+        >
+          <span className="">Favoritiserade rätter</span>{' '}
+        </Link>
       </div>
+      <div>
+        Utvalda måltider
+        Lorem ipsum dolor sit amet, consectetur
+        {/* Scroll funktion med bilder på mat */}
+
+      </div>
+
       <NavBar />
     </main>
   )

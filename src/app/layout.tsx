@@ -4,11 +4,6 @@ import './globals.css'
 
 import { useTranslation } from 'next-i18next';
 
-
-import Footer from './components/footer';
-import Header from './components/header';
-import NavBar from './components/navBar';
-
 export const lexendDeca = Lexend_Deca({ weight: ['200', '300', '400', '500', '600', '700', '800'], subsets: ['latin'] });
 
 export const karla = Karla({ weight: ['200', '300', '400', '500', '600', '700', '800'], subsets: ['latin'] });
