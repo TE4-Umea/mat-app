@@ -1,9 +1,9 @@
 import styles from '../planning/page.module.css'
 
-export default function Meals() {
+export default function Planning() {
     return (
         <main>
-            <h1>planning</h1>
+            <h1>Planning</h1>
         </main>
     )
 }
