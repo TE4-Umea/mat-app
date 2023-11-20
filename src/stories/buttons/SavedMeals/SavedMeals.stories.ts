@@ -24,6 +24,6 @@ type Story = StoryObj<typeof meta>;
 
 export const SavedMeals: Story = {
   args: {
-    label: 'inte klar',
+    label: 'Sparade rätter',
   },
 };
