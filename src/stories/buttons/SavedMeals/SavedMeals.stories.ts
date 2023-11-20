@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from './AddToPlaner';
+import { Button } from './SavedMeals';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -22,8 +22,8 @@ type Story = StoryObj<typeof meta>;
 
 
 
-export const AddToPlaner: Story = {
+export const SavedMeals: Story = {
   args: {
-    label: 'Lägg till i din veckoplanering',
+    label: 'inte klar',
   },
 };
