@@ -15,3 +15,14 @@
   flex-direction: column;
   text-align: center;
 }
+
+.scroll {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+.scroll img {
+  padding: 10px;
+}

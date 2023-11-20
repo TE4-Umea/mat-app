@@ -11,7 +11,12 @@ export default function Home() {
         Kerstkristina! Idag ska du äta
       </div>
 
-      {/* Scroll funktion med bilder på mat */}
+      <div className={styles.scroll}>
+        <img src="img_5terre.jpg" alt="Cinque Terre" width="300" height="200"></img>
+        <img src="img_forest.jpg" alt="Forest" width="300" height="200"></img>
+        <img src="img_lights.jpg" alt="Northern Lights" width="300" height="200"></img>
+        <img src="img_mountains.jpg" alt="Mountains" width="300" height="200"></img>
+      </div>
 
       <div className={styles.buttonsSaved}>
         <Link
@@ -30,8 +35,12 @@ export default function Home() {
       <div>
         Utvalda måltider
         Lorem ipsum dolor sit amet, consectetur
-        {/* Scroll funktion med bilder på mat */}
-
+        <div className={styles.scroll}>
+        <img src="img_5terre.jpg" alt="Cinque Terre" width="300" height="200"></img>
+        <img src="img_forest.jpg" alt="Forest" width="300" height="200"></img>
+        <img src="img_lights.jpg" alt="Northern Lights" width="300" height="200"></img>
+        <img src="img_mountains.jpg" alt="Mountains" width="300" height="200"></img>
+      </div>
       </div>
 
       <NavBar />
