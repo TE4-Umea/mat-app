@@ -1,5 +1,6 @@
 import React from 'react';
 import './AddToPlaner.css';
+import '/src/app/globals.css';
 
 interface ButtonProps {
   /**
