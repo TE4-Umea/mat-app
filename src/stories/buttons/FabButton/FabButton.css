@@ -1,0 +1,8 @@
+.fabButton {
+    border-radius: 100px;
+    border-style: none;
+    background-color: var(--color-secondary);
+    color: var(--color-bg);
+    padding: var(--space-s);
+    box-shadow: var(--shadow1);
+}
