@@ -1,5 +1,5 @@
 import React from 'react';
-import './SavedMeals.stories';
+import './SavedMeals.css';
 import '/src/app/globals.css';
 
 interface ButtonProps {
