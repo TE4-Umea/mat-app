@@ -15,12 +15,12 @@ export default function Planning() {
                     </div>
                 </div>
                 <div>
-                    lunch
+                    <p>lunch</p>
                     <button>+ Lägg till måltid</button>
                     <button>Generera en måltid</button>
                 </div>
                 <div>
-                    middag
+                    <p>middag</p>
                     <button>+ Lägg till måltid</button>
                     <button>Generera en måltid</button>
                 </div>
