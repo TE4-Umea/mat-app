@@ -34,7 +34,7 @@ export const Button = ({
   return (
     <button
       type="button"
-      className={['storybook-button--FaveMeals'].join(' ')}
+      className={['faveMeals'].join(' ')}
       {...props}
     >
       {label}

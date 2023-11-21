@@ -34,7 +34,7 @@ export const Button = ({
   return (
     <button
       type="button"
-      className={['storybook-button--AddToPlaner'].join(' ')}
+      className={['addToPlaner'].join(' ')}
       {...props}
     >
       {label}
