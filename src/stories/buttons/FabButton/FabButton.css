@@ -2,7 +2,13 @@
     border-radius: 100px;
     border-style: none;
     background-color: var(--color-secondary);
-    color: var(--color-bg);
     padding: var(--space-s);
     box-shadow: var(--shadow1);
+    width: 5vw;
+    height: 5vw;
+}
+
+.fabButton img {
+    width: 80%;
+    height: 80%;
 }

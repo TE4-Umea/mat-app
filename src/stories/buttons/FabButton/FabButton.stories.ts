@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from './FabButton';
+import imageFile from '../../assets/github.svg'
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -19,6 +20,11 @@ const meta = {
 
 export default meta;
 type Story = StoryObj<typeof meta>;
+
+const image = {
+    src: imageFile,
+    alt: 'my image',
+};
 
 export const FabSave: Story = {
     args: {
