@@ -1,5 +1,5 @@
 import React from 'react';
-import './SavedMeals.css';
+import './historyCard.css';
 import '/src/app/globals.css';
 
 interface ButtonProps {
@@ -22,19 +22,17 @@ interface ButtonProps {
   /**
    * Optional click handler
    */
-  onClick?: () => void;
 }
 
-export const Button = ({
+export const Card = ({
 
   backgroundColor,
   label,
   ...props
 }: ButtonProps) => {
   return (
-    <button
-      type="button"
-      className={['savedMeals'].join(' ')}
+    <div
+      className={['historyCard'].join(' ')}
       {...props}
     >
       {label}
@@ -43,6 +41,6 @@ export const Button = ({
           background-color: ${backgroundColor};
         }
       `}</style>
-    </button>
+    </div>
   );
 };
