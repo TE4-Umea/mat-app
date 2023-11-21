@@ -3,14 +3,20 @@ import styles from '../saved-meals/page.module.css'
 export default function SavedMeals() {
     return (
         <main>
-            <h1>Saved Meals</h1>
+            <h1>Sparade rätter</h1>
             <ul className={styles.ul}>
-                <li>
-                    En potatis
-                </li>
-                <li>
-                    En köttbulle
-                </li>
+                <div>
+                    <li>
+                        En potatis
+                    </li>
+                    <button>Taborticon</button>
+                </div>
+                <div>
+                    <li>
+                        En köttbulle
+                    </li>
+                    <button>Taborticon</button>
+                </div>
             </ul>
         </main>
     )
