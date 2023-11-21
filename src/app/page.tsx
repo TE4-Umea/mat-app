@@ -2,8 +2,11 @@ import Image from 'next/image'
 import styles from './page.module.css'
 import NavBar from './components/navBar'
 import Link from 'next/link'
+import Fetch from './lib/fetch'
 
-export default function Home() {
+export default async function Home() {
+  const fetch = await Fetch();
+
   return (
     <main>
       <div className={styles.startText}>
@@ -12,10 +15,10 @@ export default function Home() {
       </div>
 
       <div className={styles.scroll}>
-        <img src="img_5terre.jpg" alt="Cinque Terre" width="300" height="200"></img>
-        <img src="img_forest.jpg" alt="Forest" width="300" height="200"></img>
-        <img src="img_lights.jpg" alt="Northern Lights" width="300" height="200"></img>
-        <img src="img_mountains.jpg" alt="Mountains" width="300" height="200"></img>
+        <img src={fetch.meals[0].strMealThumb} alt="food" width="300" height="200"></img>
+        <img src={fetch.meals[1].strMealThumb} alt="food" width="300" height="200"></img>
+        <img src={fetch.meals[2].strMealThumb} alt="food" width="300" height="200"></img>
+        <img src={fetch.meals[3].strMealThumb} alt="food" width="300" height="200"></img>
       </div>
 
       <div className={styles.buttonsSaved}>
@@ -36,12 +39,14 @@ export default function Home() {
         Utvalda måltider
         Lorem ipsum dolor sit amet, consectetur
         <div className={styles.scroll}>
-          <img src="img_5terre.jpg" alt="Cinque Terre" width="300" height="200"></img>
-          <img src="img_forest.jpg" alt="Forest" width="300" height="200"></img>
-          <img src="img_lights.jpg" alt="Northern Lights" width="300" height="200"></img>
-          <img src="img_mountains.jpg" alt="Mountains" width="300" height="200"></img>
+          <img src={fetch.meals[7].strMealThumb} alt="food" width="300" height="200"></img>
+          <img src={fetch.meals[6].strMealThumb} alt="food" width="300" height="200"></img>
+          <img src={fetch.meals[5].strMealThumb} alt="food" width="300" height="200"></img>
+          <img src={fetch.meals[4].strMealThumb} alt="food" width="300" height="200"></img>
         </div>
       </div>
+
+
 
       <NavBar />
     </main>
