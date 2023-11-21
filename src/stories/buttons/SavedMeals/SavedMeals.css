@@ -1,6 +1,6 @@
-.storybook-button--AddToPlaner {
+.storybook-button--SavedMeals {
     color: var(--color-bg);
-    width: 115%;
+    --step-2: clamp(1.7581rem, 1.6903rem + 0.3391vw, 1.9531rem);
     font-size: small;
     font-family: var(--font-body);
     background-color: var(--color-secondary);  

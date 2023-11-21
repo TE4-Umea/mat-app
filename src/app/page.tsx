@@ -20,13 +20,13 @@ export default function Home() {
 
       <div className={styles.buttonsSaved}>
         <Link
-          href="/"
+          href="/pages/saved-meals"
         //   className=
         >
           <span className="">Sparade rätter</span>{' '}
         </Link>
         <Link
-          href="/"
+          href="/pages/favorite-meals"
         //   className=
         >
           <span className="">Favoritiserade rätter</span>{' '}
@@ -36,11 +36,11 @@ export default function Home() {
         Utvalda måltider
         Lorem ipsum dolor sit amet, consectetur
         <div className={styles.scroll}>
-        <img src="img_5terre.jpg" alt="Cinque Terre" width="300" height="200"></img>
-        <img src="img_forest.jpg" alt="Forest" width="300" height="200"></img>
-        <img src="img_lights.jpg" alt="Northern Lights" width="300" height="200"></img>
-        <img src="img_mountains.jpg" alt="Mountains" width="300" height="200"></img>
-      </div>
+          <img src="img_5terre.jpg" alt="Cinque Terre" width="300" height="200"></img>
+          <img src="img_forest.jpg" alt="Forest" width="300" height="200"></img>
+          <img src="img_lights.jpg" alt="Northern Lights" width="300" height="200"></img>
+          <img src="img_mountains.jpg" alt="Mountains" width="300" height="200"></img>
+        </div>
       </div>
 
       <NavBar />
