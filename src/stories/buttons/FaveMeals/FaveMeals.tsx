@@ -1,5 +1,5 @@
 import React from 'react';
-import './SavedMeals.css';
+import './FaveMeals.css';
 import '/src/app/globals.css';
 
 interface ButtonProps {
@@ -34,7 +34,7 @@ export const Button = ({
   return (
     <button
       type="button"
-      className={['savedMeals'].join(' ')}
+      className={['faveMeals'].join(' ')}
       {...props}
     >
       {label}
