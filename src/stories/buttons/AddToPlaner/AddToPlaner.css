@@ -1,8 +1,8 @@
 .storybook-button--AddToPlaner {
-    padding-left: var(--space-m);
-    padding-top: var(--space-3xs);
-    padding-bottom: var(--space-3xs);
-    padding-right: var(--space-m);
+    padding-left: var(--space-l);
+    padding-top: var(--space-2xs);
+    padding-bottom: var(--space-2xs);
+    padding-right: var(--space-l);
 
     color: var(--color-bg);
     background-color: var(--color-secondary);
@@ -11,5 +11,6 @@
     font-family: var(--font-body);  
 
     box-shadow: var(--shadow1);
-    border-radius: 20px;
+    border-radius: 25px;
+    border-style: none;
   }
