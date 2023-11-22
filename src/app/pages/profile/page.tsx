@@ -1,17 +1,21 @@
 import styles from '../saved-meals/page.module.css'
+import { getServerSession } from 'next-auth'
 
-export default function Profile() {
+export default async function Profile() {
+
+    const session = await getServerSession();
+
     return (
         <main>
             <div>
-                ProfilImage
+                <img src={session?.user?.image} alt="" />
             </div>
             <div>
                 <div>
-                    Namn
+                    {session?.user?.name}
                 </div>
                 <div>
-                    Email
+                    {session?.user?.email}
                 </div>
             </div>
             <div>
