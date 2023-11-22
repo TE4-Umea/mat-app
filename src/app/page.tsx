@@ -12,13 +12,12 @@ export default async function Home() {
   return (
     <main>
       <h1 className={styles.startText}>
-        God morgon,
+      <Time></Time>
         Kerstkristina! Idag ska du äta
-        <Time></Time>
       </h1>
 
       <div className={styles.scroll}>
-        <img src={fetch.meals[0].strMealThumb} alt="food" width="300" height="200"></img>
+        <img src={fetch.meals[0].strMealThumb} alt="food" width="300" height="200"></img> 
         <img src={fetch.meals[1].strMealThumb} alt="food" width="300" height="200"></img>
         <img src={fetch.meals[2].strMealThumb} alt="food" width="300" height="200"></img>
         <img src={fetch.meals[3].strMealThumb} alt="food" width="300" height="200"></img>
