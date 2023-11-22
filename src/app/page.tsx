@@ -9,10 +9,10 @@ export default async function Home() {
 
   return (
     <main>
-      <div className={styles.startText}>
+      <h1 className={styles.startText}>
         God morgon,
         Kerstkristina! Idag ska du äta
-      </div>
+      </h1>
 
       <div className={styles.scroll}>
         <img src={fetch.meals[0].strMealThumb} alt="food" width="300" height="200"></img>

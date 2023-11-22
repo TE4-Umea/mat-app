@@ -5,7 +5,7 @@ import Head from 'next/head';
 
 import { useTranslation } from 'next-i18next';
 
-export const lexendDeca = Lexend_Deca({ weight: ['200', '300', '400', '500', '600', '700', '800'], subsets: ['latin'] });
+export const lexendDeca = Lexend_Deca({ weight: ['200', '300', '400', '500', '600', '700', '800'], subsets: ['latin'], variable: "--font-title", });
 
 export const karla = Karla({ weight: ['200', '300', '400', '500', '600', '700', '800'], subsets: ['latin'] });
 
@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={karla.className}>
+      <body className={[lexendDeca.variable, karla.className].join(" ")}>
         {children}
       </body>
     </html>
