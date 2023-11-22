@@ -25,5 +25,6 @@ type Story = StoryObj<typeof meta>;
 export const mealCard: Story = {
     args: {
         label: 'Mat i skål',
+        tags: ['Mat', 'i', 'skål']
     },
 };
