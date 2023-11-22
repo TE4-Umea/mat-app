@@ -1,11 +1,15 @@
 import React from 'react';
-
+import { Lexend_Deca, Karla } from 'next/font/google';
 import { Header } from './Header';
 import './page.css';
 
 type User = {
   name: string;
 };
+
+export const lexendDeca = Lexend_Deca({ weight: ['200', '300', '400', '500', '600', '700', '800'], subsets: ['latin'] });
+
+export const karla = Karla({ weight: ['200', '300', '400', '500', '600', '700', '800'], subsets: ['latin'] });
 
 export const Page: React.FC = () => {
   const [user, setUser] = React.useState<User>();

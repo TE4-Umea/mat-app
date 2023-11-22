@@ -8,6 +8,7 @@
 
 .startText {
   text-align: center;
+  font-family: var(--font-title);
 }
 
 .buttonsSaved {
@@ -21,8 +22,10 @@
   overflow: auto;
   white-space: nowrap;
   padding: 10px;
+  scroll-snap-type: x mandatory;
 }
 
 .scroll img {
   padding: 10px;
+  scroll-snap-align: start;
 }
