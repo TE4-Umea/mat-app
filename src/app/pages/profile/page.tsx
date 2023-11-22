@@ -8,15 +8,27 @@ export default async function Profile() {
     return (
         <main>
             <div>
-                <img src={session?.user?.image} alt="" />
+                {session?.user?.image ? (
+                    <div><img src={session?.user?.image} alt="" /></div>
+                ) : (
+                    <div>Not logged in</div>
+                )}
             </div>
             <div>
-                <div>
-                    {session?.user?.name}
-                </div>
-                <div>
-                    {session?.user?.email}
-                </div>
+                {session?.user?.name ? (
+
+                    <div>{session?.user?.name}</div>
+                ) : (
+                    <div>Not logged in</div>
+                )}
+            </div>
+            <div>
+                {session?.user?.email ? (
+
+                    <div>{session?.user?.email}</div>
+                ) : (
+                    <div>Not logged in</div>
+                )}
             </div>
             <div>
                 <div>

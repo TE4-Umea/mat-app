@@ -24,7 +24,7 @@ export default function Planning() {
                 </div>
                 <div>
                     <p>middag</p>
-                    <button>+ Lägg till måltid</button>
+                    <DropDown></DropDown>
                     <button>Generera en måltid</button>
                 </div>
             </div>
