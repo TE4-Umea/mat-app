@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Card } from './historyCard';
+import { Card } from './Profile';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -22,8 +22,9 @@ type Story = StoryObj<typeof meta>;
 
 
 
-export const historyCard: Story = {
+export const Profile: Story = {
   args: {
-    label: 'Sparade rätter',
+    label: 'ok',
+    
   },
 };
