@@ -1,0 +1,5 @@
+.mealCard {
+    font-family: var(--font-title);
+    font-weight: 700;
+    background-color: var(--color-bg);
+}

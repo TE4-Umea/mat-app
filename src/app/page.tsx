@@ -6,10 +6,10 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <main>
-      <div className={styles.startText}>
+      <h1 className={styles.startText}>
         God morgon,
         Kerstkristina! Idag ska du äta
-      </div>
+      </h1>
 
       <div className={styles.scroll}>
         <img src="img_5terre.jpg" alt="Cinque Terre" width="300" height="200"></img>

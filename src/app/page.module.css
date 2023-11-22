@@ -8,6 +8,7 @@
 
 .startText {
   text-align: center;
+  font-family: var(--font-title);
 }
 
 .buttonsSaved {
