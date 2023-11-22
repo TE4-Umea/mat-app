@@ -3,6 +3,8 @@ import styles from './page.module.css'
 import NavBar from './components/navBar'
 import Link from 'next/link'
 import Fetch from './lib/fetch'
+import Time from './components/timeDepender'
+
 
 export default async function Home() {
   const fetch = await Fetch();
@@ -12,6 +14,7 @@ export default async function Home() {
       <h1 className={styles.startText}>
         God morgon,
         Kerstkristina! Idag ska du äta
+        <Time></Time>
       </h1>
 
       <div className={styles.scroll}>
