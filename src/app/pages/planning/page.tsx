@@ -1,4 +1,7 @@
+'use client'
+
 import styles from '../planning/page.module.css'
+import DropDown from '../../components/dropDown'
 
 export default function Planning() {
     return (
@@ -16,7 +19,7 @@ export default function Planning() {
                 </div>
                 <div>
                     <p>lunch</p>
-                    <button>+ Lägg till måltid</button>
+                    <DropDown></DropDown>
                     <button>Generera en måltid</button>
                 </div>
                 <div>

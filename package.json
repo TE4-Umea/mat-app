@@ -11,6 +11,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@nextui-org/react": "^2.2.9",
     "i18next": "^23.7.6",
     "next": "14.0.2",
     "next-auth": "^4.24.5",
