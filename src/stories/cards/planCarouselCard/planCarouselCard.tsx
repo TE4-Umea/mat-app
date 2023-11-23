@@ -28,13 +28,16 @@ export const Card = ({
 }: ButtonProps) => {
     const mode = lunch ? 'buttonLunch' : 'buttonDinner';
     return (
-        <div className={['planCarouselCard', mode].join(' ')}
+        <div className={['planCarouselCard'].join(' ')}
             {...props}>
             <div>
                 <p>{label}</p>
-                <button></button>
-                <button></button>
+                <div className={['buttonContainer', mode].join(' ')}>
+                    <button>Lunch</button>
+                    <button>Middag</button>
+                </div>
             </div>
+            {/* <img src='src/stories/assets/github.svg'></img> */}
         </div>
     );
 };
