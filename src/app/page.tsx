@@ -21,12 +21,8 @@ export default async function Home() {
       <div className={styles.scroll}>
         <div className={styles.buttoncontainer}>
           <img src={fetch.meals[0].strMealThumb} alt="food" width="300" height="200"></img>
-          <div className={styles.middagtext}>
-              <a href="">middag</a>
-          </div>
-          <div className={styles.lunchtext}>
-            <a href="">Lunch</a>
-          </div>
+          <MiddagText></MiddagText>
+          <LunchText></LunchText>
         </div>
         <div className={styles.buttoncontainer}>
           <img src={fetch.meals[1].strMealThumb} alt="food" width="300" height="200"></img>

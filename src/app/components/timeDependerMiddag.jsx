@@ -1,22 +1,22 @@
 import React from "react";
+import styles from '../page.module.css'
 
-export default async function timeDependerMiddag() {
+export default function timeDependerMiddag() {
     var today = new Date();
 
-    if (today.getHours() < 15) { 
+    if (today.getHours() < 8) { 
         return (
-            <div>
-                middagtext
+            <div className={styles.middagtext}>
+              <a href="">middag</a>
             </div>
         );
-    };
-
-
-    if (today.getHours() > 16) { 
+    } else if (today.getHours() >= 9) { 
         return (
-            <div>
-                lunchtext
+            <div className={styles.lunchtext}>
+                <a href="">Lunch</a>
             </div>
         );
-    };
+    } else {
+        return null;
+    }
 }

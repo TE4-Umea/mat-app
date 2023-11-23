@@ -39,18 +39,18 @@
   position: absolute;
   bottom: 4em;
   left: 10em;
+  background-color: red;
 }
 
 .lunchtext {
   position: absolute;
   bottom: 4em;
   right: 10em;
+  background-color: blue;
 }
 
 .buttoncontainer a {
- background-color: blue;
  border-radius: 1.5em;
- color: white;
  text-transform: uppercase;
  padding: 1em 1,5em;
 }
