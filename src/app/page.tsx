@@ -69,7 +69,6 @@ export default async function Home() {
           <img src={fetch.meals[5].strMealThumb} alt="food" width="300" height="200"></img>
           <img src={fetch.meals[4].strMealThumb} alt="food" width="300" height="200"></img>
         </div>
-     
       </div>
 
 
