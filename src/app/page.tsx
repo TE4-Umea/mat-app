@@ -4,6 +4,8 @@ import NavBar from './components/navBar'
 import Link from 'next/link'
 import Fetch from './lib/fetch'
 import Time from './components/timeDepender'
+import LunchText from './components/timeDependerLunch'
+import MiddagText from './components/timeDependerMiddag'
 
 
 export default async function Home() {

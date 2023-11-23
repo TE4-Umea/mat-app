@@ -1,28 +1,21 @@
 import React from "react";
 
-export default async function timeDepender() {
+export default async function timeDependerMiddag() {
     var today = new Date();
 
     if (today.getHours() < 15) { 
         return (
             <div>
-                God morgon!
+                middagtext
             </div>
         );
     };
 
-    if (today.getHours() < 15) { 
-        return (
-            <div>
-
-            </div>
-        );
-    };
 
     if (today.getHours() > 16) { 
         return (
             <div>
-                Good middag!
+                lunchtext
             </div>
         );
     };
