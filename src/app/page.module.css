@@ -30,27 +30,30 @@
   scroll-snap-align: start;
 }
 
-.buttoncontainer {
+.buttonContainer {
   display: inline-block;
   position: relative;
 }
 
-.middagtext {
+.primaryButtonTime {
   position: absolute;
   bottom: 4em;
   left: 10em;
   background-color: red;
+
 }
 
-.lunchtext {
+.secondaryButtonTime {
   position: absolute;
   bottom: 4em;
   right: 10em;
   background-color: blue;
 }
 
-.buttoncontainer a {
- border-radius: 1.5em;
- text-transform: uppercase;
- padding: 1em 1,5em;
+
+
+.buttonContainer a {
+  border-radius: 1.5em;
+  text-transform: uppercase;
+  padding: 1em 1, 5em;
 }
