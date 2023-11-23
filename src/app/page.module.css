@@ -29,3 +29,28 @@
   padding: 10px;
   scroll-snap-align: start;
 }
+
+.buttoncontainer {
+  display: inline-block;
+  position: relative;
+}
+
+.middagtext {
+  position: absolute;
+  bottom: 4em;
+  left: 10em;
+}
+
+.lunchtext {
+  position: absolute;
+  bottom: 4em;
+  right: 10em;
+}
+
+.buttoncontainer a {
+ background-color: blue;
+ border-radius: 1.5em;
+ color: white;
+ text-transform: uppercase;
+ padding: 1em 1,5em;
+}

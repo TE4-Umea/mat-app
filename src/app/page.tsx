@@ -12,17 +12,48 @@ export default async function Home() {
   return (
     <main>
       <h1 className={styles.startText}>
-      <Time></Time>
+        <Time></Time>
         Kerstkristina! Idag ska du äta
       </h1>
 
       <div className={styles.scroll}>
-        <img src={fetch.meals[0].strMealThumb} alt="food" width="300" height="200"></img> 
-        <img src={fetch.meals[1].strMealThumb} alt="food" width="300" height="200"></img>
-        <img src={fetch.meals[2].strMealThumb} alt="food" width="300" height="200"></img>
-        <img src={fetch.meals[3].strMealThumb} alt="food" width="300" height="200"></img>
+        <div className={styles.buttoncontainer}>
+          <img src={fetch.meals[0].strMealThumb} alt="food" width="300" height="200"></img>
+          <div className={styles.middagtext}>
+              <a href="">middag</a>
+          </div>
+          <div className={styles.lunchtext}>
+            <a href="">Lunch</a>
+          </div>
+        </div>
+        <div className={styles.buttoncontainer}>
+          <img src={fetch.meals[1].strMealThumb} alt="food" width="300" height="200"></img>
+          <div className={styles.middagtext}>
+            <a href="">middag</a>
+          </div>
+          <div className={styles.lunchtext}>
+            <a href="">Lunch</a>
+          </div>
+        </div>
+        <div className={styles.buttoncontainer}>
+          <img src={fetch.meals[2].strMealThumb} alt="food" width="300" height="200"></img>
+          <div className={styles.middagtext}>
+            <a href="">middag</a>
+          </div>
+          <div className={styles.lunchtext}>
+            <a href="">Lunch</a>
+          </div>
+        </div>
+        <div className={styles.buttoncontainer}>
+          <img src={fetch.meals[3].strMealThumb} alt="food" width="300" height="200"></img>
+          <div className={styles.middagtext}>
+            <a href="">middag</a>
+          </div>
+          <div className={styles.lunchtext}>
+            <a href="">Lunch</a>
+          </div>
+        </div>
       </div>
-
       <div className={styles.buttonsSaved}>
         <Link
           href="/pages/saved-meals"
