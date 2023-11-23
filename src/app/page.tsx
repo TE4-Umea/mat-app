@@ -19,35 +19,35 @@ export default async function Home() {
       </h1>
 
       <div className={styles.scroll}>
-        <div className={styles.buttoncontainer}>
+        <div className={styles.buttonContainer}>
           <img src={fetch.meals[0].strMealThumb} alt="food" width="300" height="200"></img>
           <MiddagText></MiddagText>
           <LunchText></LunchText>
         </div>
-        <div className={styles.buttoncontainer}>
+        <div className={styles.buttonContainer}>
           <img src={fetch.meals[1].strMealThumb} alt="food" width="300" height="200"></img>
-          <div className={styles.middagtext}>
+          <div className={styles.middagText}>
             <a href="">middag</a>
           </div>
-          <div className={styles.lunchtext}>
+          <div className={styles.lunchText}>
             <a href="">Lunch</a>
           </div>
         </div>
-        <div className={styles.buttoncontainer}>
+        <div className={styles.buttonContainer}>
           <img src={fetch.meals[2].strMealThumb} alt="food" width="300" height="200"></img>
-          <div className={styles.middagtext}>
+          <div className={styles.middagText}>
             <a href="">middag</a>
           </div>
-          <div className={styles.lunchtext}>
+          <div className={styles.lunchText}>
             <a href="">Lunch</a>
           </div>
         </div>
-        <div className={styles.buttoncontainer}>
+        <div className={styles.buttonContainer}>
           <img src={fetch.meals[3].strMealThumb} alt="food" width="300" height="200"></img>
-          <div className={styles.middagtext}>
+          <div className={styles.middagText}>
             <a href="">middag</a>
           </div>
-          <div className={styles.lunchtext}>
+          <div className={styles.lunchText}>
             <a href="">Lunch</a>
           </div>
         </div>
