@@ -62,33 +62,14 @@ export default async function Home() {
       <div>
         Utvalda måltider
         Lorem ipsum dolor sit amet, consectetur
+
         <div className={styles.scroll}>
-
-        <div className={styles.buttonContainer}>
-          <img src={fetch.meals[0].strMealThumb} alt="food" width="300" height="200"></img>
-          <MiddagText></MiddagText>
-          <LunchText></LunchText>
+          <img src={fetch.meals[7].strMealThumb} alt="food" width="300" height="200"></img>
+          <img src={fetch.meals[6].strMealThumb} alt="food" width="300" height="200"></img>
+          <img src={fetch.meals[5].strMealThumb} alt="food" width="300" height="200"></img>
+          <img src={fetch.meals[4].strMealThumb} alt="food" width="300" height="200"></img>
         </div>
-
-        <div className={styles.buttonContainer}>
-          <img src={fetch.meals[1].strMealThumb} alt="food" width="300" height="200"></img>
-          <MiddagText></MiddagText>
-          <LunchText></LunchText>
-        </div>
-
-        <div className={styles.buttonContainer}>
-          <img src={fetch.meals[2].strMealThumb} alt="food" width="300" height="200"></img>
-          <MiddagText></MiddagText>
-          <LunchText></LunchText>
-        </div>
-
-        <div className={styles.buttonContainer}>
-          <img src={fetch.meals[3].strMealThumb} alt="food" width="300" height="200"></img>
-          <MiddagText></MiddagText>
-          <LunchText></LunchText>
-        </div>
-
-      </div>
+     
       </div>
 
 
