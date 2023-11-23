@@ -4,7 +4,7 @@ import styles from '../page.module.css'
 export default function timeDependerMiddag() {
     var today = new Date();
 
-    if (today.getHours() < 8) { 
+    if (today.getHours() <= 8) { 
         return (
             <div className={styles.middagtext}>
               <a href="">middag</a>
