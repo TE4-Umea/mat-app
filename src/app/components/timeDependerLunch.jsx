@@ -1,7 +1,7 @@
 import React from "react";
 import styles from '../page.module.css'
 
-export default function timeDependerMiddag() {
+export default function timeDependerLunch() {
     var today = new Date();
 
     if (today.getHours() < 15) {

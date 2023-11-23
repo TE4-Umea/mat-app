@@ -6,14 +6,14 @@ export default function timeDependerMiddag() {
 
     if (today.getHours() < 15) {
         return (
-            <div className={styles.secondaryButtonTime}>
-                <a href="">Middag</a>
+            <div className={styles.primaryButtonTime}>
+                <a href="">Lunch</a>
             </div>
         );
     } else if (today.getHours() >= 16) {
         return (
-            <div className={styles.primaryButtonTime}>
-                <a href="">Lunch</a>
+            <div className={styles.secondaryButtonTime}>
+                <a href="">Middag</a>
             </div>
         );
     } else {
