@@ -4,13 +4,13 @@ import styles from '../page.module.css'
 export default function timeDependerMiddag() {
     var today = new Date();
 
-    if (today.getHours() <= 8) { 
+    if (today.getHours() < 15) { 
         return (
             <div className={styles.middagtext}>
               <a href="">middag</a>
             </div>
         );
-    } else if (today.getHours() >= 9) { 
+    } else if (today.getHours() >= 16) { 
         return (
             <div className={styles.lunchtext}>
                 <a href="">Lunch</a>

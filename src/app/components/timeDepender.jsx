@@ -11,14 +11,6 @@ export default async function timeDepender() {
         );
     };
 
-    if (today.getHours() < 15) { 
-        return (
-            <div>
-
-            </div>
-        );
-    };
-
     if (today.getHours() > 16) { 
         return (
             <div>
