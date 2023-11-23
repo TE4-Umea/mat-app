@@ -38,7 +38,7 @@
 .primaryButtonTime {
   position: absolute;
   bottom: 4em;
-  left: 10em;
+  right: 10em;
   background-color: red;
 
 }
@@ -46,7 +46,7 @@
 .secondaryButtonTime {
   position: absolute;
   bottom: 4em;
-  right: 10em;
+  left: 10em;
   background-color: blue;
 }
 

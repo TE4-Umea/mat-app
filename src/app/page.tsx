@@ -19,38 +19,31 @@ export default async function Home() {
       </h1>
 
       <div className={styles.scroll}>
+
         <div className={styles.buttonContainer}>
           <img src={fetch.meals[0].strMealThumb} alt="food" width="300" height="200"></img>
           <MiddagText></MiddagText>
           <LunchText></LunchText>
         </div>
+
         <div className={styles.buttonContainer}>
           <img src={fetch.meals[1].strMealThumb} alt="food" width="300" height="200"></img>
-          <div className={styles.middagText}>
-            <a href="">middag</a>
-          </div>
-          <div className={styles.lunchText}>
-            <a href="">Lunch</a>
-          </div>
+          <MiddagText></MiddagText>
+          <LunchText></LunchText>
         </div>
+
         <div className={styles.buttonContainer}>
           <img src={fetch.meals[2].strMealThumb} alt="food" width="300" height="200"></img>
-          <div className={styles.middagText}>
-            <a href="">middag</a>
-          </div>
-          <div className={styles.lunchText}>
-            <a href="">Lunch</a>
-          </div>
+          <MiddagText></MiddagText>
+          <LunchText></LunchText>
         </div>
+
         <div className={styles.buttonContainer}>
           <img src={fetch.meals[3].strMealThumb} alt="food" width="300" height="200"></img>
-          <div className={styles.middagText}>
-            <a href="">middag</a>
-          </div>
-          <div className={styles.lunchText}>
-            <a href="">Lunch</a>
-          </div>
+          <MiddagText></MiddagText>
+          <LunchText></LunchText>
         </div>
+
       </div>
       <div className={styles.buttonsSaved}>
         <Link
@@ -70,11 +63,32 @@ export default async function Home() {
         Utvalda måltider
         Lorem ipsum dolor sit amet, consectetur
         <div className={styles.scroll}>
-          <img src={fetch.meals[7].strMealThumb} alt="food" width="300" height="200"></img>
-          <img src={fetch.meals[6].strMealThumb} alt="food" width="300" height="200"></img>
-          <img src={fetch.meals[5].strMealThumb} alt="food" width="300" height="200"></img>
-          <img src={fetch.meals[4].strMealThumb} alt="food" width="300" height="200"></img>
+
+        <div className={styles.buttonContainer}>
+          <img src={fetch.meals[0].strMealThumb} alt="food" width="300" height="200"></img>
+          <MiddagText></MiddagText>
+          <LunchText></LunchText>
         </div>
+
+        <div className={styles.buttonContainer}>
+          <img src={fetch.meals[1].strMealThumb} alt="food" width="300" height="200"></img>
+          <MiddagText></MiddagText>
+          <LunchText></LunchText>
+        </div>
+
+        <div className={styles.buttonContainer}>
+          <img src={fetch.meals[2].strMealThumb} alt="food" width="300" height="200"></img>
+          <MiddagText></MiddagText>
+          <LunchText></LunchText>
+        </div>
+
+        <div className={styles.buttonContainer}>
+          <img src={fetch.meals[3].strMealThumb} alt="food" width="300" height="200"></img>
+          <MiddagText></MiddagText>
+          <LunchText></LunchText>
+        </div>
+
+      </div>
       </div>
 
 
