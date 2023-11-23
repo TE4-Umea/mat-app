@@ -4,43 +4,33 @@ import '/src/app/globals.css';
 
 interface ButtonProps {
     /**
-     * Is this the principal call to action on the page?
-     */
-
-    /**
      * What background color to use
      */
     backgroundColor?: string;
-    /**
-     * How large should the button be?
-     */
 
     /**
-     * Button contents
+     * Contents
      */
     label: string;
-    /**
-     * Optional click handler
-     */
+    tags: string[];
 }
 
 export const Card = ({
-
     backgroundColor,
     label,
+    tags,
     ...props
 }: ButtonProps) => {
     return (
-        <div
-            className={['mealCard'].join(' ')}
-            {...props}
-        >
-            {label}
-            <style jsx>{`
-        button {
-          background-color: ${backgroundColor};
-        }
-      `}</style>
+        <div className={['mealCard'].join(' ')}
+            {...props}>
+            <img src='src/stories/assets/assets.png'></img>
+            <div>
+                <p>{label}</p>
+                <ul>
+                    {tags.map((tags) => <li key={tags}>{tags}</li>)}
+                </ul>
+            </div>
         </div>
     );
 };
