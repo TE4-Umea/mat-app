@@ -44,6 +44,9 @@ export default async function Profile() {
                     Favoriter
                 </div>
             </div>
+            <button>
+                Log out
+            </button>
         </main>
     )
 }
