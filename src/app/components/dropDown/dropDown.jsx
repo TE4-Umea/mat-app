@@ -1,7 +1,7 @@
 import React from "react";
 import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button } from "@nextui-org/react";
 import styles from './dropDown.module.css';
-import Fetch from '../lib/fetch'
+import Fetch from '../../lib/fetch'
 
 export default async function DropDown() {
     const fetch = await Fetch();

@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import styles from './page.module.css'
-import NavBar from './components/navBar'
+import NavBar from './components/navBar/navBar'
 import Link from 'next/link'
 import Fetch from './lib/fetch'
-import Time from './components/timeDepender'
-import LunchText from './components/timeDependerLunch'
-import MiddagText from './components/timeDependerMiddag'
+import Time from './components/timeDepender/timeDepender'
+import LunchText from './components/timeDepender/timeDependerLunch'
+import MiddagText from './components/timeDepender/timeDependerMiddag'
 
 
 export default async function Home() {

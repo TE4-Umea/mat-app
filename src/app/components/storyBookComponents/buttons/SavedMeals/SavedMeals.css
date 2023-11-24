@@ -1,0 +1,16 @@
+.savedMeals {
+    color: var(--color-fg);
+    font-weight: 600;
+    font-size: var(--step-1);
+    font-family: var(--font-title);
+    background-color: var(--color-bg);  
+    box-shadow: var(--shadow1);
+    border-radius: 12px;
+    width: 250%;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    border-style: none;
+    
+  }
+
+  

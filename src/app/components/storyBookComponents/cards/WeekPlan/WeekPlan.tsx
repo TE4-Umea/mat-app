@@ -50,7 +50,7 @@ export const Card = ({
 
                 <div className='prison'>
 
-                    <div className='lunch'>
+                    <div className='lunch'> 
                         <p className='text'>Lunch</p>
                         <div id='flex'>
                             <div className='addRuta'><p className='textrutaa'>+ Lägg till måltid</p></div>

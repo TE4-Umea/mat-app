@@ -1,0 +1,16 @@
+.addToPlaner {
+    padding-left: var(--space-l);
+    padding-top: var(--space-2xs);
+    padding-bottom: var(--space-2xs);
+    padding-right: var(--space-l);
+
+    color: var(--color-bg);
+    background-color: var(--color-secondary);
+
+    font-size: var(--step--1);
+    font-family: var(--font-body);  
+
+    box-shadow: var(--shadow1);
+    border-radius: 25px;
+    border-style: none;
+  }
