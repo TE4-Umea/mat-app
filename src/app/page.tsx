@@ -6,16 +6,19 @@ import Fetch from './lib/fetch'
 import Time from './components/timeDepender/timeDepender'
 import LunchText from './components/timeDepender/timeDependerLunch'
 import MiddagText from './components/timeDepender/timeDependerMiddag'
+import { getServerSession } from 'next-auth'
+
 
 
 export default async function Home() {
   const fetch = await Fetch();
+  const session = await getServerSession();
 
   return (
     <main>
       <h1 className={styles.startText}>
         <Time></Time>
-        Kerstkristina! Idag ska du äta
+        <div className={styles.namecolor}>{session?.user?.name}</div> Idag ska du äta
       </h1>
 
       <div className={styles.scroll}>
