@@ -1,7 +1,7 @@
 'use client'
 
 import styles from '../planning/page.module.css'
-import DropDown from '../../components/dropDown'
+import DropDown from '../../components/dropDown/dropDown'
 
 export default function Planning() {
     return (
