@@ -5,21 +5,22 @@
   left: 0;
   top: 0;
   background-color: var(--color-secondary);
+  z-index: -1;
 }
 
-.background--light { 
+.background--light {
   background-image: linear-gradient(var(--color-gradient-d), var(--color-gradient-l));
 }
 
-.background--dark { 
-  background-image: linear-gradient(rgb(6, 3, 22), rgb(39, 24, 78) );
+.background--dark {
+  background-image: linear-gradient(rgb(6, 3, 22), rgb(39, 24, 78));
 }
 
-.background--small { 
+.background--small {
   height: 30vh;
 }
 
-.background--large { 
+.background--large {
   height: 80vh;
   border-bottom-left-radius: 350% 30%;
   border-bottom-right-radius: 350% 30%;
@@ -39,7 +40,7 @@
   border-radius: 5000000000000000000000000000000000000000000000000000000000000000000000000px;
   background-color: var(--color-bg);
   filter: drop-shadow(3px 5px 0px #00000040);
-  
+
   animation: smallCloud 14s -3s infinite linear;
 }
 
@@ -56,13 +57,14 @@
   animation-timing-function: linear, ease-in-out;
 }
 
-.cloud--large > div:nth-child(1) {
+.cloud--large>div:nth-child(1) {
   width: 120px;
   height: 23px;
   border-radius: 5000000000000000000000000000px;
   background-color: var(--color-bg);
 }
-.cloud--large > div:nth-child(2) {
+
+.cloud--large>div:nth-child(2) {
   position: absolute;
   width: 120px;
   height: 23px;
@@ -74,7 +76,7 @@
 
 
 
-@keyframes smallCloud { 
+@keyframes smallCloud {
   0% {
     left: -135px;
   }
@@ -84,7 +86,7 @@
   }
 }
 
-@keyframes largeCloud { 
+@keyframes largeCloud {
   0% {
     left: -180px;
   }
@@ -93,5 +95,3 @@
     left: 100%;
   }
 }
-
-

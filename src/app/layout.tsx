@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Lexend_Deca, Karla } from 'next/font/google';
 import './globals.css'
 import Head from 'next/head';
+import { Button as Background } from '../app/components/storyBookComponents/background/background';
 
 import { useTranslation } from 'next-i18next';
 
@@ -22,6 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Background></Background>
       <body className={[lexendDeca.variable, karla.className].join(" ")}>
         {children}
       </body>
