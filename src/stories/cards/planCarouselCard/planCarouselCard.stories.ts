@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Card } from './mealCard';
+import { Card } from './planCarouselCard';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -22,9 +22,16 @@ type Story = StoryObj<typeof meta>;
 
 
 
-export const mealCard: Story = {
+export const planCarouselCardLunch: Story = {
     args: {
-        label: 'Mat i skål',
-        tags: ['Mat', 'i', 'skål']
+        label: 'Korv och makaroner',
+        lunch: true,
+    },
+};
+
+export const planCarouselCardDinner: Story = {
+    args: {
+        label: 'Kebabråtta med grus',
+        lunch: false,
     },
 };

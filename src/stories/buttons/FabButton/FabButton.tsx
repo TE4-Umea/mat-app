@@ -4,17 +4,9 @@ import '/src/app/globals.css';
 
 interface ButtonProps {
     /**
-     * Is this the principal call to action on the page?
-     */
-
-    /**
      * What background color to use
      */
     backgroundColor?: string;
-    /**
-     * How large should the button be?
-     */
-
     /**
      * Button contents
      */

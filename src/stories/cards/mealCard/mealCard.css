@@ -1,5 +1,46 @@
 .mealCard {
-    font-family: var(--font-title);
-    font-weight: 700;
     background-color: var(--color-bg);
+    width: 12rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow2);
+}
+
+.mealCard img {
+    overflow: hidden;
+    border-radius: 12px 12px 0px 0px;
+    width: 100%;
+    height: 8rem;
+}
+
+.mealCard div {
+    padding: var(--space-xs);
+}
+
+.mealCard p {
+    font-family: var(--font-title);
+    font-weight: 600;
+    font-size: var(--step-1);
+    padding-bottom: 0;
+    margin: 0;
+}
+
+.mealCard ul {
+    overflow: scroll;
+    list-style: none;
+    display: flex;
+    gap: var(--space-3xs);
+    padding-left: 0;
+    margin-top: 2px;
+    margin-bottom: 0;
+}
+
+.mealCard li {
+    background-color: var(--color-secondary);
+    color: var(--color-bg);
+    width: fit-content;
+    padding: 4px 6px;
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: var(--step--1);
 }
