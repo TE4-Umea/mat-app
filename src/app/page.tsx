@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import styles from './page.module.css'
-import NavBar from './components/navBar/navBar'
+import { Button as NavBar } from './components/storyBookComponents/navbar/navBar';
 import Link from 'next/link'
 import Fetch from './lib/fetch'
 import Time from './components/timeDepender/timeDepender'
@@ -70,8 +70,6 @@ export default async function Home() {
           <img src={fetch.meals[4].strMealThumb} alt="food" width="300" height="200"></img>
         </div>
       </div>
-
-
 
       <NavBar />
     </main>
