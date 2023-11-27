@@ -23,8 +23,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Background></Background>
       <body className={[lexendDeca.variable, karla.className].join(" ")}>
+        <Background></Background>
         {children}
       </body>
     </html>
