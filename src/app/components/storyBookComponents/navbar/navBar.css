@@ -10,13 +10,14 @@
     bottom: 0;
     border-radius: 40px 40px 0 0;
     box-shadow: var(--shadow2);
+
 }
 
 .navButton {
     font-weight: 600;
     color: #B6B6B6;
     font-family: 'Lexend Deca', sans-serif;
-    
+
 }
 
 .navButton:hover {
