@@ -36,7 +36,7 @@
   position: absolute;
   width: 135px;
   height: 25px;
-  border-radius: 5000000000000000000000000000000000000000000000000000000000000000000000000px;
+  border-radius: 1000px;
   background-color: var(--color-bg);
   filter: drop-shadow(3px 5px 0px #00000040);
   
