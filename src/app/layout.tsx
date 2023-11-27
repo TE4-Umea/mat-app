@@ -24,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={[lexendDeca.variable, karla.className].join(" ")}>
+        <BackgroundTime></BackgroundTime>
         {children}
       </body>
     </html>
