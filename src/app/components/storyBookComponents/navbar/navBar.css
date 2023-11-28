@@ -24,4 +24,9 @@
     cursor: pointer;
 }
 
-.active {}
+.active {
+    color: var(--color-primary);
+    font-weight: 800;
+    font-family: 'Lexend Deca', sans-serif;
+
+}
