@@ -46,3 +46,10 @@
     font-family: var(--font-title);
     font-size: var(--step--1);
 }
+
+.img {
+    height: var(--space-3xl);
+    width: var(--space-3xl);
+    border-radius: 50%;
+    text-align: center;
+}

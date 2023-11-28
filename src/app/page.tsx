@@ -7,6 +7,7 @@ import LunchText from './components/timeDepender/timeDependerLunch'
 import MiddagText from './components/timeDepender/timeDependerMiddag'
 import { getServerSession } from 'next-auth'
 import GreetingCardTime from './components/timeDepender/greetingCardTime'
+import BackgroundTime from './components/timeDepender/backgroundTime';
 
 
 export default async function Home() {
@@ -15,6 +16,8 @@ export default async function Home() {
 
   return (
     <main>
+      <BackgroundTime></BackgroundTime>
+
       <h1 className={styles.startText}>
         <GreetingCardTime></GreetingCardTime>
       </h1>
