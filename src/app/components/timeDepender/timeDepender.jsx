@@ -6,7 +6,7 @@ export default async function timeDepender() {
     if (today.getHours() <= 15) {
         return (
             <div>
-                God morgon!
+                God morgon,
             </div>
         );
     };
@@ -14,7 +14,7 @@ export default async function timeDepender() {
     if (today.getHours() >= 16) {
         return (
             <div>
-                Good middag!
+                Good middag,
             </div>
         );
     };
