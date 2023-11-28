@@ -1,7 +1,9 @@
+'use client'
 import React from 'react';
 import './navBar.css';
 import '/src/app/globals.css';
 import Link from 'next/link';
+import { usePathname } from "next/navigation";
 
 interface ButtonProps {
 }
@@ -11,33 +13,35 @@ interface ButtonProps {
  */
 export const Button = ({
 }: ButtonProps) => {
-  return (
-    <nav className='navBar'>
+    const pathname = usePathname();
 
-        <Link href="/">
-            <span className='navButton' id='navHome'>
-                Hem
-            </span>
-        </Link>
+    return (
+        <nav className='navBar'>
 
-        <Link href="/pages/planning">
-            <span className='navButton' id='navPlanning'>
-                Planering
-            </span>
-        </Link>
+            <Link className={(pathname == "/" ? "active" : "")} href="/">
+                <span className='navButton' id='navHome'>
+                    Hem
+                </span>
+            </Link>
 
-        <Link href="/pages/history">
-            <span className='navButton' id='navHistory'>
-                Historik
-            </span>
-        </Link>
+            <Link className={(pathname == "/pages/planning" ? "active" : "")} href="/pages/planning">
+                <span className='navButton' id='navPlanning'>
+                    Planering
+                </span>
+            </Link>
 
-        <Link href="/pages/profile">
-            <span className='navButton' id='navProfile'>
-                Profil
-            </span>
-        </Link>
-        
-    </nav>
-  );
+            <Link className={(pathname == "/pages/history" ? "active" : "")} href="/pages/history">
+                <span className='navButton' id='navHistory'>
+                    Historik
+                </span>
+            </Link>
+
+            <Link className={(pathname == "/pages/profile" ? "active" : "")} href="/pages/profile">
+                <span className='navButton' id='navProfile'>
+                    Profil
+                </span>
+            </Link>
+
+        </nav>
+    );
 };
