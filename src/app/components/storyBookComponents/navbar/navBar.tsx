@@ -18,26 +18,26 @@ export const Button = ({
     return (
         <nav className='navBar'>
 
-            <Link className={(pathname === "/" ? "active" : "")} href="/">
-                <span className='navButton' id='navHome'>
+            <Link href="/">
+                <span className={(pathname === "/" ? "active" : "navButton")} id='navHome'>
                     Hem
                 </span>
             </Link>
 
-            <Link className={(pathname === "/pages/planning" ? "active" : "")} href="/pages/planning">
-                <span className='navButton' id='navPlanning'>
+            <Link href="/pages/planning">
+                <span className={(pathname === "/pages/planning" ? "active" : "navButton")} id='navPlanning'>
                     Planering
                 </span>
             </Link>
 
-            <Link className={(pathname === "/pages/history" ? "active" : "")} href="/pages/history">
-                <span className='navButton' id='navHistory'>
+            <Link href="/pages/history">
+                <span className={(pathname === "/pages/history" ? "active" : "navButton")} id='navHistory'>
                     Historik
                 </span>
             </Link>
 
-            <Link className={(pathname === "/pages/profile" ? "active" : "")} href="/pages/profile">
-                <span className='navButton' id='navProfile'>
+            <Link href="/pages/profile">
+                <span className={(pathname === "/pages/profile" ? "active" : "navButton")} id='navProfile'>
                     Profil
                 </span>
             </Link>
