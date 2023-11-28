@@ -24,6 +24,6 @@
     cursor: pointer;
 }
 
-#navHome {
-    color: var(--color-primary);
+.active {
+    background-color: blue;
 }
