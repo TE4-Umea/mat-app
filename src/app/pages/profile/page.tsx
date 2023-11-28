@@ -1,52 +1,11 @@
-import styles from '../saved-meals/page.module.css'
-import { getServerSession } from 'next-auth'
+import { Card as Profile } from '../../components/storyBookComponents/cards/Profile/Profile'
 
-export default async function Profile() {
 
-    const session = await getServerSession();
+export default function ProfilePage() {
 
     return (
         <main>
-            <div>
-                {session?.user?.image ? (
-                    <div><img src={session?.user?.image} alt="" /></div>
-                ) : (
-                    <div>Not logged in</div>
-                )}
-            </div>
-            <div>
-                {session?.user?.name ? (
-
-                    <div>{session?.user?.name}</div>
-                ) : (
-                    <div>Not logged in</div>
-                )}
-            </div>
-            <div>
-                {session?.user?.email ? (
-
-                    <div>{session?.user?.email}</div>
-                ) : (
-                    <div>Not logged in</div>
-                )}
-            </div>
-            <div>
-                <div>
-                    Statistik
-                </div>
-                <div>
-                    Inställningar
-                </div>
-                <div>
-                    Sparade
-                </div>
-                <div>
-                    Favoriter
-                </div>
-            </div>
-            <button>
-                Log out
-            </button>
+            <Profile></Profile>
         </main>
     )
 }

@@ -3,11 +3,10 @@ import styles from './page.module.css'
 import { Button as NavBar } from './components/storyBookComponents/navbar/navBar';
 import Link from 'next/link'
 import Fetch from './lib/fetch'
-import Time from './components/timeDepender/timeDepender'
 import LunchText from './components/timeDepender/timeDependerLunch'
 import MiddagText from './components/timeDepender/timeDependerMiddag'
 import { getServerSession } from 'next-auth'
-
+import GreetingCardTime from './components/timeDepender/greetingCardTime'
 
 
 export default async function Home() {
@@ -17,8 +16,7 @@ export default async function Home() {
   return (
     <main>
       <h1 className={styles.startText}>
-        <Time></Time>
-        <div className={styles.namecolor}>{session?.user?.name}</div> Idag ska du äta
+        <GreetingCardTime></GreetingCardTime>
       </h1>
 
       <div className={styles.scroll}>

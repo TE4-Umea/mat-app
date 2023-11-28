@@ -1,0 +1,22 @@
+.greetingCard h1 {
+    font-family: var(--font-title);
+    font-weight: 500;
+}
+
+.light h1 {
+    color: var(--color-fg);
+}
+
+.dark h1 {
+    color: var(--color-bg);
+}
+
+.light span {
+    font-weight: 300;
+    color: var(--color-bg)
+}
+
+.dark span {
+    font-weight: 300;
+    color: var(--color-secondary);
+}
