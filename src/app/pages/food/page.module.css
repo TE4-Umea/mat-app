@@ -23,7 +23,7 @@
     margin-bottom: 0;
 }
 
-.spara{
+.save{
     color: var(--color-fg);
     font-family: var(--font-body);
     font-weight: 00;
@@ -86,7 +86,7 @@
     
 }
 
-.måltid{
+.mealtid{
     color: var(--color-fg);
     font-family: var(--font-title);
     font-weight: 700;
