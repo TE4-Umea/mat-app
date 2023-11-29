@@ -3,8 +3,8 @@ import { Inter } from 'next/font/google'
 
 import { useTranslation } from 'next-i18next';
 import { Button as NavBar } from '../components/storyBookComponents/navbar/navBar';
-import { Button as Background} from '../components/storyBookComponents/background/background'
 
+import BackgroundTime from '../components/timeDepender/backgroundTimeSmall';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,12 +16,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Background></Background>
-        {children}
-        <NavBar />
-      </body>
-    </html>
+    <div className={inter.className}>
+      <BackgroundTime></BackgroundTime>
+      {children}
+      <NavBar />
+    </div>
   )
 }

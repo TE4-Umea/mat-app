@@ -46,7 +46,7 @@ export const Card = async ({
         }
       `}</style> */}
       <div className='bak' id='flex'>
-        <div className='circle'><img src={session?.user?.image} alt="" /></div>
+        <div className='circle'><img src={session?.user?.image} alt="" className='img'/></div>
         <div className='textt'><p className='name'>{session?.user?.name}<br /><span className='mail'>{session?.user?.email}</span></p></div>
 
       </div>
