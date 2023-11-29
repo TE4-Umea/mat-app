@@ -1,0 +1,26 @@
+.dropDown {
+    width: 20vw;
+    padding: var(--space-3xs);
+    border-radius: 100px;
+    border-style: none;
+    color: var(--font-fg);
+    background-color: var(--font-bg);
+    box-shadow: var(--shadow2);
+
+    text-align: center;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: var(--step--1);
+
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+
+    background: url("./expand_arrow.svg") no-repeat;
+    background-position: 2% 60%;
+    transition: cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+/* .dropDown:hover {
+    transform: rotate(90deg);
+} */
