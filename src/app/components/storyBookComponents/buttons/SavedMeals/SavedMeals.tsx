@@ -1,12 +1,13 @@
 import React from 'react';
 import './SavedMeals.css';
 import '/src/app/globals.css';
+import Link from 'next/link';
 
 interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
    */
-  
+
   /**
    * What background color to use
    */
@@ -14,7 +15,7 @@ interface ButtonProps {
   /**
    * How large should the button be?
    */
-  
+
   /**
    * Button contents
    */
@@ -32,17 +33,15 @@ export const Button = ({
   ...props
 }: ButtonProps) => {
   return (
-    <button
-      type="button"
-      className={['savedMeals'].join(' ')}
-      {...props}
-    >
-      {label}
-      <style jsx>{`
-        button {
-          background-color: ${backgroundColor};
-        }
-      `}</style>
-    </button>
+    <Link
+      href="/pages/saved-meals" >
+      <button
+        type="button"
+        className={['savedMeals'].join(' ')}
+        {...props}
+      >
+        Sparade rätter
+      </button>
+    </Link>
   );
 };
