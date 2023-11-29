@@ -19,15 +19,13 @@ export default function Planning() {
                 </div>
                 <div>
                     <p>lunch</p>
-                    <DropDown></DropDown>
-                    <button>Generera en måltid</button>
+                    <DropDown />
                 </div>
                 <div>
                     <p>middag</p>
-                    <DropDown></DropDown>
-                    <button>Generera en måltid</button>
+                    <DropDown />
                 </div>
             </div>
         </main>
-    )
+    );
 }
