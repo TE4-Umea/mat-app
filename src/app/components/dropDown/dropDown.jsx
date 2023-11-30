@@ -5,8 +5,8 @@ import styles from './dropDown.module.css';
 import Fetch from '../../lib/fetch';
 import { useMealContext } from './MealContext';
 
-export default function DropDown() {
-  const { selectedMeal, setSelectedMeal } = useMealContext();
+export default function DropDown({ mealType }) {
+  const { setSelectedLunch, setSelectedDinner } = useMealContext();
   const [meals, setMeals] = useState([]);
   const [localSelectedMeal, setLocalSelectedMeal] = useState(null);
 
@@ -34,9 +34,13 @@ export default function DropDown() {
 
   useEffect(() => {
     if (localSelectedMeal !== null) {
-      setSelectedMeal(localSelectedMeal);
+      if (mealType === 'Lunch') {
+        setSelectedLunch(localSelectedMeal);
+      } else if (mealType === 'Dinner') {
+        setSelectedDinner(localSelectedMeal);
+      }
     }
-  }, [localSelectedMeal, setSelectedMeal]);
+  }, [localSelectedMeal, setSelectedLunch, setSelectedDinner, mealType]);
 
   return (
     <div>
@@ -58,7 +62,7 @@ export default function DropDown() {
 
       {localSelectedMeal && (
         <div>
-          <p>Vald måltid: {localSelectedMeal}</p>
+          <p>{mealType}: {localSelectedMeal}</p>
           <Button variant="contained" onClick={handleGenerateRandomMeal}>
             Generera slumpad måltid
           </Button>
