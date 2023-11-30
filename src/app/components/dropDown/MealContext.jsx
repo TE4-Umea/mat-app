@@ -4,23 +4,29 @@ import React, { createContext, useContext, useEffect, useState } from 'react';
 const MealContext = createContext();
 
 export const MealProvider = ({ children }) => {
-  const [selectedMeal, setSelectedMeal] = useState(() => {
-    // Check if localStorage is available (not in SSR)
+  const [selectedLunch, setSelectedLunch] = useState(() => {
     if (typeof window !== 'undefined') {
-      return localStorage.getItem('selectedMeal') || null;
+      return localStorage.getItem('selectedLunch') || null;
+    }
+    return null;
+  });
+
+  const [selectedDinner, setSelectedDinner] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('selectedDinner') || null;
     }
     return null;
   });
 
   useEffect(() => {
-    // Check if localStorage is available (not in SSR)
     if (typeof window !== 'undefined') {
-      localStorage.setItem('selectedMeal', selectedMeal || '');
+      localStorage.setItem('selectedLunch', selectedLunch || '');
+      localStorage.setItem('selectedDinner', selectedDinner || '');
     }
-  }, [selectedMeal]);
+  }, [selectedLunch, selectedDinner]);
 
   return (
-    <MealContext.Provider value={{ selectedMeal, setSelectedMeal }}>
+    <MealContext.Provider value={{ selectedLunch, setSelectedLunch, selectedDinner, setSelectedDinner }}>
       {children}
     </MealContext.Provider>
   );
