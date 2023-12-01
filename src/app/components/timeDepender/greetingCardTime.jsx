@@ -12,7 +12,7 @@ export default async function GreetingCardTime() {
 
     if (today.getHours() >= 16) {
         return (
-            <GreetingCard light={false}></GreetingCard>
+            <GreetingCard dark={true}></GreetingCard>
         );
     };
 }
