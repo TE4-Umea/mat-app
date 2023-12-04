@@ -22,7 +22,6 @@
 }
 
 .scroll {
-  background-color: #333;
   overflow: auto;
   white-space: nowrap;
   padding: 10px;
@@ -31,12 +30,14 @@
 
 .scroll img {
   padding: 10px;
-  scroll-snap-align: start;
+
 }
 
 .buttonContainer {
+  margin-inline: 5px;
   display: inline-block;
   position: relative;
+  scroll-snap-align: start;
 }
 
 .primaryButtonTime {
@@ -60,6 +61,7 @@
   border-radius: 1.5em;
   text-transform: uppercase;
   padding: 1em 1, 5em;
+
 }
 
 .namecolor {

@@ -1,8 +1,8 @@
+
 import React from 'react';
 import './Profile.css';
 import '/src/app/globals.css';
 import { getServerSession } from 'next-auth'
-
 
 interface ButtonProps {
   /**
@@ -46,12 +46,10 @@ export const Card = async ({
         }
       `}</style> */}
       <div className='bak' id='flex'>
-        <div className='circle'><img src={session?.user?.image} alt="" className='img'/></div>
+        <div className='circle'><img src={session?.user?.image} alt="" className='img' /></div>
         <div className='textt'><p className='name'>{session?.user?.name}<br /><span className='mail'>{session?.user?.email}</span></p></div>
 
       </div>
     </div>
-
-
   );
 };
