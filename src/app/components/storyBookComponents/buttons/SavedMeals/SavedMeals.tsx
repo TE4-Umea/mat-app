@@ -2,6 +2,8 @@ import React from 'react';
 import './SavedMeals.css';
 import '/src/app/globals.css';
 import Link from 'next/link';
+import img from '../../../../../../public/bookmark_filled.svg'
+import Image from 'next/image';
 
 interface ButtonProps {
   /**
@@ -40,6 +42,12 @@ export const Button = ({
         className={['savedMeals'].join(' ')}
         {...props}
       >
+        <Image className='img'
+          src={img}
+          width={50}
+          height={50}
+          alt="Bookmark"
+        />
         Sparade rätter
       </button>
     </Link>
