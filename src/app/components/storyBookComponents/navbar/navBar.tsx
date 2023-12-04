@@ -17,7 +17,6 @@ export const Button = ({
 
     return (
         <nav className='navBar'>
-
             <Link href="/">
                 <span className={(pathname === "/" ? "active" : "navButton")} id='navHome'>
                     Hem
@@ -41,7 +40,6 @@ export const Button = ({
                     Profil
                 </span>
             </Link>
-
         </nav>
     );
 };
