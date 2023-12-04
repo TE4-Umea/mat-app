@@ -48,3 +48,7 @@
     --font-title: 'Lexend Deca', sans-serif;
     --font-body: 'Karla', sans-serif;
 }
+
+body {
+    margin: 0;
+}
