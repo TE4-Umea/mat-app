@@ -4,10 +4,10 @@ import { Button as NavBar } from './components/storyBookComponents/navbar/navBar
 import Link from 'next/link'
 import Fetch from './lib/fetch'
 import LunchMiddagText from './components/timeDepender/timeDependerLunchMiddag'
-import { getServerSession } from 'next-auth'
 import GreetingCardTime from './components/timeDepender/greetingCardTime'
 import BackgroundTime from './components/timeDepender/backgroundTime';
 import { Button as ButtonSaved } from './components/storyBookComponents/buttons/SavedMeals/SavedMeals';
+import { Card as MealCard } from './components/storyBookComponents/cards/mealCard/mealCard'
 
 export default async function Home() {
   const fetch = await Fetch();
@@ -24,15 +24,12 @@ export default async function Home() {
         <div className={styles.buttonContainer}>
           <LunchMiddagText></LunchMiddagText>
         </div>
-
         <div className={styles.buttonContainer}>
           <LunchMiddagText></LunchMiddagText>
         </div>
-
         <div className={styles.buttonContainer}>
           <LunchMiddagText></LunchMiddagText>
         </div>
-
         <div className={styles.buttonContainer}>
           <LunchMiddagText></LunchMiddagText>
         </div>
@@ -48,10 +45,18 @@ export default async function Home() {
         Lorem ipsum dolor sit amet, consectetur
 
         <div className={styles.scroll}>
-          <img src={fetch.meals[7].strMealThumb} alt="food" width="300" height="200"></img>
-          <img src={fetch.meals[6].strMealThumb} alt="food" width="300" height="200"></img>
-          <img src={fetch.meals[5].strMealThumb} alt="food" width="300" height="200"></img>
-          <img src={fetch.meals[4].strMealThumb} alt="food" width="300" height="200"></img>
+          <div className={styles.buttonContainer}>
+            <MealCard></MealCard>
+          </div>
+          <div className={styles.buttonContainer}>
+            <MealCard></MealCard>
+          </div>
+          <div className={styles.buttonContainer}>
+            <MealCard></MealCard>
+          </div>
+          <div className={styles.buttonContainer}>
+            <MealCard></MealCard>
+          </div>
         </div>
       </div>
 
