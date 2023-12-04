@@ -1,11 +1,10 @@
-import { Card as Profile } from '../../components/storyBookComponents/cards/Profile/Profile'
-
+import ProfilePageFix from '../../../profileFix/profileFix'
 
 export default function ProfilePage() {
-
     return (
         <main>
-            <Profile></Profile>
+            <ProfilePageFix></ProfilePageFix>
         </main>
     )
 }
+
