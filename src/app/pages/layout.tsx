@@ -6,17 +6,13 @@ import { Button as NavBar } from '../components/storyBookComponents/navbar/navBa
 
 import BackgroundTime from '../components/timeDepender/backgroundTimeSmall';
 
-const inter = Inter({ subsets: ['latin'] })
-
-
-
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <div className={inter.className}>
+    <div>
       <BackgroundTime></BackgroundTime>
       {children}
       <NavBar />
