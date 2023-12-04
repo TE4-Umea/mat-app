@@ -12,7 +12,7 @@ export default function timeDependerLunchMiddag() {
         );
     } else if (today.getHours() >= 16) {
         return (
-            <PlanCarousel lunch={false} />
+            <PlanCarousel />
         );
     } else {
         return null;

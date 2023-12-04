@@ -22,7 +22,6 @@
 }
 
 .scroll {
-  background-color: #333;
   overflow: auto;
   white-space: nowrap;
   padding: 10px;
@@ -35,6 +34,7 @@
 }
 
 .buttonContainer {
+  margin-inline: 5px;
   display: inline-block;
   position: relative;
   scroll-snap-align: start;
