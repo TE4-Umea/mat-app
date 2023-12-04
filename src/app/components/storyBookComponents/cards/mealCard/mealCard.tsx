@@ -1,6 +1,7 @@
 import React from 'react';
 import './mealCard.css';
 import '/src/app/globals.css';
+import Fetch from '../../../../lib/fetch'
 
 interface ButtonProps {
     /**
@@ -15,20 +16,22 @@ interface ButtonProps {
     tags: string[];
 }
 
-export const Card = ({
+export const Card = async ({
     backgroundColor,
     label,
     tags,
     ...props
 }: ButtonProps) => {
+    const fetch = await Fetch();
+
     return (
         <div className={['mealCard'].join(' ')}
             {...props}>
-            <img src='src/stories/assets/assets.png'></img>
+            <img src={fetch.meals[7].strMealThumb}></img>
             <div>
                 <p>{label}</p>
                 <ul>
-                    {tags.map((tags) => <li key={tags}>{tags}</li>)}
+                    mat i skål
                 </ul>
             </div>
         </div>
