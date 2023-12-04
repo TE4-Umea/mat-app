@@ -1,20 +1,18 @@
 import React from "react";
 import styles from '../../page.module.css'
+import { Card as PlanCarousel } from '../storyBookComponents/cards/planCarouselCard/planCarouselCard'
 
-export default function timeDependerMiddag() {
+export default function timeDependerLunchMiddag() {
     var today = new Date();
 
     if (today.getHours() <= 15) {
         return (
-            <div className={styles.primaryButtonTime}>
-                <a href="">Lunch</a>
-            </div>
+            <PlanCarousel />
+
         );
     } else if (today.getHours() >= 16) {
         return (
-            <div className={styles.primaryButtonTime}>
-                <a href="">Middag</a>
-            </div>
+            <PlanCarousel lunch={false} />
         );
     } else {
         return null;

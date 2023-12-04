@@ -31,7 +31,7 @@ export const Card = ({
         <div className={['planCarouselCard'].join(' ')}
             {...props}>
             <div>
-                <p>{label}</p>
+                <p>Kladdig pizza med bearnaise sås</p>
                 <div className={['buttonContainer', mode].join(' ')}>
                     <button>Lunch</button>
                     <button>Middag</button>
