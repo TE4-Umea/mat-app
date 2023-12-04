@@ -7,7 +7,7 @@ import LunchMiddagText from './components/timeDepender/timeDependerLunchMiddag'
 import { getServerSession } from 'next-auth'
 import GreetingCardTime from './components/timeDepender/greetingCardTime'
 import BackgroundTime from './components/timeDepender/backgroundTime';
-
+import { Button as ButtonSaved } from './components/storyBookComponents/buttons/SavedMeals/SavedMeals';
 
 export default async function Home() {
   const fetch = await Fetch();
@@ -39,18 +39,9 @@ export default async function Home() {
       </div>
 
       <div className={styles.buttonsSaved}>
-        <Link
-          href="/pages/saved-meals"
-        //   className=
-        >
-          <span className="">Sparade rätter</span>{' '}
-        </Link>
-        <Link
-          href="/pages/favorite-meals"
-        //   className=
-        >
-          <span className="">Favoritiserade rätter</span>{' '}
-        </Link>
+
+        <ButtonSaved></ButtonSaved>
+
       </div>
       <div>
         Utvalda måltider

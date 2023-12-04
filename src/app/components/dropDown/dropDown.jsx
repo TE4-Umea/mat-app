@@ -52,7 +52,7 @@ export default function DropDown({ mealType }) {
     <div>
       <Dropdown>
         <DropdownTrigger>
-          <Button variant="bordered">+ Lägg till måltid</Button>
+          <Button variant="bordered" aria-label="Add meal">+ Lägg till måltid</Button>
         </DropdownTrigger>
         <DropdownMenu className={styles.dropDownMenu}>
           {meals.map((meal, index) => (
