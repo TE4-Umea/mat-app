@@ -1,5 +1,5 @@
 import styles from './page.module.css'
-import ProfilePageFix from '../../profileFix/profileFixSetup'
+import SignUp from '../../profileFix/profileFixSetup'
 import { getServerSession } from "next-auth";
 import { redirect } from 'next/navigation'
 
@@ -11,7 +11,7 @@ export default async function Setup() {
             <>
                 <h1 className={styles.h1}>Welcome to <span className={styles.span}>Storken</span>! We&apos;ll begin with configuring your profile.</h1>
 
-                <ProfilePageFix></ProfilePageFix>
+                <SignUp></SignUp>
 
                 <h2 className={styles.h2}>Your preferred language</h2>
                 <button></button> {/* Change to dropdown menu when initialized */}
