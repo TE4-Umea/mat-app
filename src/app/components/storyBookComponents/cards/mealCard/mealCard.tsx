@@ -27,11 +27,13 @@ export const Card = async ({
     return (
         <div className={['mealCard'].join(' ')}
             {...props}>
-            <img src={fetch.meals[7].strMealThumb}></img>
+            <img className='imgMIS' src={fetch.meals[7].strMealThumb}></img>
             <div>
-                <p>{label}</p>
+                <p>Mat i skål</p>
                 <ul>
-                    mat i skål
+                    <li>Mat</li>
+                    <li>I</li>
+                    <li>Skål</li>
                 </ul>
             </div>
         </div>
