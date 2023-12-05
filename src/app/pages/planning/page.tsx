@@ -8,17 +8,22 @@ export default function Planning() {
   return (
     <MealProvider>
       <main>
-        <h1>Veckans mat</h1>
-        <h2>Planera eller generera veckans måltider</h2>
-        <div>
+
+        <div className={styles.prison}>
+
+          <h1 className={styles.title}>Veckans mat</h1>
+
+          <p className={styles.undertext}>Planera eller generera veckans måltider</p>
+
+
+
           <div>
-            <div>
-              dag
-            </div>
-            <div>
-              datum
-            </div>
+            dag
           </div>
+          <div>
+            datum
+          </div>
+
           <div>
             <p>lunch</p>
             <DropDown mealType="Lunch" />
@@ -27,6 +32,7 @@ export default function Planning() {
             <p>middag</p>
             <DropDown mealType="Dinner" />
           </div>
+
         </div>
       </main>
     </MealProvider>
