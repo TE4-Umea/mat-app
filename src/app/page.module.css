@@ -35,10 +35,10 @@
 }
 
 .buttonContainer {
-  margin-inline: var(--space-2xs);
   display: inline-block;
   position: relative;
   scroll-snap-align: start;
+  padding-left: var(--space-s);
 }
 
 .primaryButtonTime {
@@ -55,8 +55,6 @@
   left: 10em;
   background-color: blue;
 }
-
-
 
 .buttonContainer a {
   border-radius: 1.5em;
