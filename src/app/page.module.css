@@ -30,7 +30,7 @@
 
 .scroll img {
   padding: 10px;
-
+  scroll-snap-align: start;
 }
 
 .buttonContainer {
@@ -64,6 +64,6 @@
 
 }
 
-.namecolor {
-  color: white;
+.matISkal {
+  margin-bottom: 6rem;
 }
