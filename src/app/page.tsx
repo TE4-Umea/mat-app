@@ -44,13 +44,7 @@ export default async function Home() {
           Utvalda måltider
           Lorem ipsum dolor sit amet, consectetur
 
-
           <div className={styles.scroll}>
-            {/* <div className={styles.images}>
-              <input type="radio" name="slide" id="img1" checked />
-              <input type="radio" name="slide" id="img2" />
-              <input type="radio" name="slide" id="img3" />
-              <input type="radio" name="slide" id="img4" /> */}
             <div className={styles.buttonContainer}>
               <MealCard></MealCard>
             </div>
@@ -70,13 +64,6 @@ export default async function Home() {
               <MealCard></MealCard>
             </div>
           </div>
-          {/* <div className={styles.dots}>
-              <label htmlFor="img1"></label>
-              <label htmlFor="img2"></label>
-              <label htmlFor="img3"></label>
-              <label htmlFor="img4"></label>
-            </div>
-          </div> */}
         </div>
 
         <NavBar />
