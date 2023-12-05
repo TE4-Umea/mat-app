@@ -19,7 +19,7 @@
     height: 90px;
 }
 
-.navBar p { 
+.navBar p {
     margin: 0;
     font-size: 13px;
 }
@@ -30,6 +30,7 @@
     color: #B6B6B6;
     font-family: var(--font-title);
     font-weight: 500;
+    align-items: center;
 }
 
 .navButton:hover {
@@ -42,6 +43,7 @@
     color: var(--color-primary);
     font-weight: 600;
     font-family: var(--font-title);
+    align-items: center;
 }
 
 .navBar a {
@@ -62,6 +64,6 @@
 .navButton svg {
     margin-bottom: -4px;
     fill: #B6B6B6;
+    align-items: center;
+
 }
-
-
