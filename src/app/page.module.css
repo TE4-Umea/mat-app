@@ -10,9 +10,9 @@
   font-size: var(--step-1);
   text-align: left;
   font-family: var(--font-title);
-  margin: 1rem;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin: var(--space-s);
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-l);
 }
 
 .buttonsSaved {
@@ -22,6 +22,7 @@
 }
 
 .scroll {
+  padding-left: var(--space-s);
   overflow: auto;
   white-space: nowrap;
   padding: 10px;
@@ -34,7 +35,7 @@
 }
 
 .buttonContainer {
-  margin-inline: 5px;
+  margin-inline: var(--space-2xs);
   display: inline-block;
   position: relative;
   scroll-snap-align: start;
@@ -64,8 +65,28 @@
 
 }
 
-.matISkal {
-  margin-bottom: 6rem;
+.chosenMeals {
+  background-color: #EFEFEF;
+  margin-top: var(--space-xl);
+  padding-bottom: var(--space-3xl);
+}
+
+.chosenMeals h1 {
+  color: var(--color-fg);
+  font-family: var(--font-title);
+  font-size: var(--step-1);
+  font-weight: 500;
+  padding: var(--space-s) 0 0 var(--space-s);
+  margin-bottom: 0;
+}
+
+.chosenMeals span {
+  color: var(--color-gray);
+  font-family: var(--font-body);
+  font-size: var(--step--1);
+  font-weight: 400;
+  padding: var(--space-s) 0 0 var(--space-s);
+  margin-top: 0;
 }
 
 

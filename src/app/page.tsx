@@ -40,9 +40,9 @@ export default async function Home() {
           <ButtonSaved></ButtonSaved>
 
         </div>
-        <div className={styles.matISkal}>
-          Utvalda måltider
-          Lorem ipsum dolor sit amet, consectetur
+        <div className={styles.chosenMeals}>
+          <h1>Utvalda måltider</h1>
+          <span>Maträtter skapade av våra kockar, för dig</span>
 
 
           <div className={styles.scroll}>
