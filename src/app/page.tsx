@@ -64,6 +64,6 @@ export default async function Home() {
       </main>
     );
   } else if (!session) {
-    redirect('/pages/profile')
+    redirect('/setup')
   }
 }
