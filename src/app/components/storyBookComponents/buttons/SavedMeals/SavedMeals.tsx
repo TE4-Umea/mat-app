@@ -42,12 +42,6 @@ export const Button = ({
         className={['savedMeals'].join(' ')}
         {...props}
       >
-        <Image className='img'
-          src={img}
-          width={50}
-          height={50}
-          alt="Bookmark"
-        />
         Sparade rätter
       </button>
     </Link>
