@@ -21,9 +21,11 @@ export default function History() {
 
                 <div>
                     <div className={styles.textTitle2}><h3> Instruktioner</h3></div>
-                    <div className={styles.text2}><p>Skål + mat = boom</p></div>
+                    <div className={styles.text2}><p>Placera met i skålen.</p></div>
                 </div>
-            </div>
+                </div>
+
+                <div className={styles.lik}><p>Liknande rätter</p></div>
             </div>
         </div>
 

@@ -10,20 +10,20 @@ export default function Planning() {
       <main>
 
         <div className={styles.prison}>
-
-          <h1 className={styles.title}>Veckans mat</h1>
-
-          <p className={styles.undertext}>Planera eller generera veckans måltider</p>
-
-
-
+        <h1 className={styles.title}>Veckans mat</h1>
+        <p className={styles.undertext}>Planera eller generera veckans måltider</p>
+        </div>
+        
+        
+        <div>
           <div>
-            dag
+            <div>
+              dag
+            </div>
+            <div>
+              datum
+            </div>
           </div>
-          <div>
-            datum
-          </div>
-
           <div>
             <p>lunch</p>
             <DropDown mealType="Lunch" />
