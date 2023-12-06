@@ -1,9 +1,13 @@
-import ProfilePageFix from '../../../profileFix/profileFix'
+import ProfileClient from '@/app/components/storyBookComponents/cards/Profile/ProfileClient'
+import { getServerSession } from "next-auth";
+import { Card as Profile } from '@/app/components/storyBookComponents/cards/Profile/Profile'
 
-export default function ProfilePage() {
+export default async function ProfilePage() {
+    const session = await getServerSession();
     return (
         <main>
-            <ProfilePageFix></ProfilePageFix>
+            <Profile></Profile>
+            <ProfileClient session={session} />
         </main>
     )
 }
