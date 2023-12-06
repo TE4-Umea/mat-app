@@ -99,3 +99,10 @@
 	margin-left: -19px;
 	margin-top: -38px;
 }
+
+.lik{
+    color: var(--color-fg);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: x-large;
+}
