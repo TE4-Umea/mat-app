@@ -39,11 +39,19 @@ export default function DropDown({ mealType }) {
   };
 
   useEffect(() => {
+      let DeadSelect = false;
+
     if (localSelectedMeal !== null) {
-      if (mealType === 'Lunch') {
-        setSelectedLunch(localSelectedMeal);
-      } else if (mealType === 'Dinner') {
-        setSelectedDinner(localSelectedMeal);
+      if(!DeadSelect) {
+        if (mealType === 'Lunch') {
+          setSelectedLunch(localSelectedMeal);
+        } else if (mealType === 'Dinner') {
+          setSelectedDinner(localSelectedMeal);
+        }
+      }
+
+      return () => {
+        DeadSelect = false;
       }
     }
   }, [localSelectedMeal, setSelectedLunch, setSelectedDinner, mealType]);
@@ -66,12 +74,13 @@ export default function DropDown({ mealType }) {
         </DropdownMenu>
       </Dropdown>
 
+      <Button variant="contained" onClick={handleGenerateRandomMeal}>
+            Generera slumpad måltid
+      </Button>
+
       {localSelectedMeal && (
         <div>
           <p>{mealType}: {localSelectedMeal}</p>
-          <Button variant="contained" onClick={handleGenerateRandomMeal}>
-            Generera slumpad måltid
-          </Button>
         </div>
       )}
     </div>
