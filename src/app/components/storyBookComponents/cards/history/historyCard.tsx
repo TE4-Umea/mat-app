@@ -6,7 +6,7 @@ interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
    */
-  
+
   /**
    * What background color to use
    */
@@ -14,7 +14,7 @@ interface ButtonProps {
   /**
    * How large should the button be?
    */
-  
+
   /**
    * Button contents
    */
@@ -35,21 +35,15 @@ export const Card = ({
       className={['historyCard'].join(' ')}
       {...props}
     >
-      
-      <style jsx>{`
-        button {
-          background-color: ${backgroundColor};
-        }
-      `}</style>
-          <div className='bakk'>
-            <p className='title'>Igår</p>
-            <p className='text'>Lunch</p>
-            <div className='ruta'><p className='textruta'>En Kerstkristina</p></div>
-            <p className='text'>Middag</p>
-            <div className='ruta'><p className='textruta'>En till Kerstkristina</p></div>
-          </div>
+      <div className='bakk'>
+        <p className='title'>Igår</p>
+        <p className='text'>Lunch</p>
+        <div className='ruta'><p className='textruta'>En Kerstkristina</p></div>
+        <p className='text'>Middag</p>
+        <div className='ruta'><p className='textruta'>En till Kerstkristina</p></div>
+      </div>
     </div>
 
-  
+
   );
 };

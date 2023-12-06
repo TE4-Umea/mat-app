@@ -33,7 +33,7 @@ export const Card = async ({
     return (
         <div className={['greetingCard', mode].join(' ')}
             {...props}>
-            <h1><Time></Time><span>{session?.user?.name}</span>! Idag ska du äta!</h1>
+            <h1><Time></Time><span>{session?.user?.name}</span>! Idag ska du äta</h1>
         </div>
     );
 };

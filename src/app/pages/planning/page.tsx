@@ -32,6 +32,7 @@ export default function Planning() {
             <p>middag</p>
             <DropDown mealType="Dinner" />
           </div>
+
         </div>
       </main>
     </MealProvider>

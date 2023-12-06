@@ -1,5 +1,4 @@
-
-.title{
+.title {
     color: var(--color-primary);
     font-family: var(--font-title);
     font-weight: 600;
@@ -26,4 +25,5 @@
     box-sizing: border-box;
     width: 100%;
     
+
 }
