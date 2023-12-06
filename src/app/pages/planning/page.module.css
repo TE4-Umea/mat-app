@@ -1,0 +1,29 @@
+
+.title{
+    color: var(--color-primary);
+    font-family: var(--font-title);
+    font-weight: 600;
+    font-size: var(--step-4);
+    position: absolute;
+}
+
+.undertext{
+    color: var(--color-secondary);
+    font-family: var(--font-body);
+    font-weight: 500;
+    top: var(--space-2xl);
+    position: relative;
+
+    
+}
+
+.prison{
+    background-color: var(--color-bg);
+    border-radius: 20px 20px 0px 0px;
+    padding-bottom: var(--space-3xl);
+    padding-left: var(--space-s);
+    margin-top: var(--space-3xl);
+    box-sizing: border-box;
+    width: 100%;
+    
+}

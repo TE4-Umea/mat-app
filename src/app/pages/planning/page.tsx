@@ -8,8 +8,13 @@ export default function Planning() {
   return (
     <MealProvider>
       <main>
-        <h1>Veckans mat</h1>
-        <h2>Planera eller generera veckans måltider</h2>
+
+        <div className={styles.prison}>
+        <h1 className={styles.title}>Veckans mat</h1>
+        <p className={styles.undertext}>Planera eller generera veckans måltider</p>
+        </div>
+        
+        
         <div>
           <div>
             <div>
