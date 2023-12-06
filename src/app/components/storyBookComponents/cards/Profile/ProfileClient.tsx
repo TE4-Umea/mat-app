@@ -11,21 +11,21 @@ export default function ProfileClient({ session }: {
     if (session) {
         return (
             <>
-                <button>
-                    <Link href="/api/auth/signout">
-                        Sign out
-                    </Link>
-                </button>
+
+                <Link href="/api/auth/signout">
+                    Sign out
+                </Link>
+
             </>
         )
     } else if (!session) {
         return (
             <>
-                <button>
-                    <Link href="/api/auth/signin">
-                        Sign in
-                    </Link>
-                </button>
+
+                <Link href="/api/auth/signin">
+                    Sign in
+                </Link>
+
             </>
         );
     }
