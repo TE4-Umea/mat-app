@@ -1,4 +1,4 @@
-import { Card as Profile } from '../app/components/storyBookComponents/cards/Profile/Profile'
+import { Profile } from '../app/components/storyBookComponents/cards/Profile/Profile'
 import { getSession } from "next-auth/react";
 import ProfileClient from '../app/components/storyBookComponents/cards/Profile/ProfileClient';
 

@@ -12,7 +12,7 @@ interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({
+export const Background = ({
   light = true,
   size = 'large',
   ...props

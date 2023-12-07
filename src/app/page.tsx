@@ -1,10 +1,10 @@
 import styles from './page.module.css'
-import { Button as NavBar } from './components/storyBookComponents/navbar/navBar';
+import { NavBar } from './components/storyBookComponents/navbar/navBar';
 import LunchMiddagText from './components/timeDepender/timeDependerLunchMiddag'
 import GreetingCardTime from './components/timeDepender/greetingCardTime'
 import BackgroundTime from './components/timeDepender/backgroundTime';
-import { Button as ButtonSaved } from './components/storyBookComponents/buttons/SavedMeals/SavedMeals';
-import { Card as MealCard } from './components/storyBookComponents/cards/mealCard/mealCard'
+import { SavedMeals } from './components/storyBookComponents/buttons/SavedMeals/SavedMeals';
+import { MealCard } from './components/storyBookComponents/cards/mealCard/mealCard'
 import { redirect } from 'next/navigation'
 import { getServerSession } from "next-auth";
 
@@ -37,7 +37,7 @@ export default async function Home() {
 
         <div className={styles.buttonsSaved}>
 
-          <ButtonSaved></ButtonSaved>
+          <SavedMeals></SavedMeals>
 
         </div>
         <div className={styles.chosenMeals}>
@@ -46,22 +46,22 @@ export default async function Home() {
 
           <div className={styles.scroll}>
             <div className={styles.buttonContainer}>
-              <MealCard></MealCard>
+              <MealCard tags={['Mat', 'I', 'Skål']}></MealCard>
             </div>
             <div className={styles.buttonContainer}>
-              <MealCard></MealCard>
+              <MealCard tags={['Skål', 'I', 'Mat']}></MealCard>
             </div>
             <div className={styles.buttonContainer}>
-              <MealCard></MealCard>
+              <MealCard tags={['I', 'Skål', 'Mat']}></MealCard>
             </div>
             <div className={styles.buttonContainer}>
-              <MealCard></MealCard>
+              <MealCard tags={['I', 'Mat', 'Skål']}></MealCard>
             </div>
             <div className={styles.buttonContainer}>
-              <MealCard></MealCard>
+              <MealCard tags={['Skål', 'Mat', 'I']}></MealCard>
             </div>
             <div className={styles.buttonContainer}>
-              <MealCard></MealCard>
+              <MealCard tags={['Mat', 'Skål', 'I']}></MealCard>
             </div>
           </div>
         </div>

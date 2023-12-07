@@ -5,14 +5,10 @@ import '/src/app/globals.css';
 import Link from 'next/link';
 import { usePathname } from "next/navigation";
 
-interface ButtonProps {
-}
-
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({
-}: ButtonProps) => {
+export function NavBar() {
     const pathname = usePathname();
 
     return (

@@ -1,5 +1,5 @@
 import React from "react";
-import { Button as Background } from '../storyBookComponents/background/background';
+import { Background } from '../storyBookComponents/background/background';
 
 
 export default async function BackgroundTime() {
