@@ -69,7 +69,7 @@ export default function DropDown({ mealType }) {
             {localSelectedMeal ? localSelectedMeal : '+ Lägg till måltid'}
           </Button>
         </DropdownTrigger>
-        <DropdownMenu className={styles.dropDownMenu}>
+        <DropdownMenu className={styles.dropDownMenu} aria-label={`Add ${mealType} Meal`}>
           {meals.map((meal, index) => (
             <DropdownItem key={index} onClick={() => handleMealSelect(meal)}>
               {meal}
@@ -82,13 +82,13 @@ export default function DropDown({ mealType }) {
       </Dropdown>
 
       {!localSelectedMeal && (
-        <Button variant="contained" onClick={handleGenerateRandomMeal}>
+        <Button variant="contained" onClick={handleGenerateRandomMeal} aria-label={`Add ${mealType} Meal`}>
           Generera slumpad måltid
         </Button>
       )}
 
       {localSelectedMeal && (
-        <Button variant="contained" onClick={handleRemoveMeal}>
+        <Button variant="contained" onClick={handleRemoveMeal} aria-label={`Add ${mealType} Meal`}>
           Remove
         </Button>
       )}
