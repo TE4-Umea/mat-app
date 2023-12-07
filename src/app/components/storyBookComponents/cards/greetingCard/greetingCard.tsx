@@ -1,7 +1,7 @@
 import React from 'react';
 import './greetingCard.css';
 import '/src/app/globals.css';
-import Time from '../../../../components/timeDepender/timeDepender'
+import Time from '../../../../components/backendComponents/timeDepender/timeDepender'
 import { getServerSession } from 'next-auth'
 
 
