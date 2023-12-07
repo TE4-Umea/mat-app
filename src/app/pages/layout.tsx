@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google'
 import { useTranslation } from 'next-i18next';
 import { NavBar } from '../components/storyBookComponents/navbar/navBar';
 
-import BackgroundTime from '../components/timeDepender/backgroundTimeSmall';
+import BackgroundTime from '../components/backendComponents/timeDepender/backgroundTimeSmall';
 
 export default function RootLayout({
   children,
@@ -12,10 +12,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <div>
+    <>
       <BackgroundTime></BackgroundTime>
       {children}
       <NavBar />
-    </div>
+    </>
   )
 }

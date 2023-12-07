@@ -1,29 +1,31 @@
 'use client'
-import { signIn, signOut, useSession } from "next-auth/react";
-import { SessionProvider } from "next-auth/react";
+import { signIn, signOut } from "next-auth/react";
+import { Session } from "next-auth";
+import Link from "next/link";
 
-export default function ProfileClient() {
+export default function ProfileClient({ session }: {
+    session: Session | null
+}) {
 
-    return (
-        <SessionProvider>
-            <ProfileClientContent />
-        </SessionProvider>
-    );
-}
-
-function ProfileClientContent() {
-    const { data: session } = useSession();
 
     if (session) {
         return (
-            <main>
-                <button onClick={() => signOut()}>Sign out</button>
-            </main>
+            <>
+
+                <Link href="/api/auth/signout">
+                    Sign out
+                </Link>
+
+            </>
         )
     } else if (!session) {
         return (
             <>
-                <button onClick={() => signIn()}>Sign in</button>
+
+                <Link href="/api/auth/signin">
+                    Sign in
+                </Link>
+
             </>
         );
     }

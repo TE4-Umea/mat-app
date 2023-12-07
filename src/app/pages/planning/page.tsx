@@ -1,34 +1,37 @@
 'use client';
 import React from 'react';
-import { MealProvider } from '../../components/dropDown/MealContext';
+import { MealProvider } from '../../components/backendComponents/dropDown/MealContext';
 import styles from '../planning/page.module.css';
-import DropDown from '../../components/dropDown/dropDown';
+import DropDown from '../../components/backendComponents/dropDown/dropDown';
 
 export default function Planning() {
+  const date = new Date();
+  const today = date.getMonth() + 1;
+  const todayaswell = date.getDate();
+  const currentDay = date.toLocaleString('default', { weekday: 'long' });
+
   return (
     <MealProvider>
-      <main>
-        <h1>Veckans mat</h1>
-        <h2>Planera eller generera veckans måltider</h2>
-        <div>
-          <div>
-            <div>
-              dag
-            </div>
-            <div>
-              datum
-            </div>
-          </div>
-          <div>
-            <p>lunch</p>
-            <DropDown mealType="Lunch" />
-          </div>
-          <div>
-            <p>middag</p>
-            <DropDown mealType="Dinner" />
-          </div>
+      <>
+        <div className={styles.prison}>
+          <h1 className={styles.title}>Veckans mat</h1>
+          <p className={styles.undertext}>Planera eller generera veckans måltider</p>
         </div>
-      </main>
+        <div>
+          {currentDay}
+        </div>
+        <div>
+          {todayaswell} / {today}
+        </div>
+        <div>
+          <p>lunch</p>
+          <DropDown mealType="Lunch" />
+        </div>
+        <div>
+          <p>middag</p>
+          <DropDown mealType="Dinner" />
+        </div>
+      </>
     </MealProvider>
   );
 }

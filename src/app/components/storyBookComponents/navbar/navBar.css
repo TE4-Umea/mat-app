@@ -44,6 +44,7 @@
     font-weight: 600;
     font-family: var(--font-title);
     align-items: center;
+
 }
 
 .navBar a {
@@ -60,6 +61,5 @@
 .navButton svg {
     margin-bottom: -4px;
     fill: #B6B6B6;
-    align-items: center;
 
 }
