@@ -3,7 +3,6 @@ import GreetingCardTime from './components/backendComponents/timeDepender/greeti
 import BackgroundTime from './components/backendComponents/timeDepender/backgroundTime';
 import { NavBar } from './components/storyBookComponents/navbar/navBar';
 import { SavedMeals } from './components/storyBookComponents/buttons/SavedMeals/SavedMeals';
-import { MealCard } from './components/storyBookComponents/cards/mealCard/mealCard'
 import { redirect } from 'next/navigation'
 import { getServerSession } from "next-auth";
 import Carousel from './components/backendComponents/carousel/carousel'
@@ -35,26 +34,7 @@ export default async function Home() {
 
           <CarouselMIS></CarouselMIS>
 
-          <div className={styles.scroll}>
-            <div className={styles.buttonContainer}>
-              <MealCard tags={['Mat', 'I', 'Skål']}></MealCard>
-            </div>
-            <div className={styles.buttonContainer}>
-              <MealCard tags={['Skål', 'I', 'Mat']}></MealCard>
-            </div>
-            <div className={styles.buttonContainer}>
-              <MealCard tags={['I', 'Skål', 'Mat']}></MealCard>
-            </div>
-            <div className={styles.buttonContainer}>
-              <MealCard tags={['I', 'Mat', 'Skål']}></MealCard>
-            </div>
-            <div className={styles.buttonContainer}>
-              <MealCard tags={['Skål', 'Mat', 'I']}></MealCard>
-            </div>
-            <div className={styles.buttonContainer}>
-              <MealCard tags={['Mat', 'Skål', 'I']}></MealCard>
-            </div>
-          </div>
+
         </div>
 
         <NavBar />

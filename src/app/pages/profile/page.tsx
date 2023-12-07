@@ -1,6 +1,6 @@
 import ProfileClient from '@/app/components/storyBookComponents/cards/Profile/ProfileClient'
 import { getServerSession } from "next-auth";
-import { Card as Profile } from '@/app/components/storyBookComponents/cards/Profile/Profile'
+import { Profile } from '@/app/components/storyBookComponents/cards/Profile/Profile'
 
 export default async function ProfilePage() {
     const session = await getServerSession();

@@ -7,12 +7,12 @@ export default function timeDependerLunchMiddag() {
 
     if (today.getHours() <= 15) {
         return (
-            <PlanCarousel />
+            <CarouselCard />
 
         );
     } else if (today.getHours() >= 16) {
         return (
-            <PlanCarousel />
+            <CarouselCard />
         );
     } else {
         return null;
