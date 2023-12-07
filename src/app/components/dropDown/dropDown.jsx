@@ -60,7 +60,9 @@ export default function DropDown({ mealType }) {
     <div>
       <Dropdown>
         <DropdownTrigger>
-          <Button variant="bordered" aria-label="Add meal">+ Lägg till måltid</Button>
+          <Button variant="bordered" aria-label={`Add ${mealType} Meal`}>
+            {localSelectedMeal ? localSelectedMeal : '+ Lägg till måltid'}
+          </Button>
         </DropdownTrigger>
         <DropdownMenu className={styles.dropDownMenu}>
           {meals.map((meal, index) => (
