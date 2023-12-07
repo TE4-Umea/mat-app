@@ -92,12 +92,6 @@ export default function DropDown({ mealType }) {
           Remove
         </Button>
       )}
-
-      {localSelectedMeal && (
-        <div>
-          <p>{mealType}: {localSelectedMeal}</p>
-        </div>
-      )}
     </div>
   );
 }
