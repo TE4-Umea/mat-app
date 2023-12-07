@@ -5,19 +5,23 @@ import styles from '../planning/page.module.css';
 import DropDown from '../../components/dropDown/dropDown';
 
 export default function Planning() {
+  const date = new Date();
+  const today = date.getMonth() + 1;
+  const todayaswell = date.getDate();
+  const currentDay = date.toLocaleString('default', { weekday: 'long' });
+
   return (
     <MealProvider>
       <>
-
         <div className={styles.prison}>
           <h1 className={styles.title}>Veckans mat</h1>
           <p className={styles.undertext}>Planera eller generera veckans måltider</p>
         </div>
         <div>
-          dag
+          {currentDay}
         </div>
         <div>
-          datum
+          {todayaswell} / {today}
         </div>
         <div>
           <p>lunch</p>
@@ -27,8 +31,6 @@ export default function Planning() {
           <p>middag</p>
           <DropDown mealType="Dinner" />
         </div>
-
-
       </>
     </MealProvider>
   );
