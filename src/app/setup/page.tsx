@@ -25,7 +25,7 @@ export default async function Setup() {
             <button></button> {/* Change to dropdown menu when initialized */}
             <h2 className={styles.h2}>Your primary diet</h2>
             <button></button> {/* Change to dropdown menu when initialized */}
-
+            <br />
             {session && (
                 <Link href="/">Continue</Link>
             )}

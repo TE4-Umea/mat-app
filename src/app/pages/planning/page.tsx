@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
-import { MealProvider } from '../../components/dropDown/MealContext';
+import { MealProvider } from '../../components/backendComponents/dropDown/MealContext';
 import styles from '../planning/page.module.css';
-import DropDown from '../../components/dropDown/dropDown';
+import DropDown from '../../components/backendComponents/dropDown/dropDown';
 
 export default function Planning() {
   return (

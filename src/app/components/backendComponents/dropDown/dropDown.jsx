@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button } from "@nextui-org/react";
 import styles from './dropDown.module.css';
-import Fetch from '../../lib/fetch';
+import Fetch from '../../../lib/fetch';
 import { useMealContext } from './MealContext';
 
 export default function DropDown({ mealType }) {
@@ -39,10 +39,10 @@ export default function DropDown({ mealType }) {
   };
 
   useEffect(() => {
-      let DeadSelect = false;
+    let DeadSelect = false;
 
     if (localSelectedMeal !== null) {
-      if(!DeadSelect) {
+      if (!DeadSelect) {
         if (mealType === 'Lunch') {
           setSelectedLunch(localSelectedMeal);
         } else if (mealType === 'Dinner') {
@@ -77,7 +77,7 @@ export default function DropDown({ mealType }) {
       </Dropdown>
 
       <Button variant="contained" onClick={handleGenerateRandomMeal}>
-            Generera slumpad måltid
+        Generera slumpad måltid
       </Button>
 
       {localSelectedMeal && (
