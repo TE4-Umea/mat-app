@@ -7,34 +7,29 @@ import DropDown from '../../components/dropDown/dropDown';
 export default function Planning() {
   return (
     <MealProvider>
-      <main>
+      <>
 
         <div className={styles.prison}>
-        <h1 className={styles.title}>Veckans mat</h1>
-        <p className={styles.undertext}>Planera eller generera veckans måltider</p>
+          <h1 className={styles.title}>Veckans mat</h1>
+          <p className={styles.undertext}>Planera eller generera veckans måltider</p>
         </div>
-        
-        
         <div>
-          <div>
-            <div>
-              dag
-            </div>
-            <div>
-              datum
-            </div>
-          </div>
-          <div>
-            <p>lunch</p>
-            <DropDown mealType="Lunch" />
-          </div>
-          <div>
-            <p>middag</p>
-            <DropDown mealType="Dinner" />
-          </div>
-
+          dag
         </div>
-      </main>
+        <div>
+          datum
+        </div>
+        <div>
+          <p>lunch</p>
+          <DropDown mealType="Lunch" />
+        </div>
+        <div>
+          <p>middag</p>
+          <DropDown mealType="Dinner" />
+        </div>
+
+
+      </>
     </MealProvider>
   );
 }
