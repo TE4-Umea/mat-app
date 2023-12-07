@@ -1,12 +1,12 @@
 import React from 'react';
-import './AddToPlaner.css';
+import './DeleteAcc.css';
 import '/src/app/globals.css';
 
-export function AddToPlaner() {
+export function Delete() {
   return (
     <button
       type="button"
-      className={['addToPlaner'].join(' ')}
+      className={['DeleteAcc'].join(' ')}
     >
     </button>
   );

@@ -1,12 +1,12 @@
 import React from 'react';
-import './AddToPlaner.css';
+import './LoggOut.css';
 import '/src/app/globals.css';
 
-export function AddToPlaner() {
+export function LogOut() {
   return (
     <button
       type="button"
-      className={['addToPlaner'].join(' ')}
+      className={['LoggOut'].join(' ')}
     >
     </button>
   );

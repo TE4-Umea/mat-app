@@ -1,5 +1,5 @@
 import React from "react";
-import { Card as GreetingCard } from '../../storyBookComponents/cards/greetingCard/greetingCard';
+import { GreetingCard } from '../../storyBookComponents/cards/greetingCard/greetingCard';
 
 export default async function GreetingCardTime() {
     var today = new Date();

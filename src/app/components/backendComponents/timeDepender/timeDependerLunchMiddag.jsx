@@ -1,6 +1,6 @@
 import React from "react";
 import styles from '../../../page.module.css'
-import { Card as PlanCarousel } from '../../storyBookComponents/cards/planCarouselCard/planCarouselCard'
+import { CarouselCard } from '../../storyBookComponents/cards/planCarouselCard/planCarouselCard'
 
 export default function timeDependerLunchMiddag() {
     var today = new Date();
