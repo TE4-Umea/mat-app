@@ -8,7 +8,7 @@ export default function DropDown({ mealType }) {
   const { selectedLunch, selectedDinner, setSelectedLunch, setSelectedDinner } = useMealContext();
   const [meals, setMeals] = useState([]);
   const [localSelectedMeal, setLocalSelectedMeal] = useState(null);
-
+  
   useEffect(() => {
     const fetchMealsData = async () => {
       try {
@@ -38,11 +38,16 @@ export default function DropDown({ mealType }) {
     setLocalSelectedMeal(randomMeal);
   };
 
+  const handleRemoveMeal = () => {
+    setLocalSelectedMeal(null);
+    localStorage.removeItem(mealType);
+  };
+
   useEffect(() => {
-      let DeadSelect = false;
+    let DeadSelect = false;
 
     if (localSelectedMeal !== null) {
-      if(!DeadSelect) {
+      if (!DeadSelect) {
         if (mealType === 'Lunch') {
           setSelectedLunch(localSelectedMeal);
         } else if (mealType === 'Dinner') {
@@ -76,9 +81,17 @@ export default function DropDown({ mealType }) {
         </DropdownMenu>
       </Dropdown>
 
-      <Button variant="contained" onClick={handleGenerateRandomMeal}>
-            Generera slumpad måltid
-      </Button>
+      {!localSelectedMeal && (
+        <Button variant="contained" onClick={handleGenerateRandomMeal}>
+          Generera slumpad måltid
+        </Button>
+      )}
+
+      {localSelectedMeal && (
+        <Button variant="contained" onClick={handleRemoveMeal}>
+          Remove
+        </Button>
+      )}
 
       {localSelectedMeal && (
         <div>
