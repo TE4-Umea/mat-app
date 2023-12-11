@@ -10,7 +10,6 @@ export default async function ProfilePage() {
     const session = await getServerSession();
     return (
         <main>
-            <Profile></Profile>
 
             <h1 className={styles.h1}>Diet</h1>
             <DropDown options={['Normal', 'Vegetarian']}></DropDown>
