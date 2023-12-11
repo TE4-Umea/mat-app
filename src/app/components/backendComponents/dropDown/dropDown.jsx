@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button } from "@nextui-org/react";
 import styles from './dropDown.module.css';
-import Fetch from '../../lib/fetch';
+import Fetch from '@/app/lib/fetch';
 import { useMealContext } from './MealContext';
 
 export default function DropDown({ mealType }) {
@@ -38,12 +38,25 @@ export default function DropDown({ mealType }) {
     setLocalSelectedMeal(randomMeal);
   };
 
+  const handleRemoveMeal = () => {
+    setLocalSelectedMeal(null);
+    localStorage.removeItem(mealType === 'Lunch' ? 'selectedLunch' : 'selectedDinner');
+  };
+
   useEffect(() => {
+    let DeadSelect = false;
+
     if (localSelectedMeal !== null) {
-      if (mealType === 'Lunch') {
-        setSelectedLunch(localSelectedMeal);
-      } else if (mealType === 'Dinner') {
-        setSelectedDinner(localSelectedMeal);
+      if (!DeadSelect) {
+        if (mealType === 'Lunch') {
+          setSelectedLunch(localSelectedMeal);
+        } else if (mealType === 'Dinner') {
+          setSelectedDinner(localSelectedMeal);
+        }
+      }
+
+      return () => {
+        DeadSelect = false;
       }
     }
   }, [localSelectedMeal, setSelectedLunch, setSelectedDinner, mealType]);
@@ -52,9 +65,11 @@ export default function DropDown({ mealType }) {
     <div>
       <Dropdown>
         <DropdownTrigger>
-          <Button variant="bordered" aria-label="Add meal">+ Lägg till måltid</Button>
+          <Button variant="bordered" aria-label={`Add ${mealType} Meal`}>
+            {localSelectedMeal ? localSelectedMeal : '+ Lägg till måltid'}
+          </Button>
         </DropdownTrigger>
-        <DropdownMenu className={styles.dropDownMenu}>
+        <DropdownMenu className={styles.dropDownMenu} aria-label={`Add ${mealType} Meal`}>
           {meals.map((meal, index) => (
             <DropdownItem key={index} onClick={() => handleMealSelect(meal)}>
               {meal}
@@ -66,13 +81,16 @@ export default function DropDown({ mealType }) {
         </DropdownMenu>
       </Dropdown>
 
+      {!localSelectedMeal && (
+        <Button variant="contained" onClick={handleGenerateRandomMeal} aria-label={`Add ${mealType} Meal`}>
+          Generera slumpad måltid
+        </Button>
+      )}
+
       {localSelectedMeal && (
-        <div>
-          <p>{mealType}: {localSelectedMeal}</p>
-          <Button variant="contained" onClick={handleGenerateRandomMeal}>
-            Generera slumpad måltid
-          </Button>
-        </div>
+        <Button variant="contained" onClick={handleRemoveMeal} aria-label={`Add ${mealType} Meal`}>
+          Remove
+        </Button>
       )}
     </div>
   );

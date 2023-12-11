@@ -1,29 +1,36 @@
 import styles from './page.module.css'
-import SignUp from '../../profileFix/profileFixSetup'
 import { getServerSession } from "next-auth";
 import { redirect } from 'next/navigation'
+import ProfileClient from '@/app/components/storyBookComponents/cards/Profile/ProfileClient'
+import Link from 'next/link';
+import { DropDown } from '../components/storyBookComponents/buttons/DropDown/DropDown'
 
 export default async function Setup() {
     const session = await getServerSession();
 
-    if (!session) {
-        return (
-            <>
-                <h1 className={styles.h1}>Welcome to <span className={styles.span}>Storken</span>! We&apos;ll begin with configuring your profile.</h1>
+    // function continueButton() {
+    //     if (session) {
+    //         <button onClick={redirect('/')}></button>
+    //     } else if (!session) {
+    //         <button onClick={redirect('/setup')}></button>
+    //     }
+    // }
 
-                <SignUp></SignUp>
+    return (
+        <>
+            <h1 className={styles.h1}>Welcome to <span className={styles.span}>Storken</span>! We&apos;ll begin with configuring your profile.</h1>
 
-                <h2 className={styles.h2}>Your preferred language</h2>
-                <button></button> {/* Change to dropdown menu when initialized */}
-                <h2 className={styles.h2}>Your primary diet</h2>
-                <button></button> {/* Change to dropdown menu when initialized */}
+            <ProfileClient session={session} />
 
-                <button></button> {/* Continue button */}
-            </>
+            <h2 className={styles.h2}>Your preferred language</h2>
+            <DropDown options={['Normal', 'Vegetarian']}></DropDown>
+            <h2 className={styles.h2}>Your primary diet</h2>
+            <DropDown options={['Svenska', 'English']}></DropDown>
+            <br />
+            {session && (
+                <Link href="/">Continue</Link>
+            )}
+        </>
 
-        );
-    } else if (session) {
-        redirect('/')
-
-    }
+    );
 }

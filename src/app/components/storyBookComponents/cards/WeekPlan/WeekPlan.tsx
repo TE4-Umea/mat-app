@@ -2,55 +2,18 @@ import React from 'react';
 import './WeekPlan.css';
 import '/src/app/globals.css';
 
-interface ButtonProps {
-    /**
-     * Is this the principal call to action on the page?
-     */
-
-    /**
-     * What background color to use
-     */
-    backgroundColor?: string;
-    /**
-     * How large should the button be?
-     */
-
-    /**
-     * Button contents
-     */
-    label: string;
-    /**
-     * Optional click handler
-     */
-}
-
-export const Card = ({
-
-    backgroundColor,
-    label,
-    ...props
-}: ButtonProps) => {
+export function WeekPlan() {
     return (
         <div
-            className={['WeekPlan'].join(' ')}
-            {...props}
-        >
-
-            <style jsx>{`
-        button {
-          background-color: ${backgroundColor};
-        }
-      `}</style>
+            className={['WeekPlan'].join(' ')}>
             <div className='bakk'>
                 <div id='flex'>
                     <p className='title'>Måndag</p>
                     <p className='date'>13/11</p>
                 </div>
 
-
                 <div className='prison'>
-
-                    <div className='lunch'> 
+                    <div className='lunch'>
                         <p className='text'>Lunch</p>
                         <div id='flex'>
                             <div className='addRuta'><p className='textrutaa'>+ Lägg till måltid</p></div>
@@ -68,11 +31,7 @@ export const Card = ({
                     </div>
 
                 </div>
-
-
             </div>
         </div>
-
-
     );
 };

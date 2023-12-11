@@ -1,10 +1,10 @@
-import ProfilePageFix from '../../../profileFix/profileFix'
 
-export default function ProfilePage() {
+
+export default async function ProfilePage() {
     return (
-        <main>
-            <ProfilePageFix></ProfilePageFix>
-        </main>
+        <>
+
+        </>
     )
 }
 

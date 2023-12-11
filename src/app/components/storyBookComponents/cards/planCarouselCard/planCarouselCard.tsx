@@ -3,28 +3,11 @@ import './planCarouselCard.css';
 import '/src/app/globals.css';
 
 interface ButtonProps {
-    /**
-     * What background color to use
-     */
-    backgroundColor?: string;
-    /**
-     * Contents
-     */
-    label: string;
-    /**
-     * Which button is pressed
-     */
     lunch: boolean;
-    /**
-     * Needs icon
-     */
 }
 
-export const Card = ({
-    backgroundColor,
-    label,
-    lunch = true,
-    ...props
+export const CarouselCard = ({
+    lunch = true
 }: ButtonProps) => {
     const mode = lunch ? 'buttonLunch' : 'buttonDinner';
     var today = new Date();
@@ -56,8 +39,7 @@ export const Card = ({
         };
     }
     return (
-        <div className={['planCarouselCard'].join(' ')}
-            {...props}>
+        <div className={['planCarouselCard'].join(' ')}>
             <div>
                 <p>Kladdig pizza med bearnaise sås</p>
                 <div className={['buttonContainer', mode].join(' ')}>
