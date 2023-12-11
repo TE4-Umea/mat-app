@@ -1,6 +1,5 @@
 .navContainer {
     position: fixed;
-    width: 20px;
     background-color: var(--color-bg);
     width: 100vw;
     height: 85px;
@@ -16,7 +15,7 @@
     align-items: center;
     margin: 0 auto;
     width: 88%;
-    height: 90px;
+    height: 85px;
 }
 
 .navBar p {
@@ -61,5 +60,36 @@
 .navButton svg {
     margin-bottom: -4px;
     fill: #B6B6B6;
+}
 
+
+.plus {
+    width: 26px;
+    fill: var(--color-primary);
+}
+
+.navAdd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 46px;
+    width: 46px;
+    border-radius: 100px;
+    box-shadow: var(--shadow2);
+    background-color: var(--color-bg);
+}
+
+.navAddActive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 46px;
+    width: 46px;
+    border-radius: 100px;
+    box-shadow: var(--shadow2);
+    background-color: var(--color-primary);
+}
+
+.navAddActive .plus {
+    fill: var(--color-bg);
 }
