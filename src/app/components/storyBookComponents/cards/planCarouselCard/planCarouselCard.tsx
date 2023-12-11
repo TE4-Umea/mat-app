@@ -10,42 +10,33 @@ export const CarouselCard = ({
     lunch = true
 }: ButtonProps) => {
     const mode = lunch ? 'buttonLunch' : 'buttonDinner';
+    const mode1 = lunch ? 'buttonDinner' : 'buttonLunch';
     var today = new Date();
 
-    function getMealLunch() {
+    function modeTime() {
         if (today.getHours() <= 15) {
-            return (
-                <button>Lunch</button>
-            );
+            lunch = true;
         };
 
         if (today.getHours() >= 16) {
-            return (
-                <button>Middag</button>
-            );
+            lunch = false;
         };
-    }
-    function getMealMiddag() {
-        if (today.getHours() <= 15) {
-            return (
-                <button>Middag</button>
-            );
-        };
-
-        if (today.getHours() >= 16) {
-            return (
-                <button>Lunch</button>
-            );
-        };
+        return lunch;
     }
     return (
         <div className={['planCarouselCard'].join(' ')}>
             <div>
                 <p>Kladdig pizza med bearnaise sås</p>
-                <div className={['buttonContainer', mode].join(' ')}>
-                    {getMealLunch()}
-                    {getMealMiddag()}
+                {modeTime() && (<div className={['buttonContainer', mode].join(' ')}>
+                    <button>Lunch</button>
+                    <button>Middag</button>
                 </div>
+                )}
+                {!modeTime() && (<div className={['buttonContainer', mode1].join(' ')}>
+                    <button>Lunch</button>
+                    <button>Middag</button>
+                </div>
+                )}
             </div>
             {/* <img src='src/stories/assets/github.svg'></img> */}
         </div>
