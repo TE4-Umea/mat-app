@@ -1,6 +1,5 @@
 import ProfileClient from '@/app/components/storyBookComponents/cards/Profile/ProfileClient'
 import { getServerSession } from "next-auth";
-import { Profile } from '@/app/components/storyBookComponents/cards/Profile/Profile'
 import { Switch } from '../../../components/storyBookComponents/buttons/Switch/Switch'
 import { Delete } from '../../../components/storyBookComponents/buttons/DeleteAcc/DeleteAcc'
 import { DropDown } from '../../../components/storyBookComponents/buttons/DropDown/DropDown'
@@ -25,7 +24,7 @@ export default async function ProfilePage() {
             <h1 className={styles.h1}>Konto</h1>
             <div>
                 <ProfileClient session={session} />
-                <Delete label='Radera konto' className={styles.delete}>Radera konto</Delete>
+                <Delete></Delete>
             </div>
         </main>
     )
