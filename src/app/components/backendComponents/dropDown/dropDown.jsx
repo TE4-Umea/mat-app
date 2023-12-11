@@ -8,7 +8,7 @@ export default function DropDown({ mealType }) {
   const { selectedLunch, selectedDinner, setSelectedLunch, setSelectedDinner } = useMealContext();
   const [meals, setMeals] = useState([]);
   const [localSelectedMeal, setLocalSelectedMeal] = useState(null);
-  
+
   useEffect(() => {
     const fetchMealsData = async () => {
       try {
@@ -40,7 +40,7 @@ export default function DropDown({ mealType }) {
 
   const handleRemoveMeal = () => {
     setLocalSelectedMeal(null);
-    localStorage.removeItem(mealType);
+    localStorage.removeItem(mealType === 'Lunch' ? 'selectedLunch' : 'selectedDinner');
   };
 
   useEffect(() => {
