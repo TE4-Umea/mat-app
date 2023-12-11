@@ -1,0 +1,59 @@
+.StatsDrop {
+    width: 10.2vw;
+    padding: var(--space-3xs);
+    background-color: transparent;
+    border-style: none;
+    color: var(--font-fg);
+
+    text-align: center;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: var(--step--1);
+    color: var(--color-gray);
+
+    /* -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+
+    background: url("./expand_arrow.svg") no-repeat;
+    background-position: 2% 60%;
+    transition: cubic-bezier(0.47, 0, 0.745, 0.715); */
+}
+
+/* .dropDown:hover {
+    transform: rotate(90deg);
+} */
+
+div img {
+    width: 10%;
+    height: 10%;
+    z-index: -1;
+    top: 0%;
+    left: 1%;
+    opacity: 50%;
+}
+
+.rotate {
+    transform: rotate(90deg)
+}
+
+.dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdownContent a {
+    color: var(--color-gray);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    opacity: 0.5;
+}
+
+.show {
+    display: block;
+}

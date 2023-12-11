@@ -12,7 +12,7 @@ export default function History() {
                 <p className={styles.undertext}>Måltider du har haft</p>
             </div>
 
-            <HistoryCard></HistoryCard>
+            
 
         </main>
     )
