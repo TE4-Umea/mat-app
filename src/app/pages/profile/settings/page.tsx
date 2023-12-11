@@ -1,14 +1,16 @@
-import ProfilePageFix from '../../../../profileFix/profileFix'
+import ProfileClient from '@/app/components/storyBookComponents/cards/Profile/ProfileClient'
+import { getServerSession } from "next-auth";
+import { Profile } from '@/app/components/storyBookComponents/cards/Profile/Profile'
 import { Switch } from '../../../components/storyBookComponents/buttons/Switch/Switch'
 import { Delete } from '../../../components/storyBookComponents/buttons/DeleteAcc/DeleteAcc'
-import { LogOut } from '../../../components/storyBookComponents/buttons/LoggOut/LoggOut'
 import { DropDown } from '../../../components/storyBookComponents/buttons/DropDown/DropDown'
 import styles from './page.module.css'
 
-export default function ProfilePage() {
+export default async function ProfilePage() {
+    const session = await getServerSession();
     return (
         <main>
-            <ProfilePageFix></ProfilePageFix>
+            <Profile></Profile>
 
             <h1 className={styles.h1}>Diet</h1>
             <DropDown options={['Normal', 'Vegetarian']}></DropDown>
@@ -23,8 +25,8 @@ export default function ProfilePage() {
 
             <h1 className={styles.h1}>Konto</h1>
             <div>
-                <LogOut label='Logga ut'>Logga ut</LogOut>
-                <Delete label='Radera konto'>Radera konto</Delete>
+                <ProfileClient session={session} />
+                <Delete label='Radera konto' className={styles.delete}>Radera konto</Delete>
             </div>
         </main>
     )

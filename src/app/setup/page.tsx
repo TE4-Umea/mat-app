@@ -3,6 +3,7 @@ import { getServerSession } from "next-auth";
 import { redirect } from 'next/navigation'
 import ProfileClient from '@/app/components/storyBookComponents/cards/Profile/ProfileClient'
 import Link from 'next/link';
+import { DropDown } from '../components/storyBookComponents/buttons/DropDown/DropDown'
 
 export default async function Setup() {
     const session = await getServerSession();
@@ -22,9 +23,9 @@ export default async function Setup() {
             <ProfileClient session={session} />
 
             <h2 className={styles.h2}>Your preferred language</h2>
-            <button></button> {/* Change to dropdown menu when initialized */}
+            <DropDown options={['Normal', 'Vegetarian']}></DropDown>
             <h2 className={styles.h2}>Your primary diet</h2>
-            <button></button> {/* Change to dropdown menu when initialized */}
+            <DropDown options={['Svenska', 'English']}></DropDown>
             <br />
             {session && (
                 <Link href="/">Continue</Link>

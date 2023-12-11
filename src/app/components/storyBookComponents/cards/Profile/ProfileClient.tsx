@@ -2,6 +2,8 @@
 import { signIn, signOut } from "next-auth/react";
 import { Session } from "next-auth";
 import Link from "next/link";
+import { LogOut } from '../../../../components/storyBookComponents/buttons/LoggOut/LoggOut'
+
 
 export default function ProfileClient({ session }: {
     session: Session | null
@@ -13,7 +15,7 @@ export default function ProfileClient({ session }: {
             <>
 
                 <Link href="/api/auth/signout">
-                    Sign out
+                    <LogOut label='Logga ut'>Logga ut</LogOut>
                 </Link>
 
             </>
