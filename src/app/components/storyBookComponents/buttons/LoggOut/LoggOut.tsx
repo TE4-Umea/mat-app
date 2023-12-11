@@ -7,7 +7,7 @@ export function LogOut() {
     <button
       type="button"
       className={['LoggOut'].join(' ')}
-    >
+    >Logga ut
     </button>
   );
 };

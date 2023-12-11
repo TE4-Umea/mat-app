@@ -6,7 +6,7 @@ import Link from 'next/link';
 export function SavedMeals() {
   return (
     <Link
-      href="/pages/saved-meals" >
+      href="/pages/profile/saved-meals" >
       <button
         type="button"
         className={['savedMeals'].join(' ')}

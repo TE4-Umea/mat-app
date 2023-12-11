@@ -13,7 +13,7 @@ export const MealCard = async ({
     const fetch = await Fetch();
     return (
         <div className={['mealCard'].join(' ')}>
-            <img className='imgMIS' src={fetch.meals[7].strMealThumb}></img>
+            <img src={fetch.meals[7].strMealThumb}></img>
             <div>
                 <p>Mat i skål</p>
                 <ul>

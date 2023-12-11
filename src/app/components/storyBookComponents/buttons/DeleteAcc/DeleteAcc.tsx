@@ -7,7 +7,7 @@ export function Delete() {
     <button
       type="button"
       className={['DeleteAcc'].join(' ')}
-    >
+    >Radera konto
     </button>
   );
 };
