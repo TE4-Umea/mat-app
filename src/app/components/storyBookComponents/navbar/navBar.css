@@ -53,10 +53,6 @@
     gap: 0;
 }
 
-.navMargin {
-    height: 90px;
-}
-
 .active svg {
     margin-bottom: -4px;
     fill: var(--color-primary);

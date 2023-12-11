@@ -1,29 +1,33 @@
 'use client'
-import { signIn, signOut, useSession } from "next-auth/react";
-import { SessionProvider } from "next-auth/react";
+import { signIn, signOut } from "next-auth/react";
+import { Session } from "next-auth";
+import Link from "next/link";
+import { LogOut } from '../../../../components/storyBookComponents/buttons/LoggOut/LoggOut'
 
-export default function ProfileClient() {
 
-    return (
-        <SessionProvider>
-            <ProfileClientContent />
-        </SessionProvider>
-    );
-}
+export default function ProfileClient({ session }: {
+    session: Session | null
+}) {
 
-function ProfileClientContent() {
-    const { data: session } = useSession();
 
     if (session) {
         return (
-            <main>
-                <button onClick={() => signOut()}>Sign out</button>
-            </main>
+            <>
+
+                <Link href="/api/auth/signout">
+                    <LogOut label='Logga ut'>Logga ut</LogOut>
+                </Link>
+
+            </>
         )
     } else if (!session) {
         return (
             <>
-                <button onClick={() => signIn()}>Sign in</button>
+
+                <Link href="/api/auth/signin">
+                    Sign in
+                </Link>
+
             </>
         );
     }
