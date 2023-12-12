@@ -15,9 +15,10 @@ export const MealCard = async ({
         <div className={['mealCard'].join(' ')}>
             <img src={fetch.meals[7].strMealThumb}></img>
             <div>
-                <p>Mat i skål</p>
+                <p>Mat i skål</p> {/*Hämta recept namn från databasen*/}
                 <ul>
                     {tags.map((tags) => <li key={tags} value={tags}>{tags}</li>)}
+                    {/*Hämta taggar som är kopplade till recept från databasen*/}
                 </ul>
             </div>
         </div>

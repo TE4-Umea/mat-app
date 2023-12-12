@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Lexend_Deca, Karla } from 'next/font/google';
 import './globals.css'
-import Head from 'next/head';
 
 import { useTranslation } from 'next-i18next';
 
