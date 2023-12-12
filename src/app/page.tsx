@@ -7,10 +7,13 @@ import { redirect } from 'next/navigation'
 import { getServerSession } from "next-auth";
 import Carousel from './components/backendComponents/carousel/carousel'
 import CarouselMIS from './components/backendComponents/carouselMIS/carouselMIS'
+import Fetch from '../app/lib/matFetch'
 
 export default async function Home() {
   const session = await getServerSession();
+  // const fetch = await Fetch();
 
+  // console.log(fetch)
   if (session) {
     return (
       <main>
