@@ -3,6 +3,7 @@ import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button } from "@
 import styles from './dropDown.module.css';
 import Fetch from '@/app/lib/fetch';
 import { useMealContext } from './MealContext';
+import '../../storyBookComponents/cards/WeekPlan/WeekPlan.css';
 
 export default function DropDown({ mealType }) {
   const { selectedLunch, selectedDinner, setSelectedLunch, setSelectedDinner } = useMealContext();
@@ -28,46 +29,18 @@ export default function DropDown({ mealType }) {
       setLocalSelectedMeal(selectedDinner);
     }
   }, [mealType, selectedLunch, selectedDinner]);
-  useEffect(() => {
-    let DeadSelect = false;
-  
-    if (localSelectedMeal !== null) {
-      if (!DeadSelect) {
-        if (mealType === 'Lunch') {
-          setSelectedLunch(localSelectedMeal);
-        } else if (mealType === 'Dinner') {
-          setSelectedDinner(localSelectedMeal);
-        }
-      }
-    }
-  }, [localSelectedMeal, mealType, setSelectedLunch, setSelectedDinner]); 
 
   const handleMealSelect = (meal) => {
     setLocalSelectedMeal(meal);
-    if (mealType === 'Lunch') {
-      setSelectedLunch(meal);
-    } else if (mealType === 'Dinner') {
-      setSelectedDinner(meal);
-    }
   };
-  
+
   const handleGenerateRandomMeal = () => {
     const randomMeal = meals[Math.floor(Math.random() * meals.length)];
     setLocalSelectedMeal(randomMeal);
-    if (mealType === 'Lunch') {
-      setSelectedLunch(randomMeal);
-    } else if (mealType === 'Dinner') {
-      setSelectedDinner(randomMeal);
-    }
   };
-  
+
   const handleRemoveMeal = () => {
     setLocalSelectedMeal(null);
-    if (mealType === 'Lunch') {
-      setSelectedLunch(null);
-    } else if (mealType === 'Dinner') {
-      setSelectedDinner(null);
-    }
     localStorage.removeItem(mealType === 'Lunch' ? 'selectedLunch' : 'selectedDinner');
   };
 
@@ -93,8 +66,8 @@ export default function DropDown({ mealType }) {
     <div>
       <Dropdown>
         <DropdownTrigger>
-          <Button variant="bordered" aria-label={`Add ${mealType} Meal`}>
-            {localSelectedMeal ? localSelectedMeal : '+ Lägg till måltid'}
+          <Button className='addRuta' variant="bordered" aria-label={`Add ${mealType} Meal`}>
+            <p className='textrutaa'>{localSelectedMeal ? localSelectedMeal : '+ Lägg till måltid'}</p>
           </Button>
         </DropdownTrigger>
         <DropdownMenu className={styles.dropDownMenu} aria-label={`Add ${mealType} Meal`}>
@@ -110,14 +83,18 @@ export default function DropDown({ mealType }) {
       </Dropdown>
 
       {!localSelectedMeal && (
-        <Button variant="contained" onClick={handleGenerateRandomMeal} aria-label={`Add ${mealType} Meal`}>
-          Generera slumpad måltid
+        <Button className='generate' variant="contained" onClick={handleGenerateRandomMeal} aria-label={`Add ${mealType} Meal`}>
+          <p className='textrutaa'>
+            Generera slumpad måltid
+          </p>
         </Button>
       )}
 
       {localSelectedMeal && (
-        <Button variant="contained" onClick={handleRemoveMeal} aria-label={`Add ${mealType} Meal`}>
-          Remove
+        <Button className='delete' variant="contained" onClick={handleRemoveMeal} aria-label={`Add ${mealType} Meal`}>
+          <p className='textruta'>
+            Remove
+          </p>
         </Button>
       )}
     </div>

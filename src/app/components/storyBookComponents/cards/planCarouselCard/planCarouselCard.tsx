@@ -26,7 +26,8 @@ export const CarouselCard = ({
     return (
         <div className={['planCarouselCard'].join(' ')}>
             <div>
-                <p>Kladdig pizza med bearnaise sås</p>
+                <p>Kladdig pizza med bearnaise sås</p> {/*Hämta planeringen från databasen*/}
+
                 {modeTime() && (<div className={['buttonContainer', mode].join(' ')}>
                     <button>Lunch</button>
                     <button>Middag</button>
