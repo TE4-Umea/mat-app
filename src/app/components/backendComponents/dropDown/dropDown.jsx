@@ -28,18 +28,46 @@ export default function DropDown({ mealType }) {
       setLocalSelectedMeal(selectedDinner);
     }
   }, [mealType, selectedLunch, selectedDinner]);
+  useEffect(() => {
+    let DeadSelect = false;
+  
+    if (localSelectedMeal !== null) {
+      if (!DeadSelect) {
+        if (mealType === 'Lunch') {
+          setSelectedLunch(localSelectedMeal);
+        } else if (mealType === 'Dinner') {
+          setSelectedDinner(localSelectedMeal);
+        }
+      }
+    }
+  }, [localSelectedMeal, mealType, setSelectedLunch, setSelectedDinner]); 
 
   const handleMealSelect = (meal) => {
     setLocalSelectedMeal(meal);
+    if (mealType === 'Lunch') {
+      setSelectedLunch(meal);
+    } else if (mealType === 'Dinner') {
+      setSelectedDinner(meal);
+    }
   };
-
+  
   const handleGenerateRandomMeal = () => {
     const randomMeal = meals[Math.floor(Math.random() * meals.length)];
     setLocalSelectedMeal(randomMeal);
+    if (mealType === 'Lunch') {
+      setSelectedLunch(randomMeal);
+    } else if (mealType === 'Dinner') {
+      setSelectedDinner(randomMeal);
+    }
   };
-
+  
   const handleRemoveMeal = () => {
     setLocalSelectedMeal(null);
+    if (mealType === 'Lunch') {
+      setSelectedLunch(null);
+    } else if (mealType === 'Dinner') {
+      setSelectedDinner(null);
+    }
     localStorage.removeItem(mealType === 'Lunch' ? 'selectedLunch' : 'selectedDinner');
   };
 
