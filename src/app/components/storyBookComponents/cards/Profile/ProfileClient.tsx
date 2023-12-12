@@ -14,7 +14,7 @@ export default function ProfileClient({ session }: {
         return (
             <>
                 <Link href="/api/auth/signout">
-                    <LogOut label='Logga ut'>Logga ut</LogOut>
+                    <LogOut></LogOut>
                 </Link>
             </>
         )

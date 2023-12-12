@@ -6,16 +6,16 @@ export default function Carousel() {
         <>
             <div className={styles.scroll}>
                 <div className={styles.buttonContainer}>
-                    <CarouselCard></CarouselCard>
+                    <CarouselCard lunch={true}></CarouselCard>
                 </div>
                 <div className={styles.buttonContainer}>
-                    <CarouselCard></CarouselCard>
+                    <CarouselCard lunch={true}></CarouselCard>
                 </div>
                 <div className={styles.buttonContainer}>
-                    <CarouselCard></CarouselCard>
+                    <CarouselCard lunch={true}></CarouselCard>
                 </div>
                 <div className={styles.buttonContainer}>
-                    <CarouselCard></CarouselCard>
+                    <CarouselCard lunch={true}></CarouselCard>
                 </div>
             </div>
         </>
