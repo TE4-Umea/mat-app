@@ -91,11 +91,12 @@ export default function DropDown({ mealType }) {
   }, [localSelectedMeal, setSelectedLunch, setSelectedDinner, mealType]);
 
   return (
-    <div>
+    <>
+
       <Dropdown>
         <DropdownTrigger>
-          <Button className='addRuta' variant="bordered" aria-label={`Add ${mealType} Meal`}>
-            <p className='textrutaa'>{localSelectedMeal ? localSelectedMeal : '+ Lägg till måltid'}</p>
+          <Button className='weekPlanAddRuta' variant="bordered" aria-label={`Add ${mealType} Meal`}>
+            <p className='weekPlanTextrutaa'>{localSelectedMeal ? localSelectedMeal : '+ Lägg till måltid'}</p>
           </Button>
         </DropdownTrigger>
         <DropdownMenu className={styles.dropDownMenu} aria-label={`Add ${mealType} Meal`}>
@@ -111,20 +112,20 @@ export default function DropDown({ mealType }) {
       </Dropdown>
 
       {!localSelectedMeal && (
-        <Button className='generate' variant="contained" onClick={handleGenerateRandomMeal} aria-label={`Add ${mealType} Meal`}>
-          <p className='textrutaa'>
+        <Button className='weekPlanGenerate' variant="contained" onClick={handleGenerateRandomMeal} aria-label={`Add ${mealType} Meal`}>
+          <p className='weekPlanTextrutaa'>
             Generera slumpad måltid
           </p>
         </Button>
       )}
 
       {localSelectedMeal && (
-        <Button className='delete' variant="contained" onClick={handleRemoveMeal} aria-label={`Add ${mealType} Meal`}>
+        <Button className='weekPlanDelete' variant="contained" onClick={handleRemoveMeal} aria-label={`Add ${mealType} Meal`}>
           <p className='textruta'>
             Remove
           </p>
         </Button>
       )}
-    </div>
+    </>
   );
 }
