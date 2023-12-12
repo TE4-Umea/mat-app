@@ -1,4 +1,4 @@
-import LunchMiddagText from '../timeDepender/timeDependerLunchMiddag'
+import { CarouselCard } from '../../storyBookComponents/cards/planCarouselCard/planCarouselCard'
 import styles from './carousel.module.css'
 
 export default function Carousel() {
@@ -6,16 +6,16 @@ export default function Carousel() {
         <>
             <div className={styles.scroll}>
                 <div className={styles.buttonContainer}>
-                    <LunchMiddagText></LunchMiddagText>
+                    <CarouselCard></CarouselCard>
                 </div>
                 <div className={styles.buttonContainer}>
-                    <LunchMiddagText></LunchMiddagText>
+                    <CarouselCard></CarouselCard>
                 </div>
                 <div className={styles.buttonContainer}>
-                    <LunchMiddagText></LunchMiddagText>
+                    <CarouselCard></CarouselCard>
                 </div>
                 <div className={styles.buttonContainer}>
-                    <LunchMiddagText></LunchMiddagText>
+                    <CarouselCard></CarouselCard>
                 </div>
             </div>
         </>

@@ -13,21 +13,17 @@ export default function ProfileClient({ session }: {
     if (session) {
         return (
             <>
-
                 <Link href="/api/auth/signout">
                     <LogOut label='Logga ut'>Logga ut</LogOut>
                 </Link>
-
             </>
         )
     } else if (!session) {
         return (
             <>
-
                 <Link href="/api/auth/signin">
                     Sign in
                 </Link>
-
             </>
         );
     }
