@@ -5,41 +5,48 @@ import DropDown from '../../../backendComponents/dropDown/dropDown';
 import { MealProvider } from '../../../backendComponents/dropDown/MealContext';
 
 export function WeekPlan() {
+    const date = new Date();
+    const today = date.getMonth() + 1;
+    const todayaswell = date.getDate();
+    const currentDay = date.toLocaleString('default', { weekday: 'long' });
+
     return (
         <MealProvider>
-            <div
-                className={['WeekPlan'].join(' ')}>
-                <div className='bakk'>
-                    <div id='flex'>
-                        <p className='title'>Måndag</p>
-                        <p className='date'>13/11</p>
+
+            <>
+                <div className='weekPlanBakk'>
+                    <div id='weekPlanFlex'>
+                        <p className='weekPlanTitle'>{currentDay}</p>
+                        <p className='weekPlanDate'> {todayaswell} / {today}</p>
                     </div>
+
 
                     <div className='prison'>
-                        <div className='lunch'>
-                            <p className='text'>Lunch</p>
-                            <div id='flex'>
-                                {/* <div className='addRuta'><p className='textrutaa'>+ Lägg till måltid</p></div>
-                            <div className='generate'><p className='textrutaa'>Generera en måltid</p></div> */}
+
+                        <div className='weekPlanLunch'>
+                            <p className='weekPlanText'>Lunch</p>
+                            <div id='weekPlanFlex'>
+                                {/* <div className='weekPlanAddRuta'><p className='weekPlanTextrutaa'>+ Lägg till måltid</p></div>
+                            <div className='weekPlanGenerate'><p className='weekPlanTextrutaa'>Generera en måltid</p></div> */}
                                 <DropDown mealType="Lunch" />
+
                             </div>
                         </div>
 
-                        <div className='middag'>
-                            <p className='text'>Middag</p>
-                            <div id='flex'>
-                                {/* <div className='ruta'><p className='textruta'>Mat i skål</p></div>
-                            <div className='fave'><p className='textruta'>F</p></div>
-                            <div className='delete'><p className='textruta'>D</p></div> */}
+                        <div className='weekPlanMiddag'>
+                            <p className='weekPlanText'>Middag</p>
+                            <div id='weekPlanFlex'>
+                                {/* <div className='weekPlanRuta'><p className='weekPlanTextruta'>Mat i skål</p></div>
+                            <div className='weekPlanDelete'></div> */}
                                 <DropDown mealType="Dinner" />
-
                             </div>
                         </div>
 
                     </div>
-                </div>
-            </div>
-        </MealProvider>
 
+
+                </div>
+            </>
+        </MealProvider>
     );
 };

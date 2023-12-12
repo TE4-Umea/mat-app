@@ -14,13 +14,13 @@ export function NavProfile() {
     return (
         <>
             <div className='profileNavContainer'>
-                <Link className={(pathname === "/pages/profile" ? "profileNavActive" : "profileNavLink")} href=''>
+                <Link className={(pathname === "/pages/profile/stats" ? "profileNavActive" : "profileNavLink")} href='/pages/profile/stats'>
                     Statistik
                 </Link>
-                <Link className={(pathname === "/" ? "profileNavActive" : "profileNavLink")} href=''>
+                <Link className={(pathname === "/pages/profile/settings" ? "profileNavActive" : "profileNavLink")} href='/pages/profile/settings'>
                     Inställningar
                 </Link>
-                <Link className={(pathname === "/" ? "profileNavActive" : "profileNavLink")} href=''>
+                <Link className={(pathname === "/pages/profile/saved-meals" ? "profileNavActive" : "profileNavLink")} href='/pages/profile/saved-meals'>
                     Sparade
                 </Link>
             </div>

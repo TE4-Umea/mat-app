@@ -20,7 +20,6 @@ export default async function RootLayout({
             <Profile></Profile>
             <NavProfile></NavProfile>
             {children}
-            <ProfileClient session={session} />
         </>
     )
 }
