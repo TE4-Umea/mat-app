@@ -7,6 +7,12 @@
     display: flex;
 }
 
+.Profile {
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
 .bak {
     padding-left: var(--space-m);
     padding-top: var(--space-l);
