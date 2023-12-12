@@ -30,9 +30,9 @@ export function NavBar() {
                         </span>
                     </Link>
 
-                    <Link href="">
-                        <span className={(pathname === "/pages/planning" ? "navAddActive" : "navAdd")} id='navAdd'>
-                           <svg className='plus' xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 -960 960 960"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg>
+                    <Link href="/pages/create">
+                        <span className={(pathname === "/pages/create" ? "navAddActive" : "navAdd")} id='navAdd'>
+                            <svg className='plus' xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 -960 960 960"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" /></svg>
                         </span>
                     </Link>
 
