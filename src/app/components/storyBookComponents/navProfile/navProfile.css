@@ -1,0 +1,26 @@
+.profileNavActive {
+    font-family: var(--font-title);
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.profileNavLink {
+    font-family: var(--font-title);
+    font-weight: 400;
+    color: var(--color-gray);
+}
+
+.profileNavContainer{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-bg);
+    border-radius: 20px 20px 0px 0px;
+    padding: var(--space-s) var(--space-m) var(--space-m) var(--space-m);
+    margin-top: var(--space-5xl);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.profileNavContainer a {
+    text-decoration: none;
+}

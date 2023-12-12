@@ -42,3 +42,9 @@ export const Small: Story = {
     size: 'small',
   },
 };
+
+export const Profile: Story = {
+  args: {
+    size: 'profile',
+  },
+};

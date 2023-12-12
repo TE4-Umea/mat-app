@@ -36,34 +36,28 @@ export const Card = ({
             {...props}
         >
 
-            <style jsx>{`
-        button {
-          background-color: ${backgroundColor};
-        }
-      `}</style>
-            <div className='bakk'>
-                <div id='flex'>
-                    <p className='title'>Måndag</p>
-                    <p className='date'>13/11</p>
+            <div className='weekPlanBakk'>
+                <div id='weekPlanFlex'>
+                    <p className='weekPlanTitle'>Måndag</p>
+                    <p className='weekPlanDate'>13/11</p>
                 </div>
 
 
                 <div className='prison'>
 
-                    <div className='lunch'>
-                        <p className='text'>Lunch</p>
-                        <div id='flex'>
-                            <div className='addRuta'><p className='textrutaa'>+ Lägg till måltid</p></div>
-                            <div className='generate'><p className='textrutaa'>Generera en måltid</p></div>
+                    <div className='weekPlanLunch'>
+                        <p className='weekPlanText'>Lunch</p>
+                        <div id='weekPlanFlex'>
+                            <div className='weekPlanAddRuta'><p className='weekPlanTextrutaa'>+ Lägg till måltid</p></div>
+                            <div className='weekPlanGenerate'><p className='weekPlanTextrutaa'>Generera en måltid</p></div>
                         </div>
                     </div>
 
-                    <div className='middag'>
-                        <p className='text'>Middag</p>
-                        <div id='flex'>
-                            <div className='ruta'><p className='textruta'>Mat i skål</p></div>
-                            <div className='fave'><p className='textruta'>F</p></div>
-                            <div className='delete'><p className='textruta'>D</p></div>
+                    <div className='weekPlanMiddag'>
+                        <p className='weekPlanText'>Middag</p>
+                        <div id='weekPlanFlex'>
+                            <div className='weekPlanRuta'><p className='weekPlanTextruta'>Mat i skål</p></div>
+                            <div className='weekPlanDelete'></div>
                         </div>
                     </div>
 

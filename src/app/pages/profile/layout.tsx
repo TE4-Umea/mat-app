@@ -6,6 +6,7 @@ import { useTranslation } from 'next-i18next';
 import ProfileClient from '@/app/components/storyBookComponents/cards/Profile/ProfileClient'
 import { getServerSession } from "next-auth";
 import { Profile } from '@/app/components/storyBookComponents/cards/Profile/Profile'
+import { NavProfile } from '@/app/components/storyBookComponents/navProfile/navProfile'
 
 export default async function RootLayout({
     children,
@@ -17,8 +18,9 @@ export default async function RootLayout({
     return (
         <>
             <Profile></Profile>
-            <ProfileClient session={session} />
+            <NavProfile></NavProfile>
             {children}
+            <ProfileClient session={session} />
         </>
     )
 }

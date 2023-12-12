@@ -6,7 +6,7 @@ interface ButtonProps {
 
   light?: boolean;
 
-  size?: 'small' | 'large';
+  size?: 'small' | 'large' | 'profile';
 }
 
 /**
