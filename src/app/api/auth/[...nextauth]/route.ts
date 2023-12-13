@@ -13,13 +13,16 @@ export const authOptions = {
             clientId: process.env.GOOGLE_ID ?? "",
             clientSecret: process.env.GOOGLE_SECRET ?? "",
         }),
+
     ],
     callbacks: {
-        signIn: async () => {
-            return '/setup';
-        },
+        async redirect({ url, baseUrl }: { url: string, baseUrl: string }) {
+            console.log(url, baseUrl)
+            return baseUrl + "/setup"
+        }
     }
-};
+}
+
 
 export const handler = NextAuth(authOptions);
 
