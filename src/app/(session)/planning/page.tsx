@@ -13,6 +13,10 @@ export default function Planning() {
 
   return (
     <>
+      <div className={styles.prison}>
+        <h1 className={styles.title}>Veckans mat</h1>
+        <p className={styles.undertext}>Planera eller generera veckans måltider</p>
+      </div>
       <WeekPlan></WeekPlan>
     </>
     // <MealProvider>
