@@ -17,7 +17,6 @@ export const authOptions = {
     ],
     callbacks: {
         async redirect({ url, baseUrl }: { url: string, baseUrl: string }) {
-            console.log(url, baseUrl)
             return baseUrl + "/setup"
         }
     }
