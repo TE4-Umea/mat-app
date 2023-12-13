@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { MealProvider } from '../../components/backendComponents/dropDown/MealContext';
-import styles from '../planning/page.module.css';
+import styles from './page.module.css';
 import DropDown from '../../components/backendComponents/dropDown/dropDown';
 import { WeekPlan } from '@/app/components/storyBookComponents/cards/WeekPlan/WeekPlan';
 
