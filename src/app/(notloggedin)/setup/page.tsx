@@ -2,7 +2,7 @@ import styles from './page.module.css'
 import { getServerSession } from "next-auth";
 import ProfileClient from '@/app/components/storyBookComponents/cards/Profile/ProfileClient'
 import Link from 'next/link';
-import { DropDown } from '../components/storyBookComponents/buttons/DropDown/DropDown'
+import { DropDown } from '../../components/storyBookComponents/buttons/DropDown/DropDown'
 
 export default async function Setup() {
     const session = await getServerSession();

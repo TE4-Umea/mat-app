@@ -1,7 +1,7 @@
 import styles from './page.module.css'
 import GreetingCardTime from './components/backendComponents/timeDepender/greetingCardTime'
 import BackgroundTime from './components/backendComponents/timeDepender/backgroundTime';
-import { NavBar } from './components/storyBookComponents/navbar/navBar';
+import { NavBar } from '@/app/components/storyBookComponents/navbar/navBar';
 import { SavedMeals } from './components/storyBookComponents/buttons/SavedMeals/SavedMeals';
 import { redirect } from 'next/navigation'
 import { getServerSession } from "next-auth";

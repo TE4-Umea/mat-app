@@ -1,5 +1,5 @@
 import styles from './page.module.css'
-import { Card as HistoryCard } from '../../components/storyBookComponents/cards/history/historyCard'
+import { HistoryCard } from '../../components/storyBookComponents/cards/history/historyCard'
 
 export default function History() {
     return (
