@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import { Lexend_Deca, Karla } from 'next/font/google';
 import './globals.css'
-
+import { NavBar } from './components/storyBookComponents/navbar/navBar';
+import BackgroundTime from './components/backendComponents/timeDepender/backgroundTimeSmall';
 import { useTranslation } from 'next-i18next';
 
 export const lexendDeca = Lexend_Deca({ weight: ['200', '300', '400', '500', '600', '700', '800'], subsets: ['latin'], variable: "--font-title", });
@@ -25,5 +26,7 @@ export default function RootLayout({
         {children}
       </body>
     </html>
+
+
   )
 }
