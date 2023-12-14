@@ -12,6 +12,11 @@ export default function Create() {
             authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdW5kbWFya2hqYWxtYXJAZ21haWwuY29tIiwiaWF0IjoxNzAyNDU1MTAzfQ.O9LhDq-P1jFVwDlToU8p_VUrRjsqQ60R1bybCa0B9yI',
         },
        })
+         .then(response => response.json())
+            .then(data => {
+                console.log(data);
+            })
+        
       };
 
     return (
