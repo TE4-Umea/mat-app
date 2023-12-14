@@ -117,3 +117,9 @@ input.title::placeholder {
 .iconsRadio:checked+label svg {
     fill: var(--color-bg);
 }
+
+.savebutton {
+
+    margin-bottom: 10rem;
+    margin-inline: 10rem;
+}

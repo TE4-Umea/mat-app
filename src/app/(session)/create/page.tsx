@@ -1,6 +1,19 @@
+'use client';
 import styles from './page.module.css'
 
 export default function Create() {
+
+    const Create = () => {
+        const title = (document.getElementById('title') as HTMLInputElement).value;
+        const disc = (document.getElementById('disc') as HTMLInputElement).value;
+       fetch (`http://jupiter.umea-ntig.se:3008/api/dish?name=${title}&desc=${disc}` , {
+        method: 'POST',
+        headers: {
+            authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdW5kbWFya2hqYWxtYXJAZ21haWwuY29tIiwiaWF0IjoxNzAyNDU1MTAzfQ.O9LhDq-P1jFVwDlToU8p_VUrRjsqQ60R1bybCa0B9yI',
+        },
+       })
+      };
+
     return (
         <main>
             <div className={styles.prison}>
@@ -15,7 +28,7 @@ export default function Create() {
             </div>
 
             <form className={styles.infoContainer}>
-                <textarea className={styles.input} maxLength={500} />
+                <textarea className={styles.input} maxLength={500} id='disc'/>
             </form>
 
             <div className={styles.iconTitle}><p>välj icon för maträtten</p></div>
@@ -56,6 +69,10 @@ export default function Create() {
 
                 <input className={styles.iconsRadio} type="radio" id='icon12' name='icons' />
                 <label htmlFor='icon12'>hallå</label>
+            </div>
+
+            <div className={styles.savebutton}>
+                <button onClick={Create} className={styles.save}>Spara</button>
             </div>
 
         </main>
