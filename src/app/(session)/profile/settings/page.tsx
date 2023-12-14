@@ -10,7 +10,7 @@ export default async function ProfilePage() {
     return (
         <main>
 
-            <h1 className={styles.h1}>Diet</h1>
+            <h1 className={styles.h1}>Språk</h1>
             <DropDown options={['Normal', 'Vegetarian']}></DropDown>
 
             <div className={styles.dflex}>
@@ -18,7 +18,7 @@ export default async function ProfilePage() {
                 <Switch></Switch>
             </div>
 
-            <h1 className={styles.h1}>Språk</h1>
+            <h1 className={styles.h1}>Diet</h1>
             <DropDown options={['Svenska', 'Engelska']}></DropDown>
 
             <h1 className={styles.h1}>Konto</h1>
