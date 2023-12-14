@@ -1,34 +1,62 @@
 import styles from './page.module.css'
-import { HistoryCard } from '../../components/storyBookComponents/cards/history/historyCard'
 
-export default function History() {
+export default function Create() {
     return (
         <main>
-
-            <div className={styles.bg}>
-                <div></div>
-
-                <div>
-                    <input className={styles.name} id={styles.placeholder} type="text" placeholder='Namn..' />
-                </div>
-                
-
-                <div id={styles.flex}>
-                    <div className={styles.info}><p>Ytterligare information</p></div>
-                    <div className={styles.info2}><p>(frivilligt)</p></div>
-                </div>
-
-                
-
-                <div>
-                    <input className={styles.name2} id={styles.placeholder2} type="text" placeholder='Skriv aehsaer...' />
-                </div>
-                
-                <div className={styles.iconTitle}><p>välj icon för maträtten</p></div>
-
+            <div className={styles.prison}>
+                <input className={styles.title} id='title' type="text" placeholder='Namn...' />
+                <label htmlFor='title'>Tryck för att redigera titeln</label>
             </div>
 
+
+            <div className={styles.infoTitle}>
+                <p>Ytterligare information</p>
+                <p>(Frivilligt)</p>
+            </div>
+
+            <form className={styles.infoContainer}>
+                <textarea className={styles.input} maxLength={500} />
+            </form>
+
+            <div className={styles.iconTitle}><p>välj icon för maträtten</p></div>
             
+            <div className={styles.iconsContainer}>
+                <input className={styles.iconsRadio} type="radio" id='icon1' name='icons' />
+                <label htmlFor='icon1'><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M280-80v-366q-51-14-85.5-56T160-600v-280h80v280h40v-280h80v280h40v-280h80v280q0 56-34.5 98T360-446v366h-80Zm400 0v-320H560v-280q0-83 58.5-141.5T760-880v800h-80Z"/></svg></label>
+                
+                <input className={styles.iconsRadio} type="radio" id='icon2' name='icons' />
+                <label htmlFor='icon2'>hallå</label>
+                
+                <input className={styles.iconsRadio} type="radio" id='icon3' name='icons' />
+                <label htmlFor='icon3'>hallå</label>
+                
+                <input className={styles.iconsRadio} type="radio" id='icon4' name='icons' />
+                <label htmlFor='icon4'>hallå</label>
+
+                <input className={styles.iconsRadio} type="radio" id='icon5' name='icons' />
+                <label htmlFor='icon5'>hallå</label>
+
+                <input className={styles.iconsRadio} type="radio" id='icon6' name='icons' />
+                <label htmlFor='icon6'>hallå</label>
+
+                <input className={styles.iconsRadio} type="radio" id='icon7' name='icons' />
+                <label htmlFor='icon7'>hallå</label>
+
+                <input className={styles.iconsRadio} type="radio" id='icon8' name='icons' />
+                <label htmlFor='icon8'>hallå</label>
+
+                <input className={styles.iconsRadio} type="radio" id='icon9' name='icons' />
+                <label htmlFor='icon9'>hallå</label>
+
+                <input className={styles.iconsRadio} type="radio" id='icon10' name='icons' />
+                <label htmlFor='icon10'>hallå</label>
+
+                <input className={styles.iconsRadio} type="radio" id='icon11' name='icons' />
+                <label htmlFor='icon11'>hallå</label>
+
+                <input className={styles.iconsRadio} type="radio" id='icon12' name='icons' />
+                <label htmlFor='icon12'>hallå</label>
+            </div>
 
         </main>
     )
