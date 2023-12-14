@@ -1,26 +1,35 @@
+'use client';
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
-const MealContext = createContext();
+export const MealContext = createContext();
 
-export const MealProvider = ({ children }) => {
+export const MealProvider = ({ children, currentDay }) => {
+  const getCurrentDayStorageKey = (mealType) => {
+    return `${currentDay}_${mealType}`;
+  };
+
   const [selectedLunch, setSelectedLunch] = useState(() => {
     if (typeof window !== 'undefined') {
-      return localStorage.getItem('selectedLunch') || null;
+      const key = getCurrentDayStorageKey('Lunch');
+      return localStorage.getItem(key) || null;
     }
     return null;
   });
 
   const [selectedDinner, setSelectedDinner] = useState(() => {
     if (typeof window !== 'undefined') {
-      return localStorage.getItem('selectedDinner') || null;
+      const key = getCurrentDayStorageKey('Dinner');
+      return localStorage.getItem(key) || null;
     }
     return null;
   });
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      localStorage.setItem('selectedLunch', selectedLunch || '');
-      localStorage.setItem('selectedDinner', selectedDinner || '');
+      const lunchKey = getCurrentDayStorageKey('Lunch');
+      const dinnerKey = getCurrentDayStorageKey('Dinner');
+      localStorage.setItem(lunchKey, selectedLunch || '');
+      localStorage.setItem(dinnerKey, selectedDinner || '');
     }
   }, [selectedLunch, selectedDinner]);
 

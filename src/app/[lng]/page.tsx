@@ -14,7 +14,7 @@ export default async function Home({ params: { lng } }) {
   const session = await getServerSession();
   const { t } = await useTranslation(lng, ['glossary', 'common'])
 
-  // const fetch = await Fetch();
+  const fetch = await Fetch();
 
   // console.log(fetch)
   if (session) {

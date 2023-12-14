@@ -1,6 +1,7 @@
 import NextAuth from "next-auth";
 import GitHubProvider from "next-auth/providers/github";
 import GoogleProvider from 'next-auth/providers/google';
+import { redirect } from 'next/navigation'
 
 export const authOptions = {
     providers: [
@@ -12,8 +13,15 @@ export const authOptions = {
             clientId: process.env.GOOGLE_ID ?? "",
             clientSecret: process.env.GOOGLE_SECRET ?? "",
         }),
+
     ],
-};
+    callbacks: {
+        async redirect({ url, baseUrl }: { url: string, baseUrl: string }) {
+            return baseUrl + "/setup"
+        }
+    }
+}
+
 
 export const handler = NextAuth(authOptions);
 
