@@ -9,7 +9,8 @@ export default function Planning() {
   const date = new Date();
   const today = date.getMonth() + 1;
   const todayaswell = date.getDate();
-  const currentDay = date.toLocaleString('default', { weekday: 'long' });
+  const dataWeek = "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday".split(', ');
+  const data = [1, 2, 3, 4, 5, 6, 7]
 
   return (
     <>
@@ -17,29 +18,14 @@ export default function Planning() {
         <h1 className={styles.title}>Veckans mat</h1>
         <p className={styles.undertext}>Planera eller generera veckans måltider</p>
       </div>
-      <WeekPlan></WeekPlan>
+      {data.map((date) => (
+        <WeekPlan
+          key={date}
+          today={today}
+          todayaswell={todayaswell + date - 1}
+          currentDay={dataWeek[date - 1]}
+        ></WeekPlan>
+      ))}
     </>
-    // <MealProvider>
-    //   <>
-    //     <div className={styles.prison}>
-    //       <h1 className={styles.title}>Veckans mat</h1>
-    //       <p className={styles.undertext}>Planera eller generera veckans måltider</p>
-    //     </div>
-    //     <div>
-    //       {currentDay}
-    //     </div>
-    //     <div>
-    //       {todayaswell} / {today}
-    //     </div>
-    //     <div>
-    //       <p>lunch</p>
-    //       <DropDown mealType="Lunch" />
-    //     </div>
-    //     <div>
-    //       <p>middag</p>
-    //       <DropDown mealType="Dinner" />
-    //     </div>
-    //   </>
-    // </MealProvider>
   );
 }

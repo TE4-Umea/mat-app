@@ -4,11 +4,8 @@ import '/src/app/globals.css';
 import DropDown from '../../../backendComponents/dropDown/dropDown';
 import { MealProvider } from '../../../backendComponents/dropDown/MealContext';
 
-export function WeekPlan() {
-    const date = new Date();
-    const today = date.getMonth() + 1;
-    const todayaswell = date.getDate();
-    const currentDay = date.toLocaleString('default', { weekday: 'long' });
+export function WeekPlan(props) {
+
 
     return (
         <MealProvider>
@@ -16,8 +13,8 @@ export function WeekPlan() {
             <>
                 <div className='weekPlanBakk'>
                     <div id='weekPlanFlex'>
-                        <p className='weekPlanTitle'>{currentDay}</p>
-                        <p className='weekPlanDate'> {todayaswell} / {today}</p>
+                        <p className='weekPlanTitle'>{props.currentDay}</p>
+                        <p className='weekPlanDate'> {props.todayaswell} / {props.today}</p>
                     </div>
 
 
