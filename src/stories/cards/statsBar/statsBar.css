@@ -2,37 +2,39 @@
     height: 6px;
     background-color: var(--color-secondary);
     border-radius: 100px;
-    grid-area: 1 / 1;
 }
 
 .statsBackDrop {
-    width: 10vw;
+    width: 140px;
     height: 6px;
     background-color: var(--color-border);
     border-radius: 100px;
-    grid-area: 1 / 1;
-}
-
-.grid {
-    display: grid;
 }
 
 .dflex {
+    background-color: var(--color-bg);
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-s);
 }
 
-span {
+.dflex:nth-child(odd) {
+    background-color: var(--color-tertiary);
+}
+
+.statsTitle {
     color: var(--color-fg);
     font-family: var(--font-title);
-    font-size: var(--step-1);
+    font-size: var(--step-2);
     font-weight: 500;
     margin-right: var(--space-s);
 }
 
-p {
+.statsAmount {
     color: var(--color-primary);
     font-family: var(--font-title);
     font-weight: 500;
     margin: 0;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
 }

@@ -16,14 +16,13 @@ export const Card = ({
 }: ButtonProps) => {
     return (
         <div className='dflex'>
-            <span>{label}</span>
+            <span className='statsTitle'>{label}</span>
             <div>
-                <p>{times} gånger</p>
-                <div className='grid'>
-                    <div className={['statsBackDrop'].join(' ')} />
+                <p className='statsAmount'>{times} gånger</p>
+                <div className={['statsBackDrop'].join(' ')}>
                     <style jsx>{`
                         .statsBar {
-                            width: ${percent}vw;
+                            width: ${percent}%;
                         }
                     `}</style>
                     <div id='statsBar' className={['statsBar'].join(' ')} />
