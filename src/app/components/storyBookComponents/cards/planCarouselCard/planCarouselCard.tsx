@@ -36,7 +36,7 @@ export const CarouselCard = ({
                     <button onClick={() => setTime((prevDisplay) => !prevDisplay)}>Middag</button>
                 </div>
                 )}
-                {!modeTime() && (<div className={time ? ['buttonContainer', mode1].join(' ') : ['buttonContainer', mode].join(' ')}>
+                {!modeTime() && (<div className={time ? ['buttonContainer', mode].join(' ') : ['buttonContainer', mode1].join(' ')}>
                     <button onClick={() => setTime((prevDisplay) => !prevDisplay)}>Lunch</button>
                     <button onClick={() => setTime((prevDisplay) => !prevDisplay)}>Middag</button>
                 </div>
