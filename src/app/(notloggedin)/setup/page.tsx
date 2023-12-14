@@ -23,9 +23,9 @@ export default async function Setup() {
 
 
             <h2 className={styles.h2}>Your preferred language</h2>
-            <DropDown options={['Normal', 'Vegetarian']}></DropDown>
-            <h2 className={styles.h2}>Your primary diet</h2>
             <DropDown options={['Svenska', 'English']}></DropDown>
+            <h2 className={styles.h2}>Your primary diet</h2>
+            <DropDown options={['Normal', 'Vegetarian']}></DropDown>
             <br />
 
             {session && (
