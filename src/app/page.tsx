@@ -11,9 +11,9 @@ import Fetch from '../app/lib/matFetch'
 
 export default async function Home() {
   const session = await getServerSession();
-  // const fetch = await Fetch();
+  const fetch = await Fetch();
 
-  // console.log(fetch)
+  console.log(fetch)
   if (session) {
     return (
       <main>

@@ -1,7 +1,8 @@
+'use client';
 import React, { useState, useEffect } from 'react';
 import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button } from "@nextui-org/react";
 import styles from './dropDown.module.css';
-import Fetch from '@/app/lib/fetch';
+import Fetch from '@/app/lib/matFetch';
 import { useMealContext } from './MealContext';
 import '../../storyBookComponents/cards/WeekPlan/WeekPlan.css';
 
@@ -14,53 +15,52 @@ export default function DropDown({ mealType }) {
     const fetchMealsData = async () => {
       try {
         const fetchedData = await Fetch();
-        setMeals(fetchedData.meals.map(meal => meal.strMeal));
+        console.log(fetchedData);
+        setMeals(fetchedData);
       } catch (error) {
         console.error('Error fetching meals:', error);
       }
     };
-
     fetchMealsData();
 
-    // Set initial localSelectedMeal based on mealType
-    if (mealType === 'Lunch') {
-      setLocalSelectedMeal(selectedLunch);
-    } else if (mealType === 'Dinner') {
-      setLocalSelectedMeal(selectedDinner);
-    }
-  }, [mealType, selectedLunch, selectedDinner]);
-  useEffect(() => {
-    let DeadSelect = false;
+     if (mealType === 'Lunch') {
+       setLocalSelectedMeal(selectedLunch);
+     } else if (mealType === 'Dinner') {
+       setLocalSelectedMeal(selectedDinner);
+     }
+   }, [mealType, selectedLunch, selectedDinner]);
+   useEffect(() => {
+     let DeadSelect = false;
 
-    if (localSelectedMeal !== null) {
-      if (!DeadSelect) {
-        if (mealType === 'Lunch') {
-          setSelectedLunch(localSelectedMeal);
-        } else if (mealType === 'Dinner') {
-          setSelectedDinner(localSelectedMeal);
-        }
-      }
-    }
+     if (localSelectedMeal !== null) {
+       if (!DeadSelect) {
+         if (mealType === 'Lunch') {
+           setSelectedLunch(localSelectedMeal);
+         } else if (mealType === 'Dinner') {
+           setSelectedDinner(localSelectedMeal);
+         }
+       }
+     }
   }, [localSelectedMeal, mealType, setSelectedLunch, setSelectedDinner]);
 
   const handleMealSelect = (meal) => {
-    setLocalSelectedMeal(meal);
+    setLocalSelectedMeal(meal.name);
     if (mealType === 'Lunch') {
-      setSelectedLunch(meal);
+      setSelectedLunch(meal.name);
     } else if (mealType === 'Dinner') {
-      setSelectedDinner(meal);
+      setSelectedDinner(meal.name);
     }
   };
-
+  
   const handleGenerateRandomMeal = () => {
     const randomMeal = meals[Math.floor(Math.random() * meals.length)];
-    setLocalSelectedMeal(randomMeal);
+    setLocalSelectedMeal(randomMeal.name);
     if (mealType === 'Lunch') {
-      setSelectedLunch(randomMeal);
+      setSelectedLunch(randomMeal.name);
     } else if (mealType === 'Dinner') {
-      setSelectedDinner(randomMeal);
+      setSelectedDinner(randomMeal.name);
     }
-  };
+  }
 
   const handleRemoveMeal = () => {
     setLocalSelectedMeal(null);
@@ -72,23 +72,23 @@ export default function DropDown({ mealType }) {
     localStorage.removeItem(mealType === 'Lunch' ? 'selectedLunch' : 'selectedDinner');
   };
 
-  useEffect(() => {
-    let DeadSelect = false;
+   useEffect(() => {
+     let DeadSelect = false;
 
-    if (localSelectedMeal !== null) {
-      if (!DeadSelect) {
-        if (mealType === 'Lunch') {
-          setSelectedLunch(localSelectedMeal);
-        } else if (mealType === 'Dinner') {
-          setSelectedDinner(localSelectedMeal);
-        }
-      }
+     if (localSelectedMeal !== null) {
+       if (!DeadSelect) {
+         if (mealType === 'Lunch') {
+           setSelectedLunch(localSelectedMeal);
+         } else if (mealType === 'Dinner') {
+           setSelectedDinner(localSelectedMeal);
+         }
+       }
 
-      return () => {
-        DeadSelect = false;
-      }
-    }
-  }, [localSelectedMeal, setSelectedLunch, setSelectedDinner, mealType]);
+       return () => {
+         DeadSelect = false;
+       }
+     }
+   }, [localSelectedMeal, setSelectedLunch, setSelectedDinner, mealType]);
 
   return (
     <>
@@ -100,9 +100,9 @@ export default function DropDown({ mealType }) {
           </Button>
         </DropdownTrigger>
         <DropdownMenu className={styles.dropDownMenu} aria-label={`Add ${mealType} Meal`}>
-          {meals.map((meal, index) => (
+          {meals && meals.map((meal, index) => (
             <DropdownItem key={index} onClick={() => handleMealSelect(meal)}>
-              {meal}
+              {meal.name}
             </DropdownItem>
           ))}
           <DropdownItem onClick={handleGenerateRandomMeal}>
