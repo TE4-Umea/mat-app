@@ -1,4 +1,4 @@
-// MealContext.js
+'use client';
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
 export const MealContext = createContext();
