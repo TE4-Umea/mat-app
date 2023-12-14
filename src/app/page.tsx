@@ -1,3 +1,4 @@
+'use server'
 import styles from './page.module.css'
 import GreetingCardTime from './components/backendComponents/timeDepender/greetingCardTime'
 import BackgroundTime from './components/backendComponents/timeDepender/backgroundTime';

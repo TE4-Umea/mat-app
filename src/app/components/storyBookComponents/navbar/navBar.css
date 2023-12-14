@@ -92,4 +92,5 @@
 
 .navAddActive .plus {
     fill: var(--color-bg);
+    transform: rotate(45deg);
 }
