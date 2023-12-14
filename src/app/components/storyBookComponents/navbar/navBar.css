@@ -94,3 +94,8 @@
     fill: var(--color-bg);
     transform: rotate(45deg);
 }
+
+.navMargin {
+    display: block;
+    height: 90px;
+}

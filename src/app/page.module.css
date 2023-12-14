@@ -48,7 +48,6 @@
 .chosenMeals {
   background-color: #EFEFEF;
   margin-top: var(--space-xl);
-  padding-bottom: var(--space-3xl);
 }
 
 .chosenMeals h1 {
