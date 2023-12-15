@@ -4,12 +4,14 @@ import { MealProvider } from '../components/backendComponents/dropDown/MealConte
 import styles from './page.module.css';
 import DropDown from '../components/backendComponents/dropDown/dropDown';
 import { WeekPlan } from '../components/storyBookComponents/WeekPlan/WeekPlan';
+// import { useTranslation } from '@/app/i18n'
 
-export default function Planning({ params: { lng } }) {
+export default function Planning() {
   const date = new Date();
   const today = date.getMonth() + 1;
   const todayaswell = date.getDate();
   const data = [1, 2, 3, 4, 5, 6, 7]
+  // const { t } = await useTranslation(lng, ['glossary', 'common'])
 
   const getDayOfWeek = (date, offset) => {
     const newDate = new Date(date);
@@ -25,7 +27,7 @@ export default function Planning({ params: { lng } }) {
       </div>
       {data.map((offset) => (
         <WeekPlan
-          params={lng}
+          // params={lng}
           key={offset}
           today={today}
           todayaswell={todayaswell + offset - 1}
