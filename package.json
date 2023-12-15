@@ -12,13 +12,15 @@
   },
   "dependencies": {
     "@nextui-org/react": "^2.2.9",
-    "i18next": "^23.7.6",
+    "accept-language": "^3.0.18",
+    "i18next": "^23.7.9",
+    "i18next-resources-to-backend": "^1.2.0",
     "next": "14.0.2",
     "next-auth": "^4.24.5",
     "next-i18next": "^15.0.0",
     "react": "^18",
     "react-dom": "^18",
-    "react-i18next": "^13.4.1"
+    "react-i18next": "^13.5.0"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.5.3",

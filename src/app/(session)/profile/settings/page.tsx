@@ -1,8 +1,8 @@
-import ProfileClient from '@/app/components/storyBookComponents/cards/Profile/ProfileClient'
+import ProfileClient from '../../../[lng]/components/storyBookComponents/Profile/ProfileClient'
 import { getServerSession } from "next-auth";
-import { Switch } from '@/app/components/storyBookComponents/buttons/Switch/Switch'
-import { Delete } from '@/app/components/storyBookComponents/buttons/DeleteAcc/DeleteAcc'
-import { DropDown } from '@/app/components/storyBookComponents/buttons/DropDown/DropDown'
+import { Switch } from '../../../[lng]/components/storyBookComponents/Switch/Switch'
+import { Delete } from '../../../[lng]/components/storyBookComponents/DeleteAcc/DeleteAcc'
+import { DropDown } from '../../../[lng]/components/storyBookComponents/DropDown/DropDown'
 import styles from './page.module.css'
 
 export default async function ProfilePage() {

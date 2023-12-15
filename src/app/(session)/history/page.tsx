@@ -1,7 +1,7 @@
 'use client'
 import styles from './page.module.css'
-import { HistoryCard } from '../../components/storyBookComponents/cards/history/historyCard'
-import { MealProvider } from '../../components/backendComponents/dropDown/MealContext';
+import { HistoryCard } from '../../[lng]/components/storyBookComponents/history/historyCard'
+import { MealProvider } from '../../[lng]/components/backendComponents/dropDown/MealContext';
 
 export default function History() {
     const date = new Date();

@@ -1,0 +1,49 @@
+{
+    "setup_message": {
+        "setup1": "Welcome to ",
+        "setup2": "Storken",
+        "setup3": "! We'll begin with configuring your profile."
+    },
+    "language": "Your preferred language",
+    "diet": "Your primary diet",
+    "greeting": {
+        "morning": "Good morning, ",
+        "afternoon": "Good afternoon, ",
+        "day": "Good day, ",
+        "evening": "Good evening, "
+    },
+    "eat": {
+        "today": "Today you'll be having",
+        "tomorrow": "Tomorrow you'll be having",
+        "tuesday_future": "On tuesday you'll be having",
+        "wednesday_future": "On wednesday you'll be having",
+        "thursday_future": "On thursday you'll be having",
+        "friday_future": "On friday you'll be having",
+        "saturday_future": "On saturday you'll be having",
+        "sunday_future": "On sunday you'll be having",
+        "yesterday": "Yesterday you had",
+        "monday_past": "On monday you had",
+        "tuesday_past": "On tuesday you had",
+        "wednesday_past": "On wednesday you had",
+        "thursday_past": "On thursday you had",
+        "friday_past": "On friday you had",
+        "saturday_past": "On saturday you had",
+        "sunday_past": "On sunday you had"
+    },
+    "scroll": "Scroll to see your entire weekly plan",
+    "saved_button": "Saved meals",
+    "chosen_meals_title": "Chosen meals",
+    "chosen_meals_desc": "Meals created by our chefs, for you",
+    "add_saved": "Add to saved",
+    "last_time": "Last you had this was on",
+    "amount_eat": "You have had this",
+    "times": "times",
+    "meal_history": "Meal history",
+    "add_to_plan": "Add to your weekly plan",
+    "week_food_title": "This week's food",
+    "week_food_desc": "Plan or generate this week's meals",
+    "history_title": "History",
+    "history_desc": "Meals you have had",
+    "type_here": "Type here",
+    "icon_choice": "Choose an icon for this meal"
+}
