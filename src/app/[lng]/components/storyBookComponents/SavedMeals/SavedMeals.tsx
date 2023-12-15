@@ -4,11 +4,11 @@ import '/src/app/globals.css';
 import Link from 'next/link';
 import { useTranslation } from '@/app/i18n'
 
-export async function SavedMeals({ params: { lng } }) {
+export const SavedMeals = async ({ lng }) => {
   const { t } = await useTranslation(lng, ['glossary', 'common'])
   return (
     <Link
-      href="/profile/saved-meals" >
+      href={`/${lng}/profile/saved-meals`} >
       <button
         type="button"
         className={['savedMeals'].join(' ')}

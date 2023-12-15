@@ -1,6 +1,6 @@
 import styles from './page.module.css'
 import { getServerSession } from "next-auth";
-import ProfileClient from '../components/storyBookComponents/cards/Profile/ProfileClient'
+import ProfileClient from '@/app/[lng]/components/storyBookComponents/Profile/ProfileClient'
 import Link from 'next/link';
 import { DropDown } from '../components/storyBookComponents/DropDown/DropDown'
 import { useTranslation } from '@/app/i18n'

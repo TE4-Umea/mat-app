@@ -30,7 +30,7 @@ export default async function Home({ params: { lng } }) {
 
         <div className={styles.buttonsSaved}>
 
-          <SavedMeals params={lng}></SavedMeals>
+          <SavedMeals lng={lng}></SavedMeals>
 
         </div>
         <div className={styles.chosenMeals}>
