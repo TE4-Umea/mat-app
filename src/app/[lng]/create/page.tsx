@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import styles from './page.module.css'
 import { HistoryCard } from '../components/storyBookComponents/history/historyCard'
 import { useTranslation } from '@/app/i18n'
@@ -9,18 +9,40 @@ export default async function History({ params: { lng } }) {
     const Create = () => {
         const title = (document.getElementById('title') as HTMLInputElement).value;
         const disc = (document.getElementById('disc') as HTMLInputElement).value;
-        fetch(`http://jupiter.umea-ntig.se:3008/api/dish?name=${title}&desc=${disc}`, {
-            method: 'POST',
+       fetch (`http://jupiter.umea-ntig.se:3008/api/dish?name=${title}&desc=${disc}` , {
+        method: 'POST',
+        headers: {
+            authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdW5kbWFya2hqYWxtYXJAZ21haWwuY29tIiwiaWF0IjoxNzAyNDU1MTAzfQ.O9LhDq-P1jFVwDlToU8p_VUrRjsqQ60R1bybCa0B9yI',
+        },
+       })
+       .then(response => {
+        if (!response.ok) {
+          if (response.status === 400) {
+            throw new Error('Item already exists');
+          }
+          throw new Error('An error occurred');
+        }
+        return response.json();
+      })
+      .then(data => {
+        window.alert('Item has been created');
+      })
+      .catch((error) => {
+        window.alert(error.message);
+      });    
+    };
+
+    const Delete = () => {
+        const remove = (document.getElementById('remove') as HTMLInputElement).value;
+         fetch (`http://jupiter.umea-ntig.se:3008/api/dish/${remove}` , {
+            method : 'DELETE',
             headers: {
                 authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdW5kbWFya2hqYWxtYXJAZ21haWwuY29tIiwiaWF0IjoxNzAyNDU1MTAzfQ.O9LhDq-P1jFVwDlToU8p_VUrRjsqQ60R1bybCa0B9yI',
             },
         })
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-            })
-
     };
+
+    
     return (
         <main>
 
@@ -81,6 +103,12 @@ export default async function History({ params: { lng } }) {
 
             <div className={styles.savebutton}>
                 <button onClick={Create} className={styles.save}>Spara</button>
+            </div>
+
+            <div className={styles.deletebutton}>
+                <button onClick={Delete} className={styles.delete}>Radera</button>
+                <input className={styles.deleteInput} id='remove' type="text"/>
+                <label htmlFor='delete'>Tryck för att radera</label>
             </div>
 
         </main>
