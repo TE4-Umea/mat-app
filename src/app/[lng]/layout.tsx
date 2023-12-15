@@ -26,7 +26,10 @@ export default function RootLayout({
     lng
   }
 }: {
-  children: React.ReactNode
+  children: React.ReactNode,
+  params: {
+    lng: string
+  }
 }) {
   return (
     <html lang={lng} dir={dir(lng)}>
@@ -34,7 +37,5 @@ export default function RootLayout({
         {children}
       </body>
     </html>
-
-
   )
 }
