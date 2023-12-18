@@ -1,0 +1,49 @@
+{
+    "setup_message": {
+        "setup1": "Välkommen till ",
+        "setup2": "Storken",
+        "setup3": "! Vi börjar med att konfigurera din profil."
+    },
+    "language": "Ditt föredragna språk",
+    "diet": "Din primära diet",
+    "greeting": {
+        "morning": "God morgon, ",
+        "afternoon": "God eftermiddag, ",
+        "day": "God dag, ",
+        "evening": "God kväll, "
+    },
+    "eat": {
+        "today": "Idag ska du äta",
+        "tomorrow": "Imorgon ska du äta",
+        "tuesday_future": "På tisdag ska du äta",
+        "wednesday_future": "På onsdag ska du äta",
+        "thursday_future": "På torsdag ska du äta",
+        "friday_future": "På fredag ska du äta",
+        "saturday_future": "På lördag ska du äta",
+        "sunday_future": "På söndag ska du äta",
+        "yesterday": "Yesterday hade du",
+        "monday_past": "På måndag hade du",
+        "tuesday_past": "På tisdag hade du",
+        "wednesday_past": "På onsdag hade du",
+        "thursday_past": "På torsdag hade du",
+        "friday_past": "På fredag hade du",
+        "saturday_past": "På lördag hade du",
+        "sunday_past": "På söndag hade du"
+    },
+    "scroll": "Skrolla för att se hela din veckoplanering",
+    "saved_button": "Sparade rätter",
+    "chosen_meals_title": "Utvalda måltider",
+    "chosen_meals_desc": "Maträtter skapade av våra kockar, för dig",
+    "add_saved": "Lägg till i sparade",
+    "last_time": "Sist du hade detta var",
+    "amount_eat": "Du har ätit detta",
+    "times": "gånger",
+    "meal_history": "Måltidshistorik",
+    "add_to_plan": "Lägg till i din veckoplanering",
+    "week_food_title": "Veckans mat",
+    "week_food_desc": "Planera eller generera veckans måltider",
+    "history_title": "Historik",
+    "history_desc": "Måltider du har haft",
+    "type_here": "Skriv här",
+    "icon_choice": "Välj en ikon för denna måltid"
+}

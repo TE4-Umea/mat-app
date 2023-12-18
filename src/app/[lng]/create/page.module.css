@@ -1,0 +1,130 @@
+.title{
+    margin: 0;
+
+    color: var(--color-primary);
+    font-family: var(--font-title);
+    font-weight: 600;
+    font-size: var(--step-4);
+    border-style: none;
+    max-width: 100%;
+}
+
+.prison{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg);
+    border-radius: 20px 20px 0px 0px;
+    padding: var(--space-xs) var(--space-m) var(--space-m) var(--space-m);
+    margin-top: var(--space-4xl);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+input.title::placeholder {
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.infoTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--font-title);
+    font-weight: 500;
+    padding: 0px var(--space-m);
+}
+
+.infoTitle p {
+    color: var(--color-fg);
+    margin: 0;
+}
+
+.infoTitle p:nth-child(2) {
+    font-weight: 400;
+    color: var(--color-gray);
+}
+
+#flex{
+    flex-direction: row;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.infoContainer {
+    padding: var(--space-m);
+}
+
+.input {
+    resize: none;
+    font-family: var(--font-body);
+    font-size: 13px;
+    padding: 6px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    width: 100%;
+    min-height: 150px;
+}
+
+
+
+
+.iconTitle{
+    color: var(--color-primary);
+    
+    font-weight: 600;
+    font-size: var(--step--1);
+    font-family: var(--font-body);
+
+    text-align: center;
+}
+
+
+.iconsContainer {
+    margin-bottom: 120px;
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    padding: 0px var(--space-m);
+}
+
+.iconsContainer label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+    border-radius: 6px;
+    aspect-ratio: 1;
+    background-color: var(--color-tertiary);
+}
+
+
+.iconsContainer label svg {
+    width: 46px;
+    height: auto;
+    transition: fill 0.2s;
+    fill: var(--color-fg);
+}
+
+.iconsRadio {
+    display: none;
+}
+
+.iconsRadio:checked+label {
+    background-color: var(--color-secondary);
+}
+
+.iconsRadio:checked+label svg {
+    fill: var(--color-bg);
+}
+
+.savebutton {
+
+    margin-bottom: 10rem;
+    margin-inline: 10rem;
+}
+
+.deletebutton {
+    margin-bottom: 10rem;
+    margin-inline: 10rem;
+}
