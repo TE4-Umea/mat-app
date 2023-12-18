@@ -17,9 +17,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <>
+    <main className={["backgroundGlobal"].join(" ")}>
       {children}
-    </>
+    </main>
 
   )
 }
