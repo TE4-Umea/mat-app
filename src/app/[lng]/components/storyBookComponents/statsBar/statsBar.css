@@ -5,8 +5,9 @@
     grid-area: 1 / 1;
 }
 
+
 .statsBackDrop {
-    width: 10vw;
+    width: 50vw;
     height: 6px;
     background-color: var(--color-border);
     border-radius: 100px;
