@@ -16,6 +16,14 @@
     white-space: normal;
 }
 
+.show {
+    display: block;
+}
+
+.notShow {
+    display: none;
+}
+
 /* .planCarouselCard img {
     width: 13rem;
     height: 13rem;
