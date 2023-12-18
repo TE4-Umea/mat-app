@@ -9,7 +9,7 @@ export default function food({ params: { lng } }) {
         <div className={styles.bg}>
 
 
-            <StatsBar lng={lng} label={"Kebabpizza"} times={500} percent={80}></StatsBar>
+            {/* <StatsBar lng={lng} label={"Kebabpizza"} times={500} percent={80}></StatsBar> */}
 
             <div className={styles.mealtid}><p>Måltidshistorik</p></div>
 
