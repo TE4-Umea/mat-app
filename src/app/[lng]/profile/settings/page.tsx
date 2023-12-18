@@ -42,7 +42,7 @@ export default async function ProfilePage({ params: { lng } }) {
 
             <h1 className={styles.h1}>{t('common:account')}</h1>
             <div>
-                <ProfileClient session={session} />
+                <ProfileClient session={session} lng={lng} />
                 <Delete></Delete>
             </div>
         </main>
