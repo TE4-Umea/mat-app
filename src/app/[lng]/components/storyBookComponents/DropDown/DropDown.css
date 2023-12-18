@@ -12,6 +12,7 @@
     font-weight: 500;
     font-size: var(--step--1);
 
+    display: block;
     margin-right: auto;
     margin-left: auto;
 }
