@@ -3,6 +3,7 @@ import styles from './page.module.css'
 import { HistoryCard } from '../components/storyBookComponents/history/historyCard'
 import { useTranslation } from '@/app/i18n'
 import { CreateMealIcons } from '@/app/components/storyBookComponents/buttons/CreateMealIcons/CreateMealIcons'
+import { MealsMenu } from '../components/storyBookComponents/MealsMenu/MealsMenu';
 
 export default async function History({ params: { lng } }) {
     const { t } = await useTranslation(lng, ['glossary', 'common'])
@@ -64,7 +65,9 @@ export default async function History({ params: { lng } }) {
 
             <div className={styles.prison}>
                 <input className={styles.title} id='title' type="text" placeholder={t('common:name')} />
-                <label htmlFor='title'>Tryck för att redigera titeln</label>
+                <div className={styles.mealsMenuContainer}>
+                    <MealsMenu></MealsMenu>    
+                </div>
             </div>
 
 
@@ -80,7 +83,6 @@ export default async function History({ params: { lng } }) {
 
             <div className={styles.iconTitle}><p>{t('glossary:icon_choice')}</p></div>
               
-            <div className={styles.iconTitle}><p>välj icon för maträtten</p></div>
 
             <div className={styles.iconsContainer}>
                 {id.map((id) => (
