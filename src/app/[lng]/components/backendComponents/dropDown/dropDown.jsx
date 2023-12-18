@@ -108,11 +108,11 @@ export default function DropDown({ mealType }) {
         </DropdownTrigger>
         <DropdownMenu className={styles.dropDownMenu} aria-label={`Add ${mealType} Meal`}>
           {meals && meals.map((meal, index) => (
-            <DropdownItem key={index} onClick={() => { handleMealSelect(meal); setTime((prevDisplay) => !prevDisplay) }}>
+            <DropdownItem key={index} onClick={() => { handleMealSelect(meal); setTime(true) }}>
               {meal.name}
             </DropdownItem>
           ))}
-          <DropdownItem onClick={() => { handleGenerateRandomMeal(); setTime((prevDisplay) => !prevDisplay) }} >
+          <DropdownItem onClick={() => { handleGenerateRandomMeal(); setTime(true) }} >
             Generera en slumpad måltid
           </DropdownItem>
         </DropdownMenu>
