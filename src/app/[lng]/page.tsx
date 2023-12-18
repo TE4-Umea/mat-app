@@ -1,5 +1,5 @@
 import styles from './page.module.css'
-import GreetingCardTime from './components/backendComponents/timeDepender/greetingCardTime'
+import { GreetingCardTime } from './components/backendComponents/timeDepender/greetingCardTime'
 import BackgroundTime from './components/backendComponents/timeDepender/backgroundTime';
 import { NavBar } from './components/storyBookComponents/navbar/navBar';
 import { SavedMeals } from './components/storyBookComponents/SavedMeals/SavedMeals';
@@ -13,6 +13,8 @@ import { useTranslation } from '../i18n'
 export default async function Home({ params: { lng } }) {
   const session = await getServerSession();
   const { t } = await useTranslation(lng, ['glossary', 'common'])
+  console.log({ lng })
+
 
   const fetch = await Fetch();
 
@@ -23,7 +25,7 @@ export default async function Home({ params: { lng } }) {
         <BackgroundTime></BackgroundTime>
 
         <h1 className={styles.startText}>
-          <GreetingCardTime></GreetingCardTime>
+          <GreetingCardTime lng={lng}></GreetingCardTime>
         </h1>
 
         <Carousel></Carousel>
