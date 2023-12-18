@@ -19,7 +19,7 @@ export function WeekPlan(props) {
     // }
 
     return (
-        <MealProvider currentDay={""}>
+        <MealProvider currentDay={props.currentDay}>
 
             <>
                 <div className='weekPlanBakk'>
