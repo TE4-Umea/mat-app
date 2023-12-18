@@ -1,4 +1,4 @@
-'use client';
+
 import styles from './page.module.css'
 import { HistoryCard } from '../components/storyBookComponents/history/historyCard'
 import { useTranslation } from '@/app/i18n'

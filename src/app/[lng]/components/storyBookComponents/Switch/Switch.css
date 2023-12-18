@@ -3,7 +3,7 @@
   position: relative;
   width: 64px;
   height: 32px;
-  margin: 0;
+  margin: var(--space-s) 5% 0 auto;
 
 
   background-color: var(--color-border);
@@ -30,10 +30,10 @@
   display: none;
 }
 
-.hidden:checked + .switch > .switch-front { 
-    left: calc(100% - 27px);
+.hidden:checked+.switch>.switch-front {
+  left: calc(100% - 27px);
 }
 
-.hidden:checked + .switch {
+.hidden:checked+.switch {
   background-color: var(--color-secondary);
 }

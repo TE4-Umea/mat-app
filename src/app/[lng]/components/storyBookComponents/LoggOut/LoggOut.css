@@ -16,7 +16,12 @@
   box-shadow: var(--shadow2);
   border-radius: 25px;
   border-style: none;
-  transition: transform 0.2s
+  transition: transform 0.2s;
+
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: var(--space-s);
 }
 
 
