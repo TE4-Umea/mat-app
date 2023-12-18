@@ -10,6 +10,7 @@ export default function DropDown({ mealType }) {
   const { selectedLunch, selectedDinner, setSelectedLunch, setSelectedDinner } = useMealContext();
   const [meals, setMeals] = useState([]);
   const [localSelectedMeal, setLocalSelectedMeal] = useState(null);
+  const [time, setTime] = useState(false);
 
   useEffect(() => {
     const fetchMealsData = async () => {
@@ -33,103 +34,105 @@ export default function DropDown({ mealType }) {
   }, [mealType, selectedLunch, selectedDinner]);
 
 
-useEffect(() => {
-  let DeadSelect = false;
+  useEffect(() => {
+    let DeadSelect = false;
 
-  if (localSelectedMeal !== null) {
-    if (!DeadSelect) {
-      if (mealType === 'Lunch') {
-        setSelectedLunch(localSelectedMeal);
-      } else if (mealType === 'Dinner') {
-        setSelectedDinner(localSelectedMeal);
+    if (localSelectedMeal !== null) {
+      if (!DeadSelect) {
+        if (mealType === 'Lunch') {
+          setSelectedLunch(localSelectedMeal);
+        } else if (mealType === 'Dinner') {
+          setSelectedDinner(localSelectedMeal);
+        }
       }
     }
+  }, [localSelectedMeal, mealType, setSelectedLunch, setSelectedDinner]);
+
+  const handleMealSelect = (meal) => {
+    setLocalSelectedMeal(meal.name);
+    if (mealType === 'Lunch') {
+      setSelectedLunch(meal.name);
+    } else if (mealType === 'Dinner') {
+      setSelectedDinner(meal.name);
+    }
+  };
+
+  const handleGenerateRandomMeal = () => {
+    const randomMeal = meals[Math.floor(Math.random() * meals.length)];
+    setLocalSelectedMeal(randomMeal.name);
+    if (mealType === 'Lunch') {
+      setSelectedLunch(randomMeal.name);
+    } else if (mealType === 'Dinner') {
+      setSelectedDinner(randomMeal.name);
+    }
   }
-}, [localSelectedMeal, mealType, setSelectedLunch, setSelectedDinner]);
 
-const handleMealSelect = (meal) => {
-  setLocalSelectedMeal(meal.name);
-  if (mealType === 'Lunch') {
-    setSelectedLunch(meal.name);
-  } else if (mealType === 'Dinner') {
-    setSelectedDinner(meal.name);
-  }
-};
+  const handleRemoveMeal = () => {
+    setLocalSelectedMeal(null);
+    if (mealType === 'Lunch') {
+      setSelectedLunch(null);
+    } else if (mealType === 'Dinner') {
+      setSelectedDinner(null);
+    }
+    localStorage.removeItem(mealType === 'Lunch' ? 'selectedLunch' : 'selectedDinner');
+  };
 
-const handleGenerateRandomMeal = () => {
-  const randomMeal = meals[Math.floor(Math.random() * meals.length)];
-  setLocalSelectedMeal(randomMeal.name);
-  if (mealType === 'Lunch') {
-    setSelectedLunch(randomMeal.name);
-  } else if (mealType === 'Dinner') {
-    setSelectedDinner(randomMeal.name);
-  }
-}
+  useEffect(() => {
+    let DeadSelect = false;
 
-const handleRemoveMeal = () => {
-  setLocalSelectedMeal(null);
-  if (mealType === 'Lunch') {
-    setSelectedLunch(null);
-  } else if (mealType === 'Dinner') {
-    setSelectedDinner(null);
-  }
-  localStorage.removeItem(mealType === 'Lunch' ? 'selectedLunch' : 'selectedDinner');
-};
+    if (localSelectedMeal !== null) {
+      if (!DeadSelect) {
+        if (mealType === 'Lunch') {
+          setSelectedLunch(localSelectedMeal);
+        } else if (mealType === 'Dinner') {
+          setSelectedDinner(localSelectedMeal);
+        }
+      }
 
-useEffect(() => {
-  let DeadSelect = false;
-
-  if (localSelectedMeal !== null) {
-    if (!DeadSelect) {
-      if (mealType === 'Lunch') {
-        setSelectedLunch(localSelectedMeal);
-      } else if (mealType === 'Dinner') {
-        setSelectedDinner(localSelectedMeal);
+      return () => {
+        DeadSelect = false;
       }
     }
+  }, [localSelectedMeal, setSelectedLunch, setSelectedDinner, mealType]);
 
-    return () => {
-      DeadSelect = false;
-    }
-  }
-}, [localSelectedMeal, setSelectedLunch, setSelectedDinner, mealType]);
 
-return (
-  <>
 
-    <Dropdown>
-      <DropdownTrigger>
-        <Button className='weekPlanAddRuta' variant="bordered" aria-label={`Add ${mealType} Meal`}>
-          <p className='weekPlanTextrutaa'>{localSelectedMeal ? localSelectedMeal : '+ Lägg till måltid'}</p>
-        </Button>
-      </DropdownTrigger>
-      <DropdownMenu className={styles.dropDownMenu} aria-label={`Add ${mealType} Meal`}>
-        {meals && meals.map((meal, index) => (
-          <DropdownItem key={index} onClick={() => handleMealSelect(meal)}>
-            {meal.name}
+  return (
+    <>
+
+      <Dropdown>
+        <DropdownTrigger>
+          <Button className={time ? 'weekPlanRuta' : 'weekPlanAddRuta'} variant="bordered" aria-label={`Add ${mealType} Meal`}>
+            <p className='weekPlanTextrutaa'>{localSelectedMeal ? localSelectedMeal : '+ Lägg till måltid'}</p>
+          </Button>
+        </DropdownTrigger>
+        <DropdownMenu className={styles.dropDownMenu} aria-label={`Add ${mealType} Meal`}>
+          {meals && meals.map((meal, index) => (
+            <DropdownItem key={index} onClick={() => { handleMealSelect(meal); setTime(true) }}>
+              {meal.name}
+            </DropdownItem>
+          ))}
+          <DropdownItem onClick={() => { handleGenerateRandomMeal(); setTime(true) }} >
+            Generera en slumpad måltid
           </DropdownItem>
-        ))}
-        <DropdownItem onClick={handleGenerateRandomMeal}>
-          Generera en slumpad måltid
-        </DropdownItem>
-      </DropdownMenu>
-    </Dropdown>
+        </DropdownMenu>
+      </Dropdown>
 
-    {!localSelectedMeal && (
-      <Button className='weekPlanGenerate' variant="contained" onClick={handleGenerateRandomMeal} aria-label={`Add ${mealType} Meal`}>
-        <p className='weekPlanTextrutaa'>
-          Generera slumpad måltid
-        </p>
-      </Button>
-    )}
+      {!localSelectedMeal && (
+        <Button className='weekPlanGenerate' variant="contained" onClick={() => { handleGenerateRandomMeal(); setTime((prevDisplay) => !prevDisplay) }} aria-label={`Add ${mealType} Meal`}>
+          <p className='weekPlanTextrutaa'>
+            Generera slumpad måltid
+          </p>
+        </Button>
+      )}
 
-    {localSelectedMeal && (
-      <Button className='weekPlanDelete' variant="contained" onClick={handleRemoveMeal} aria-label={`Add ${mealType} Meal`}>
-        <p className='textruta'>
-          Remove
-        </p>
-      </Button>
-    )}
-  </>
-);
+      {localSelectedMeal && (
+        <Button className='weekPlanDelete' variant="contained" onClick={() => { handleRemoveMeal(); setTime((prevDisplay) => !prevDisplay) }} aria-label={`Add ${mealType} Meal`}>
+          <p className='textruta'>
+            Remove
+          </p>
+        </Button>
+      )}
+    </>
+  );
 }

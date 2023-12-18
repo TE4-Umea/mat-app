@@ -5,7 +5,7 @@ import Link from "next/link";
 import { LogOut } from '../../../components/storyBookComponents/LoggOut/LoggOut'
 
 
-export default function ProfileClient({ session }: {
+export default function ProfileClient({ session, lng }: {
     session: Session | null
 }) {
 
@@ -14,7 +14,7 @@ export default function ProfileClient({ session }: {
         return (
             <>
                 <Link href="/api/auth/signout">
-                    <LogOut></LogOut>
+                    <LogOut lng={lng}></LogOut>
                 </Link>
             </>
         )
