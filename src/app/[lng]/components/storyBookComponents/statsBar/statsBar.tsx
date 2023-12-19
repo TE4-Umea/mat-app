@@ -1,4 +1,4 @@
-'use client'
+// 'use client'
 import React from 'react';
 import './statsBar.css';
 import '/src/app/globals.css';
@@ -19,12 +19,7 @@ export const StatsBar = async ({ lng, label, times, percent }) => {
                 <p>{times} {t('glossary:times')}</p>
                 <div className='grid'>
                     <div className={['statsBackDrop'].join(' ')} />
-                    {/* <style jsx>{`
-                        .statsBar {
-                            width: ${percent}%;
-                        }
-                    `}</style> */}
-                    <div id='statsBar' className={['statsBar'].join(' ')} />
+                    <div id='statsBar' className={['statsBar'].join(' ')} style={{ width: `${percent}%` }} />
                 </div>
             </div>
         </div>

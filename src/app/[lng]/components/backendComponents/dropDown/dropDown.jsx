@@ -10,7 +10,7 @@ export default function DropDown({ mealType }) {
   const { selectedLunch, selectedDinner, setSelectedLunch, setSelectedDinner } = useMealContext();
   const [meals, setMeals] = useState([]);
   const [localSelectedMeal, setLocalSelectedMeal] = useState(null);
-  const [time, setTime] = useState(false);
+  const [time, setTime] = useState(true);
 
   useEffect(() => {
     const fetchMealsData = async () => {
@@ -102,7 +102,7 @@ export default function DropDown({ mealType }) {
 
       <Dropdown>
         <DropdownTrigger>
-          <Button className={time ? 'weekPlanRuta' : 'weekPlanAddRuta'} variant="bordered" aria-label={`Add ${mealType} Meal`}>
+          <Button className={time && localSelectedMeal ? 'weekPlanRuta' : 'weekPlanAddRuta'} variant="bordered" aria-label={`Add ${mealType} Meal`}>
             <p className='weekPlanTextrutaa'>{localSelectedMeal ? localSelectedMeal : '+ Lägg till måltid'}</p>
           </Button>
         </DropdownTrigger>
@@ -112,14 +112,14 @@ export default function DropDown({ mealType }) {
               {meal.name}
             </DropdownItem>
           ))}
-          <DropdownItem onClick={() => { handleGenerateRandomMeal(); setTime(true) }} >
+          <DropdownItem onClick={() => { handleGenerateRandomMeal(); setTime((prevDisplay) => prevDisplay) }} >
             Generera en slumpad måltid
           </DropdownItem>
         </DropdownMenu>
       </Dropdown>
 
       {!localSelectedMeal && (
-        <Button className='weekPlanGenerate' variant="contained" onClick={() => { handleGenerateRandomMeal(); setTime((prevDisplay) => !prevDisplay) }} aria-label={`Add ${mealType} Meal`}>
+        <Button className='weekPlanGenerate' variant="contained" onClick={() => { handleGenerateRandomMeal(); setTime((prevDisplay) => prevDisplay) }} aria-label={`Add ${mealType} Meal`}>
           <p className='weekPlanTextrutaa'>
             Generera slumpad måltid
           </p>
@@ -127,7 +127,7 @@ export default function DropDown({ mealType }) {
       )}
 
       {localSelectedMeal && (
-        <Button className='weekPlanDelete' variant="contained" onClick={() => { handleRemoveMeal(); setTime((prevDisplay) => !prevDisplay) }} aria-label={`Add ${mealType} Meal`}>
+        <Button className='weekPlanDelete' variant="contained" onClick={() => { handleRemoveMeal(); setTime((prevDisplay) => prevDisplay) }} aria-label={`Add ${mealType} Meal`}>
           <p className='textruta'>
             Remove
           </p>
