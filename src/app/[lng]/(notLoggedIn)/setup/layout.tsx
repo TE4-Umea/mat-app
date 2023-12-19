@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Lexend_Deca, Karla } from 'next/font/google';
-import '../../globals.css'
+import '../../../globals.css'
 import { getServerSession } from "next-auth";
 import { redirect } from 'next/navigation'
 
