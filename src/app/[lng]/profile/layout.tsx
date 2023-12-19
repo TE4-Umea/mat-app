@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-
+import { redirect } from 'next/navigation'
 import { useTranslation } from 'next-i18next';
 
 import ProfileClient from '../components/storyBookComponents/Profile/ProfileClient'
@@ -22,17 +22,23 @@ export default async function RootLayout({
         lng
     }
 }: {
-    children: React.ReactNode
+    children: React.ReactNode,
+    params: {
+        lng: string
+    }
 }) {
     const session = await getServerSession();
-
-    return (
-        <>
-            <BackgroundTime></BackgroundTime>
-            <Profile></Profile>
-            <NavProfile lng={lng}></NavProfile>
-            {children}
-            <NavBar lng={lng} />
-        </>
-    )
+    if (session) {
+        return (
+            <>
+                <BackgroundTime></BackgroundTime>
+                <Profile></Profile>
+                <NavProfile lng={lng}></NavProfile>
+                {children}
+                <NavBar lng={lng} />
+            </>
+        )
+    } else if (!session) {
+        redirect(`/${lng}/setup`)
+    }
 }

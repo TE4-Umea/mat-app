@@ -38,6 +38,6 @@ export default async function RootLayout({
       </>
     )
   } else if (!session) {
-    redirect('/setup')
+    redirect(`/${lng}/setup`)
   }
 }
