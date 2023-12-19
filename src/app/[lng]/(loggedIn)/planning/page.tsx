@@ -1,9 +1,9 @@
 'use client';
 import React from 'react';
-import { MealProvider } from '../components/backendComponents/dropDown/MealContext';
+import { MealProvider } from '../../components/backendComponents/dropDown/MealContext';
 import styles from './page.module.css';
-import DropDown from '../components/backendComponents/dropDown/dropDown';
-import { WeekPlan } from '../components/storyBookComponents/WeekPlan/WeekPlan';
+import DropDown from '../../components/backendComponents/dropDown/dropDown';
+import { WeekPlan } from '../../components/storyBookComponents/WeekPlan/WeekPlan';
 // import { useTranslation } from '@/app/i18n'
 
 export default function Planning() {
