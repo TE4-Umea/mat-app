@@ -2,7 +2,7 @@
 import styles from './page.module.css'
 import { HistoryCard } from '../../components/storyBookComponents/history/historyCard'
 import { useTranslation } from '@/app/i18n'
-import { CreateMealIcons } from '@/app/components/storyBookComponents/buttons/CreateMealIcons/CreateMealIcons'
+import { CreateMealIcons } from '@/app/[lng]/components/storyBookComponents/CreateMealIcons/CreateMealIcons'
 import { MealsMenu } from '../../components/storyBookComponents/MealsMenu/MealsMenu';
 
 export default async function History({ params: { lng } }) {
