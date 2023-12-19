@@ -1,5 +1,5 @@
 import React from 'react';
-import './DropDown.css';
+import './dropDown.css';
 import '/src/app/globals.css';
 
 interface ButtonProps {

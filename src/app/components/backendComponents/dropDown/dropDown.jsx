@@ -4,7 +4,7 @@ import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button } from "@
 import styles from './dropDown.module.css';
 import Fetch from '@/app/lib/matFetch';
 import { useMealContext } from './MealContext';
-import '../../storyBookComponents/WeekPlan/WeekPlan.css';
+import '../../storyBookComponents/weekPlan/weekPlan.css';
 
 export default function DropDown({ mealType }) {
   const { selectedLunch, selectedDinner, setSelectedLunch, setSelectedDinner } = useMealContext();

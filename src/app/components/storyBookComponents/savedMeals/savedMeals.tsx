@@ -1,5 +1,5 @@
 import React from 'react';
-import './SavedMeals.css';
+import './savedMeals.css';
 import '/src/app/globals.css';
 import Link from 'next/link';
 import { useTranslation } from '@/app/i18n'

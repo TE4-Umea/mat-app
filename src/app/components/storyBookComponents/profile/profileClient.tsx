@@ -2,8 +2,8 @@
 import { signIn, signOut } from "next-auth/react";
 import { Session } from "next-auth";
 import Link from "next/link";
-import './Profile.css';
-import { LogOut } from '../LoggOut/LoggOut'
+import './profile.css';
+import { LogOut } from '../logOut/logOut'
 
 
 export default function ProfileClient({ session, lng }: {

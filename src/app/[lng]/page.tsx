@@ -2,7 +2,7 @@ import styles from './page.module.css'
 import { GreetingCardTime } from '../components/backendComponents/timeDepender/greetingCardTime'
 import BackgroundTime from '../components/backendComponents/timeDepender/backgroundTime';
 import { NavBar } from '../components/storyBookComponents/navbar/navBar';
-import { SavedMeals } from '../components/storyBookComponents/SavedMeals/SavedMeals';
+import { SavedMeals } from '../components/storyBookComponents/savedMeals/savedMeals';
 import { redirect } from 'next/navigation'
 import { getServerSession } from "next-auth";
 import Carousel from '../components/backendComponents/carousel/carousel'

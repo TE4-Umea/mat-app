@@ -3,9 +3,9 @@ import { Inter } from 'next/font/google'
 import { redirect } from 'next/navigation'
 import { useTranslation } from 'next-i18next';
 
-import ProfileClient from '../../../components/storyBookComponents/Profile/ProfileClient'
+import ProfileClient from '../../../components/storyBookComponents/profile/profileClient'
 import { getServerSession } from "next-auth";
-import { Profile } from '../../../components/storyBookComponents/Profile/Profile'
+import { Profile } from '../../../components/storyBookComponents/profile/profile'
 import { NavProfile } from '../../../components/storyBookComponents/navProfile/navProfile'
 import { NavBar } from '../../../components/storyBookComponents/navbar/navBar';
 import BackgroundTime from '../../../components/backendComponents/timeDepender/backgroundTimeSmall';

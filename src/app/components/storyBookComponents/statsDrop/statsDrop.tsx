@@ -1,5 +1,5 @@
 import React from 'react';
-import './StatsDrop.css';
+import './statsDrop.css';
 import '/src/app/globals.css';
 
 /* When the user clicks on the button,

@@ -1,5 +1,5 @@
 import React from 'react';
-import './WeekPlan.css';
+import './weekPlan.css';
 import '/src/app/globals.css';
 import DropDown from '../../backendComponents/dropDown/dropDown';
 import { MealProvider } from '../../backendComponents/dropDown/MealContext';

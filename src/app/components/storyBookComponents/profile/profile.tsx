@@ -1,5 +1,5 @@
 import React from 'react';
-import './Profile.css';
+import './profile.css';
 import '/src/app/globals.css';
 import { getServerSession } from 'next-auth'
 

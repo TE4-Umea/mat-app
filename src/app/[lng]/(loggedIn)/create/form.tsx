@@ -1,6 +1,6 @@
 'use client'
 
-import { MealsMenu } from '@/app/components/storyBookComponents/MealsMenu/MealsMenu';
+import { MealsMenu } from '@/app/components/storyBookComponents/mealsMenu/mealsMenu';
 import { Button as CreateMealIcons } from '@/stories/buttons/CreateMealIcons/CreateMealIcons'
 import styles from './page.module.css'
 import { useFormState } from 'react-dom';

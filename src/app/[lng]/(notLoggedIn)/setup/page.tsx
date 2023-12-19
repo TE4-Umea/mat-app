@@ -1,8 +1,8 @@
 import styles from './page.module.css'
 import { getServerSession } from "next-auth";
-import ProfileClient from '@/app/components/storyBookComponents/Profile/ProfileClient'
+import ProfileClient from '@/app/components/storyBookComponents/profile/ProfileClient'
 import Link from 'next/link';
-import { DropDown } from '../../../components/storyBookComponents/DropDown/DropDown'
+import { DropDown } from '../../../components/storyBookComponents/dropDown/dropDown'
 import { useTranslation } from '@/app/i18n'
 
 export default async function Setup({ params: { lng } }) {

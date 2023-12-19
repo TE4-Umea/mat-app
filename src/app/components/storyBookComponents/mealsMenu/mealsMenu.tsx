@@ -1,5 +1,5 @@
 import React from 'react';
-import './MealsMenu.css';
+import './mealsMenu.css';
 import '/src/app/globals.css';
 
 export function MealsMenu() {

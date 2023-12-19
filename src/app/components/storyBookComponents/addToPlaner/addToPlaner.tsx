@@ -1,5 +1,5 @@
 import React from 'react';
-import './AddToPlaner.css';
+import './addToPlaner.css';
 import '/src/app/globals.css';
 
 export function AddToPlaner() {

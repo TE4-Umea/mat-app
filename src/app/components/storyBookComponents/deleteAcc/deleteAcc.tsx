@@ -1,15 +1,15 @@
 import React from 'react';
-import './LoggOut.css';
+import './deleteAcc.css';
 import '/src/app/globals.css';
 import { useTranslation } from '@/app/i18n'
 
-export const LogOut = async ({ lng }) => {
+export const Delete = async ({ lng }) => {
   const { t } = await useTranslation(lng, ['glossary', 'common'])
   return (
     <button
       type="button"
-      className={['LoggOut'].join(' ')}
-    >{t('common:logout')}
+      className={['DeleteAcc'].join(' ')}
+    >{t('common:delete_account')}
     </button>
   );
 };
