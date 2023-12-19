@@ -4,7 +4,7 @@ import './navProfile.css';
 import '/src/app/globals.css';
 import Link from 'next/link';
 import { usePathname } from "next/navigation";
-import { languages } from '../../../../i18n/settings'
+import { languages } from '../../../i18n/settings'
 import { useTranslation } from '@/app/i18n'
 
 /**

@@ -1,48 +1,12 @@
-'use client'
 import styles from './page.module.css'
-import { HistoryCard } from '../../components/storyBookComponents/history/historyCard'
 import { useTranslation } from '@/app/i18n'
-import { CreateMealIcons } from '@/app/components/storyBookComponents/buttons/CreateMealIcons/CreateMealIcons'
-import { MealsMenu } from '../../components/storyBookComponents/MealsMenu/MealsMenu';
+import { Button as CreateMealIcons } from '@/stories/buttons/CreateMealIcons/CreateMealIcons'
+import { MealsMenu } from '@/app/components/storyBookComponents/MealsMenu/MealsMenu';
+import DeleteButton from '@/app/components/backendComponents/createButtons/deleteButton'
+import CreateButton from '@/app/components/backendComponents/createButtons/createButton'
 
 export default async function History({ params: { lng } }) {
     const { t } = await useTranslation(lng, ['glossary', 'common'])
-
-    const Create = () => {
-        const title = (document.getElementById('title') as HTMLInputElement).value;
-        const disc = (document.getElementById('disc') as HTMLInputElement).value;
-        fetch(`http://jupiter.umea-ntig.se:3008/api/dish?name=${title}&desc=${disc}`, {
-            method: 'POST',
-            headers: {
-                authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdW5kbWFya2hqYWxtYXJAZ21haWwuY29tIiwiaWF0IjoxNzAyNDU1MTAzfQ.O9LhDq-P1jFVwDlToU8p_VUrRjsqQ60R1bybCa0B9yI',
-            },
-        })
-            .then(response => {
-                if (!response.ok) {
-                    if (response.status === 400) {
-                        throw new Error('Item already exists');
-                    }
-                    throw new Error('An error occurred');
-                }
-                return response.json();
-            })
-            .then(data => {
-                window.alert('Item has been created');
-            })
-            .catch((error) => {
-                window.alert(error.message);
-            });
-    };
-
-    const Delete = () => {
-        const remove = (document.getElementById('remove') as HTMLInputElement).value;
-        fetch(`http://jupiter.umea-ntig.se:3008/api/dish/${remove}`, {
-            method: 'DELETE',
-            headers: {
-                authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdW5kbWFya2hqYWxtYXJAZ21haWwuY29tIiwiaWF0IjoxNzAyNDU1MTAzfQ.O9LhDq-P1jFVwDlToU8p_VUrRjsqQ60R1bybCa0B9yI',
-            },
-        })
-    };
 
     const id = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
     const icons = [/*Kniv och gaffel */ "M280-80v-366q-51-14-85.5-56T160-600v-280h80v280h40v-280h80v280h40v-280h80v280q0 56-34.5 98T360-446v366h-80Zm400 0v-320H560v-280q0-83 58.5-141.5T760-880v800h-80Z",
@@ -58,7 +22,6 @@ export default async function History({ params: { lng } }) {
         11,
         12
     ]
-
 
     return (
         <main>
@@ -90,16 +53,10 @@ export default async function History({ params: { lng } }) {
                 ))}
 
             </div>
-
-            <div className={styles.savebutton}>
-                <button onClick={Create} className={styles.save}>Spara</button>
-            </div>
-
-            <div className={styles.deletebutton}>
-                <button onClick={Delete} className={styles.delete}>Radera</button>
-                <input className={styles.deleteInput} id='remove' type="text" />
-                <label htmlFor='delete'>Tryck för att radera</label>
-            </div>
+            
+                <DeleteButton></DeleteButton>
+                <CreateButton></CreateButton>
+            
 
         </main>
     )

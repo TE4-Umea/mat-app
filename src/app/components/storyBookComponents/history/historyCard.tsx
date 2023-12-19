@@ -2,7 +2,7 @@
 import React from 'react';
 import './historyCard.css';
 import '/src/app/globals.css';
-import { useTranslation } from '../../../../i18n'
+import { useTranslation } from '../../../i18n'
 
 export function HistoryCard(props) {
   return (

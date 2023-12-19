@@ -3,7 +3,7 @@ import { signIn, signOut } from "next-auth/react";
 import { Session } from "next-auth";
 import Link from "next/link";
 import './Profile.css';
-import { LogOut } from '../../../components/storyBookComponents/LoggOut/LoggOut'
+import { LogOut } from '../LoggOut/LoggOut'
 
 
 export default function ProfileClient({ session, lng }: {

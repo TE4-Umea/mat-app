@@ -1,9 +1,9 @@
 import React from 'react';
 import './greetingCard.css';
 import '/src/app/globals.css';
-import { Time } from '../../../components/backendComponents/timeDepender/timeDepender'
+import { Time } from '../../backendComponents/timeDepender/timeDepender'
 import { getServerSession } from 'next-auth'
-import { useTranslation } from '../../../../i18n'
+import { useTranslation } from '../../../i18n'
 
 export const GreetingCard = async ({ lng, dark }) => {
     const { t } = await useTranslation(lng, ['glossary', 'common'])

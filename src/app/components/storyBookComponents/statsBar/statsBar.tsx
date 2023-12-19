@@ -2,7 +2,7 @@
 import React from 'react';
 import './statsBar.css';
 import '/src/app/globals.css';
-import { useTranslation } from '../../../../i18n'
+import { useTranslation } from '../../../i18n'
 
 // interface ButtonProps {
 //     label: string,

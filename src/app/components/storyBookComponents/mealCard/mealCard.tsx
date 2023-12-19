@@ -1,7 +1,7 @@
 import React from 'react';
 import './mealCard.css';
 import '/src/app/globals.css';
-import Fetch from '../../../../lib/fetch'
+import Fetch from '../../../lib/fetch'
 
 interface ButtonProps {
     tags: string[];
