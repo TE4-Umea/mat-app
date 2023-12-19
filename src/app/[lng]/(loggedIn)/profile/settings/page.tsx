@@ -1,8 +1,8 @@
-import ProfileClient from '../../../components/storyBookComponents/Profile/ProfileClient'
+import ProfileClient from '../../../../components/storyBookComponents/profile/profileClient'
 import { getServerSession } from "next-auth";
-import { Switch } from '../../../components/storyBookComponents/Switch/Switch'
-import { Delete } from '../../../components/storyBookComponents/DeleteAcc/DeleteAcc'
-import { DropDown } from '../../../components/storyBookComponents/DropDown/DropDown'
+import { Switch } from '../../../../components/storyBookComponents/switch/switch'
+import { Delete } from '../../../../components/storyBookComponents/deleteAcc/deleteAcc'
+import { DropDown } from '../../../../components/storyBookComponents/dropDown/dropDown'
 import styles from './page.module.css'
 import { Trans } from 'react-i18next/TransWithoutContext'
 import { languages } from '../../../../i18n/settings'

@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import { Lexend_Deca, Karla } from 'next/font/google';
 import '@/app/globals.css'
-import { NavBar } from './components/storyBookComponents/navbar/navBar';
-import BackgroundTime from './components/backendComponents/timeDepender/backgroundTimeSmall';
+import { NavBar } from '../components/storyBookComponents/navbar/navBar';
+import BackgroundTime from '../components/backendComponents/timeDepender/backgroundTimeSmall';
 import { useTranslation } from 'next-i18next';
 import { dir } from 'i18next'
 import { languages } from '../i18n/settings'

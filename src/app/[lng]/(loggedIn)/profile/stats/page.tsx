@@ -1,5 +1,5 @@
 import styles from './page.module.css'
-import { StatsBar } from '../../../components/storyBookComponents/statsBar/statsBar'
+import { StatsBar } from '../../../../components/storyBookComponents/statsBar/statsBar'
 
 
 export default function Stats({ params: { lng } }) {

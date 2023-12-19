@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import '@/app/globals.css'
-import { NavBar } from '@/app/[lng]/components/storyBookComponents/navbar/navBar';
-import BackgroundTime from '@/app/[lng]/components/backendComponents/timeDepender/backgroundTimeSmall';
+import { NavBar } from '@/app/components/storyBookComponents/navbar/navBar';
+import BackgroundTime from '@/app/components/backendComponents/timeDepender/backgroundTimeSmall';
 import { getServerSession } from "next-auth";
 import { redirect } from 'next/navigation'
 import { Lexend_Deca, Karla } from 'next/font/google';

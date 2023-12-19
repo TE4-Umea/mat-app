@@ -1,0 +1,17 @@
+.savedMeals {
+  color: var(--color-fg);
+  font-weight: 500;
+  font-size: var(--step-1);
+  font-family: var(--font-title);
+  background-color: var(--color-bg);
+  box-shadow: var(--shadow1);
+  border-radius: 12px;
+  width: 90vw;
+  padding-top: var(--space-s);
+  padding-bottom: var(--space-s);
+  border-style: none;
+  background-image: url(/bookmark_filled.svg);
+  background-size: 40px;
+  background-position: var(--space-xs) center;
+  background-repeat: no-repeat;
+}
