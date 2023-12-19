@@ -88,10 +88,10 @@ p {
 
 
 .weekPlanRuta {
+    text-align: left;
     background-color: var(--color-bg);
-    padding: 6px 0px;
-    padding-left: var(--space-s);
-    padding-right: var(--space-3xl);
+    padding: 6px var(--space-s);
+    
 
     border-radius: 5px;
     border-style: solid;

@@ -1,6 +1,10 @@
 .planCarouselCard {
     background-color: var(--color-bg);
-    width: 14rem;
+    width: 16rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
     border-radius: 12px;
     box-shadow: var(--shadow1);
     padding: var(--space-xs);

@@ -4,6 +4,8 @@
     white-space: nowrap;
     padding: 10px;
     scroll-snap-type: x mandatory;
+    display: flex;
+    flex-direction: row;
 }
 
 .scroll img {
