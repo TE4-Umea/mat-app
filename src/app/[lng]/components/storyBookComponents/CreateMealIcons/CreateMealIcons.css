@@ -1,0 +1,29 @@
+.iconButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+    border-radius: 6px;
+    aspect-ratio: 1;
+    background-color: var(--color-tertiary);
+}
+
+
+.iconButton svg {
+    width: 50%;
+    height: auto;
+    transition: fill 0.2s;
+    fill: var(--color-fg);
+}
+
+.iconsRadio {
+    display: none;
+}
+
+.iconsRadio:checked+label {
+    background-color: var(--color-secondary);
+}
+
+.iconsRadio:checked+label svg {
+    fill: var(--color-bg);
+}
