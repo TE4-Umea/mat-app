@@ -27,7 +27,7 @@ export const CarouselCard = ({ lunch, currentDay }) => {
     }
     return (
         <div className={['planCarouselCard'].join(' ')}>
-            <div>
+
 
                 {modeTime() && (<>
                     <p className={time ? 'notShow' : 'show'}>
@@ -59,7 +59,7 @@ export const CarouselCard = ({ lunch, currentDay }) => {
                     <button onClick={() => setTime((prevDisplay) => !prevDisplay)}>Middag</button>
                 </div>
                 )}
-            </div>
+    
             {/* <img src='src/stories/assets/github.svg'></img> */}
         </div>
     );
