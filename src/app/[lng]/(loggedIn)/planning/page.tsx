@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { MealProvider } from '../../../components/backendComponents/dropDown/MealContext';
+import { MealProvider } from '../../../components/backendComponents/dropDown/mealContext';
 import styles from './page.module.css';
 import DropDown from '../../../components/backendComponents/dropDown/dropDown';
 import { WeekPlan } from '../../../components/storyBookComponents/weekPlan/weekPlan';

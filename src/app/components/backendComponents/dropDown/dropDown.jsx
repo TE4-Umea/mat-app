@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button } from "@nextui-org/react";
 import styles from './dropDown.module.css';
 import Fetch from '@/app/lib/matFetch';
-import { useMealContext } from './MealContext';
+import { useMealContext } from './mealContext';
 import '../../storyBookComponents/weekPlan/weekPlan.css';
 
 export default function DropDown({ mealType }) {

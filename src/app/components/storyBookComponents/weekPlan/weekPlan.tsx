@@ -2,7 +2,7 @@ import React from 'react';
 import './weekPlan.css';
 import '/src/app/globals.css';
 import DropDown from '../../backendComponents/dropDown/dropDown';
-import { MealProvider } from '../../backendComponents/dropDown/MealContext';
+import { MealProvider } from '../../backendComponents/dropDown/mealContext';
 // import { useTranslation } from '@/app/i18n'
 
 export function WeekPlan(props) {
