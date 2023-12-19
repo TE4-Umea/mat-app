@@ -1,6 +1,5 @@
 import styles from './page.module.css'
 import { GreetingCardTime } from '../components/backendComponents/timeDepender/greetingCardTime'
-import BackgroundTime from '../components/backendComponents/timeDepender/backgroundTime';
 import { NavBar } from '../components/storyBookComponents/navbar/navBar';
 import { SavedMeals } from '../components/storyBookComponents/savedMeals/savedMeals';
 import { redirect } from 'next/navigation'
@@ -9,6 +8,7 @@ import Carousel from '../components/backendComponents/carousel/carousel'
 import CarouselMIS from '../components/backendComponents/carouselMIS/carouselMIS'
 import Fetch from '../lib/matFetch'
 import { useTranslation } from '../i18n'
+import BackgroundClouds from '../components/backgroundClouds';
 
 export default async function Home({ params: { lng } }) {
   const session = await getServerSession();
@@ -17,12 +17,13 @@ export default async function Home({ params: { lng } }) {
 
 
   const fetch = await Fetch();
+  const today = new Date();
 
   // console.log(fetch)
   if (session) {
     return (
       <main>
-        <BackgroundTime></BackgroundTime>
+        <BackgroundClouds size={'large'} light={today.getHours() <= 15 ? true : false} />
 
         <h1 className={styles.startText}>
           <GreetingCardTime lng={lng}></GreetingCardTime>
