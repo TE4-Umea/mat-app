@@ -1,8 +1,8 @@
 
 import styles from './page.module.css'
-import { HistoryCard } from '../components/storyBookComponents/history/historyCard'
+import { HistoryCard } from '../../components/storyBookComponents/history/historyCard'
 import { useTranslation } from '@/app/i18n'
-import { MealProvider } from '../../[lng]/components/backendComponents/dropDown/MealContext';
+import { MealProvider } from '../../components/backendComponents/dropDown/MealContext';
 
 export default async function History({ params: { lng } }) {
     const { t } = await useTranslation(lng, ['glossary', 'common'])
