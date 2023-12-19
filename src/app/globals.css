@@ -31,6 +31,10 @@
     --space-xl-2xl: clamp(3.375rem, 2.8098rem + 2.8261vw, 5rem);
     --space-2xl-3xl: clamp(4.5rem, 3.4565rem + 5.2174vw, 7.5rem);
 
+    --border-small: 6px;
+    --border-medium: 12px;
+    --border-large: 48px; 
+
     --color-bg: #FFFCF9;
     --color-fg: #111111;
     --color-primary: #46539C;
@@ -39,9 +43,9 @@
     --color-delete: #EA3E49;
     --color-gradient-d: #4E82C2;
     --color-gradient-l: #92C0F9;
-    --color-gray:#818181;
-    --color-border:#B9B9B9;
-    --color-gayer:#444444;
+    --color-gray: #818181;
+    --color-border: #B9B9B9;
+    --color-gayer: #444444;
 
     --shadow1: 2px 2px 4px 2px #00000040;
     --shadow2: 2px 3px 13px #00000040;
@@ -57,5 +61,5 @@ html {
 
 body {
     margin: 0;
+    background-color: var(--color-bg);
 }
-

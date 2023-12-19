@@ -1,0 +1,39 @@
+.switch {
+  display: block;
+  position: relative;
+  width: 64px;
+  height: 32px;
+  margin: var(--space-s) 5% 0 auto;
+
+
+  background-color: var(--color-border);
+
+  box-shadow: var(--shadow2);
+  border-radius: 25px;
+  border-style: none;
+  transition: 0.5s
+}
+
+.switch-front {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: var(--color-bg);
+  width: 22px;
+  height: 22px;
+  border-radius: 25px;
+  border-style: none;
+  transition: 0.5s
+}
+
+.hidden {
+  display: none;
+}
+
+.hidden:checked+.switch>.switch-front {
+  left: calc(100% - 27px);
+}
+
+.hidden:checked+.switch {
+  background-color: var(--color-secondary);
+}

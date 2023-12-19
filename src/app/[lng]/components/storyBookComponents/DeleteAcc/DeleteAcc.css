@@ -1,0 +1,30 @@
+.DeleteAcc {
+  width: 90vw;
+
+  padding-left: var(--space-3xl);
+  padding-top: var(--space-2xs);
+  padding-bottom: var(--space-2xs);
+  padding-right: var(--space-3xl);
+
+  color: var(--color-bg);
+  background-color: var(--color-delete);
+
+  font-size: var(--step--1);
+  font-family: var(--font-title);
+  font-weight: 500;
+
+  box-shadow: var(--shadow2);
+  border-radius: 25px;
+  border-style: none;
+  transition: transform 0.2s;
+
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: var(--space-s);
+}
+
+
+.DeleteAcc:active {
+  transform: scale(0.95);
+}

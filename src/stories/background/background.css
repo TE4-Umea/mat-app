@@ -16,13 +16,25 @@
 }
 
 .background--small { 
-  height: 30vh;
+  height: 20vh;
 }
 
 .background--large { 
   height: 80vh;
   border-bottom-left-radius: 350% 30%;
   border-bottom-right-radius: 350% 30%;
+}
+
+.background--profile {
+  height: 20vh;
+}
+
+.background--profile .clouds {
+  top: -4px;
+}
+
+.background--profile .cloud--large {
+  top: 10px;
 }
 
 .clouds {

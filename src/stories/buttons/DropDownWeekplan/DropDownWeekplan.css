@@ -1,0 +1,85 @@
+.WeekplanDropdown {
+    display: block;
+    margin: 0;
+    background-color: var(--color-bg);
+    width: 100vw;
+    font-family: var(--font-title);
+}
+
+.WeekplanDropdown:nth-child(even) {
+    background-color: var(--color-tertiary);
+}
+
+.WeekplanLabel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-s);
+}
+
+.WeekplanTitle {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2xs);
+    background-color: inherit;
+}
+
+.WeekplanDropdown h2,
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.WeekplanContent {
+    display: block;
+    position: relative;
+    width: 100vw;
+    height: 0;
+    background-color: inherit;
+    transition: height 0.5s;
+    overflow: hidden;
+}
+
+.WeekplanText {
+    width: calc(100vw - 2 * var(--space-s));
+    position: absolute;
+    display: flex;
+    gap: 2%;
+    bottom: 10px;
+    left: var(--space-s);
+}
+
+.WeekplanText>div p {
+    color: var(--color-gayer);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.WeekplanText div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 49%;
+}
+
+.WeekplanTitle> svg {
+    width: 35px;
+    transition: transform 0.2s;
+    transform: rotate(-90deg);
+}
+
+#WeekplanActivate:checked+.WeekplanDropdown .WeekplanTitle> svg {
+    transform: rotate(0deg);
+}
+
+#WeekplanActivate:checked+.WeekplanDropdown .WeekplanContent {
+    height: 225px;
+}
+
+
+
+
+.hidden {
+    display: none;
+  }
