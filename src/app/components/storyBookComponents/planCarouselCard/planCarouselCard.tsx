@@ -8,11 +8,17 @@ import { useState, useEffect } from "react";
 export const CarouselCard = ({ lunch, currentDay }) => {
     const mode = lunch ? 'buttonLunch' : 'buttonDinner';
     const mode1 = lunch ? 'buttonDinner' : 'buttonLunch';
-    var today = new Date();
+    const today = new Date();
     const [time, setTime] = useState(false);
-    var itemLunch = localStorage.getItem(`${currentDay}_Lunch`) || 'Ingen lunch vald'
-    var itemDinner = localStorage.getItem(`${currentDay}_Dinner`) || 'Ingen middag vald'
+    // const itemLunch = localStorage.getItem(`${currentDay}_Lunch`) || 'Ingen lunch vald'
+    // const itemDinner = localStorage.getItem(`${currentDay}_Dinner`) || 'Ingen middag vald'
+    const [itemLunch, setItemLunch] = useState<string>("");
+    const [itemDinner, setItemDinner] = useState<string>("");
 
+    useEffect(() => {
+        setItemLunch(localStorage.getItem(`${currentDay}_Lunch`) || 'Ingen lunch vald');
+        setItemDinner(localStorage.getItem(`${currentDay}_Dinner`) || 'Ingen middag vald');
+    }, []);
 
 
     function modeTime() {
@@ -25,11 +31,11 @@ export const CarouselCard = ({ lunch, currentDay }) => {
         };
         return lunch;
     }
+
     return (
         <div className={['planCarouselCard'].join(' ')}>
-
-
-                {modeTime() && (<>
+                {modeTime() && (
+                <>
                     <p className={time ? 'notShow' : 'show'}>
                         {itemLunch}
                     </p>
@@ -38,7 +44,8 @@ export const CarouselCard = ({ lunch, currentDay }) => {
                     </p>
                 </>
                 )}
-                {!modeTime() && (<>
+                {!modeTime() && (
+                <>
                     <p className={time ? 'show' : 'notShow'}>
                         {itemLunch}
                     </p>

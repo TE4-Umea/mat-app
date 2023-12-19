@@ -1,4 +1,5 @@
-import styles from './page.module.css'
+
+// import styles from './page.module.css' alltså på rikt!
 
 
 
@@ -14,9 +15,9 @@ export default function DeleteButton() {
     };
 
     return (
-        <div className={styles.deletebutton}>
-            <button onClick={Delete} className={styles.delete}>Radera</button>
-            <input className={styles.deleteInput} id='remove' type="text" />
+        <div >
+            <button>Radera</button>
+            <input id='remove' type="text" />
             <label htmlFor='delete'>Tryck för att radera</label>
         </div>
     )

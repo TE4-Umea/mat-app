@@ -1,8 +1,8 @@
-import styles from './page.module.css'
+// import styles from './page.module.css' för helvete
 
 
 export default function CreateButton() {
-    const Create = () => {
+    const create = () => {
         const title = (document.getElementById('title') as HTMLInputElement).value;
         const disc = (document.getElementById('disc') as HTMLInputElement).value;
         fetch(`http://jupiter.umea-ntig.se:3008/api/dish?name=${title}&desc=${disc}`, {
@@ -29,9 +29,11 @@ export default function CreateButton() {
     };
 
     return (
-        <div className={styles.savebutton}>
-            <button onClick={Create} className={styles.save}>Spara</button>
-        </div>
+        <form action={async () => {
+            'use server'
+            await create() }}>
+            <button>Spara</button>
+        </form>
     )
 }
 
