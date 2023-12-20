@@ -5,11 +5,13 @@ import { Button as CreateMealIcons } from '@/stories/buttons/CreateMealIcons/Cre
 import styles from './page.module.css'
 import { useFormState } from 'react-dom';
 import { createMeal } from '@/app/lib/actions';
+import { deleteMeal } from '@/app/lib/actions';
 
 export default function Form() {
 
     const initialState = { message: null, errors: {} };
     const [state, dispatch] = useFormState(createMeal, initialState);
+    const [state2, dispatch2] = useFormState(deleteMeal, initialState);
     const id = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
     const icons = [/*Kniv och gaffel */ "M280-80v-366q-51-14-85.5-56T160-600v-280h80v280h40v-280h80v280h40v-280h80v280q0 56-34.5 98T360-446v366h-80Zm400 0v-320H560v-280q0-83 58.5-141.5T760-880v800h-80Z",
         /*Sop och tunna */ "M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z",
@@ -32,27 +34,8 @@ export default function Form() {
                 <MealsMenu></MealsMenu>
             </div>
         </div>
-
-
-        {/* <div className={styles.infoTitle}>
-            <p>{t('common:additional')}</p>
-            <p>({t('common:optional')})</p>
-        </div> */}
-
-     
-            <textarea className={styles.input} maxLength={500} id='description' name='description' />
-      
-
-
-        {/* <div className={styles.iconTitle}><p>{t('glossary:icon_choice')}</p></div> */}
-
-
-        {/* <div className={styles.iconsContainer}>
-            {id.map((id) => (
-                <CreateMealIcons key={id} iconId={"Icon" + id} svg={icons[id - 1]}></CreateMealIcons>
-            ))}
-
-        </div> */}
+        <textarea className={styles.input} maxLength={500} id='description' name='description' />
+    
         <button type='submit'>Sicka</button>
     </form>
     )
