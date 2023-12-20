@@ -1,6 +1,7 @@
-import React from 'react';
-import './statsDrop.css';
-import '/src/app/globals.css';
+import './statsDrop.css'
+import '/src/app/globals.css'
+
+import React from 'react'
 
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
@@ -25,15 +26,15 @@ interface ButtonProps {
     /**
      * What background color to use
      */
-    backgroundColor?: string;
+    backgroundColor?: string
     /**
      * Button contents
      */
-    options: string[];
+    options: string[]
     /**
      * Optional click handler
      */
-    droppingDown: () => void;
+    droppingDown: () => void
 }
 
 export const Button = ({
@@ -44,7 +45,11 @@ export const Button = ({
 }: ButtonProps) => {
     return (
         <select className={['StatsDrop'].join(' ')}>
-            {options.map((options) => <option key={options} value={options}>{options}</option>)}
+            {options.map((options) => (
+                <option key={options} value={options}>
+                    {options}
+                </option>
+            ))}
         </select>
 
         // <button onClick={droppingDown} className="dropDown">
@@ -54,5 +59,5 @@ export const Button = ({
         //         {options.map((options) => <a key={options}>{options}</a>)}
         //     </div>
         // </button>
-    );
-};
+    )
+}

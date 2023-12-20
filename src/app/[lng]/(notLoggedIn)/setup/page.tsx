@@ -1,12 +1,14 @@
-import styles from './page.module.css'
-import { getServerSession } from "next-auth";
+import Link from 'next/link'
+import { getServerSession } from 'next-auth'
+
 import ProfileClient from '@/app/components/storyBookComponents/profile/ProfileClient'
-import Link from 'next/link';
-import { DropDown } from '../../../components/storyBookComponents/dropDown/dropDown'
 import { useTranslation } from '@/app/i18n'
 
+import { DropDown } from '../../../components/storyBookComponents/dropDown/dropDown'
+import styles from './page.module.css'
+
 export default async function Setup({ params: { lng } }) {
-    const session = await getServerSession();
+    const session = await getServerSession()
     const { t } = await useTranslation(lng, ['glossary', 'common'])
 
     // function continueButton() {
@@ -19,10 +21,13 @@ export default async function Setup({ params: { lng } }) {
 
     return (
         <>
-            <h1 className={styles.h1}>{t('setup_message.setup1')}<span className={styles.span}>{t('setup_message.setup2')}</span>{t('setup_message.setup3')}</h1>
+            <h1 className={styles.h1}>
+                {t('setup_message.setup1')}
+                <span className={styles.span}>{t('setup_message.setup2')}</span>
+                {t('setup_message.setup3')}
+            </h1>
 
-            {!session && (<ProfileClient session={session} />)}
-
+            {!session && <ProfileClient session={session} />}
 
             <h2 className={styles.h2}>{t('glossary:language')}</h2>
             <DropDown options={['Normal', 'Vegetarian']}></DropDown>
@@ -30,10 +35,7 @@ export default async function Setup({ params: { lng } }) {
             <DropDown options={['Svenska', 'English']}></DropDown>
             <br />
 
-            {session && (
-                <Link href={`/${lng}`}>{t('common:continue')}</Link>
-            )}
+            {session && <Link href={`/${lng}`}>{t('common:continue')}</Link>}
         </>
-
-    );
+    )
 }

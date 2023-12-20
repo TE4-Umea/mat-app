@@ -1,7 +1,6 @@
 .hidden {
     display: none;
-  }
-
+}
 
 .menuContainer {
     position: absolute;
@@ -22,7 +21,8 @@
     width: auto;
 }
 
-.menuContainer label, button {
+.menuContainer label,
+button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,7 +45,7 @@
     border-radius: var(--border-medium);
 }
 
-#mealsMenu:checked+.menuContainer {
+#mealsMenu:checked + .menuContainer {
     box-shadow: 4px 10px 10px #00000034;
-    height: 165px
+    height: 165px;
 }

@@ -1,23 +1,22 @@
 .addToPlaner {
-  padding-left: var(--space-l);
-  padding-top: var(--space-2xs);
-  padding-bottom: var(--space-2xs);
-  padding-right: var(--space-l);
+    padding-left: var(--space-l);
+    padding-top: var(--space-2xs);
+    padding-bottom: var(--space-2xs);
+    padding-right: var(--space-l);
 
-  color: var(--color-bg);
-  background-color: var(--color-secondary);
+    color: var(--color-bg);
+    background-color: var(--color-secondary);
 
-  font-size: var(--step--1);
-  font-family: var(--font-title);
-  font-weight: 500;
+    font-size: var(--step--1);
+    font-family: var(--font-title);
+    font-weight: 500;
 
-  box-shadow: var(--shadow2);
-  border-radius: 25px;
-  border-style: none;
-  transition: transform 0.2s
+    box-shadow: var(--shadow2);
+    border-radius: 25px;
+    border-style: none;
+    transition: transform 0.2s;
 }
 
-
 .addToPlaner:active {
-  transform: scale(0.95);
+    transform: scale(0.95);
 }

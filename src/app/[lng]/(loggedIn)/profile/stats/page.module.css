@@ -4,7 +4,6 @@
     padding-bottom: var(--space-xs);
     padding-right: var(--space-l);
     font-size: var(--step-0);
-
 }
 
 .circle {
@@ -25,25 +24,22 @@
     font-weight: 600;
     font-family: var(--font-title);
     font-size: var(--step-1);
-
-
 }
 
 .mail {
     color: var(--color-tertiary);
-
 
     font-weight: 500;
     font-family: var(--font-title);
     font-size: var(--step--1);
 }
 
-#flex{
+#flex {
     flex-direction: row;
     display: flex;
 }
 
-.bg{
+.bg {
     background-color: var(--color-bg);
     width: 110%;
     height: 100%;
@@ -51,7 +47,7 @@
     margin-top: -30px;
 }
 
-.title{
+.title {
     color: var(--color-primary);
     font-family: var(--font-title);
     font-size: var(--step-4);
@@ -62,70 +58,61 @@
     margin-bottom: 0;
 }
 
-.save{
+.save {
     color: var(--color-fg);
     font-family: var(--font-body);
     font-weight: 00;
 
     padding-left: var(--space-xl);
-    
 }
 
-.text1{
+.text1 {
     color: var(--color-primary);
     padding-left: var(--space-l);
     padding-top: var(--space-3xs);
-    
+
     font-size: 600;
     font-size: var(--font-body);
     font-size: var(--step-0);
-    
+
     position: absolute;
 }
 
-
-
-.text2{
+.text2 {
     color: var(--color-fg);
     font-family: var(--font-body);
     font-size: var(--step-1);
     font-weight: 500;
     position: relative;
-    
+
     padding-left: var(--space-l);
-    padding-top: var(--space-s) ;
-    
-    
+    padding-top: var(--space-s);
 }
 
-.text11{
+.text11 {
     color: var(--color-primary);
     padding-left: var(--space-l);
     padding-top: var(--space-3xs);
-    
+
     font-size: 600;
     font-size: var(--font-body);
     font-size: var(--step-0);
-    position: absolute
-    
+    position: absolute;
 }
 
-.text22{
+.text22 {
     color: var(--color-fg);
     font-family: var(--font-body);
     font-size: var(--step-1);
     font-weight: 500;
 
     position: relative;
-    
+
     padding-left: var(--space-l);
-    padding-top: var(--space-s) ;
-    
-    
-    
+    padding-top: var(--space-s);
 }
 
-.mealtid{
+.mealtid {
     color: var(--color-fg);
     font-family: var(--font-title);
     font-weight: 700;
@@ -135,40 +122,37 @@
     padding-top: var(--space-xs);
 }
 
-
-.bak1{
+.bak1 {
     background-color: var(--color-tertiary);
     padding-left: var(--space-l);
     padding-top: var(--space-3xs);
     padding-bottom: var(--space-3xs);
-    padding-right: var(--space-3xls); 
+    padding-right: var(--space-3xls);
 }
 
-.bak2{
+.bak2 {
     padding-left: var(--space-l);
     padding-top: var(--space-3xs);
     padding-bottom: var(--space-3xs);
-    padding-right: var(--space-3xls); 
+    padding-right: var(--space-3xls);
 }
 
-
-.tex{
-
+.tex {
     color: var(--color-fg);
 
     font-size: var(--step--1);
     font-weight: 500;
     font-family: var(--font-title);
-    
+
     position: absolute;
 }
 
-.del{
+.del {
     color: var(--color-gayer);
     font-family: var(--font-body);
     font-size: var(--step--1);
     font-weight: 500;
-    
+
     position: relative;
     padding-left: 75%;
 }

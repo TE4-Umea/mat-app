@@ -43,10 +43,8 @@ p {
     font-family: var(--font-title);
     font-weight: 500;
 
-
     margin: var(--space-3xs) 0px;
 }
-
 
 .weekPlanAddRuta {
     background-color: var(--color-bg);
@@ -86,18 +84,15 @@ p {
     color: var(--color-bg);
 }
 
-
 .weekPlanRuta {
     text-align: left;
     background-color: var(--color-bg);
     padding: 6px var(--space-s);
-    
 
     border-radius: 5px;
     border-style: solid;
     border-width: 2px;
     border-color: var(--color-border);
-
 
     font-size: var(--step--1);
     font-weight: 500;
@@ -109,7 +104,6 @@ p {
 .weekPlanTextruta {
     font-family: var(--font-body);
 }
-
 
 .weekPlanFave {
     border-radius: 5px;

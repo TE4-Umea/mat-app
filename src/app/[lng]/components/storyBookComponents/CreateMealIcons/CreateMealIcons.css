@@ -1,4 +1,4 @@
-.iconButton{
+.iconButton {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,7 +7,6 @@
     aspect-ratio: 1;
     background-color: var(--color-tertiary);
 }
-
 
 .iconButton svg {
     width: 50%;
@@ -20,10 +19,10 @@
     display: none;
 }
 
-.iconsRadio:checked+label {
+.iconsRadio:checked + label {
     background-color: var(--color-secondary);
 }
 
-.iconsRadio:checked+label svg {
+.iconsRadio:checked + label svg {
     fill: var(--color-bg);
 }

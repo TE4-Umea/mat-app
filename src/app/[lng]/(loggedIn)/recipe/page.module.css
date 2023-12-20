@@ -1,84 +1,75 @@
-#flex{
+#flex {
     display: flex;
     flex-direction: row;
 }
 
-.title{
+.title {
     color: var(--color-primary);
     font-family: var(--font-title);
     font-weight: 600;
     font-size: var(--step-1);
 
     position: absolute;
-    
 }
 
-.undertext{
+.undertext {
     color: var(--color-fg);
     font-family: var(--font-body);
 
     position: relative;
     padding-left: var(--space-3xs);
     top: 0;
-    
 }
 
-.prison{
+.prison {
     background-color: var(--color-bg);
     border-radius: 20px 20px 0px 0px;
     padding-bottom: var(--space-2xs);
     padding-left: var(--space-s);
-    
 
     margin-left: -8px;
     margin-top: var(--space-7xl);
     box-sizing: border-box;
     width: 104%;
-    
 }
 
-.textTitle{
+.textTitle {
     font-weight: 600;
     color: var(--color-fg);
     position: absolute;
     padding-top: var(--space-3xs);
-    
-    
-    
 }
 
-.textTitle2{
+.textTitle2 {
     font-weight: 600;
     color: var(--color-fg);
     position: absolute;
     padding-top: var(--space-3xs);
     padding-left: var(--space-5xl);
-    
 }
-.text{
+.text {
     color: var(--color-fg);
     position: relative;
     padding-top: var(--space-l);
     padding-left: var(--space-xs);
 }
-.li{
+.li {
     padding-top: var(--space-s);
 }
 
-.text2{
+.text2 {
     color: var(--color-fg);
     position: relative;
     padding-top: var(--space-l);
     padding-left: var(--space-5xl);
 }
 
-
 .speech {
-	position: relative;
+    position: relative;
     color: var(--color-bg);
     font-family: var(--font-body);
-	background: var(--color-secondary);
-	border-radius: 100% / 150% 150% 150% 150%;
+    background: var(--color-secondary);
+    border-radius: 100% / 150% 150% 150% 150%;
     text-align: center;
     padding-top: var(--space-3xs);
     padding-bottom: var(--space-3xs);
@@ -86,21 +77,21 @@
 }
 
 .speech:after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 50%;
-	width: 0;
-	height: 0;
-	border: 45px solid transparent;
-	border-bottom-color: var(--color-secondary);
-	border-top: 0;
-	border-right: 0;
-	margin-left: -19px;
-	margin-top: -38px;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 45px solid transparent;
+    border-bottom-color: var(--color-secondary);
+    border-top: 0;
+    border-right: 0;
+    margin-left: -19px;
+    margin-top: -38px;
 }
 
-.lik{
+.lik {
     color: var(--color-fg);
     font-family: var(--font-body);
     font-weight: 600;

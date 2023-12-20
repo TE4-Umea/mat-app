@@ -1,6 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from './FabButton';
+import type { Meta, StoryObj } from '@storybook/react'
+
 import imageFile from '../../assets/github.svg'
+import { Button } from './FabButton'
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -16,24 +17,24 @@ const meta = {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof Button>
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default meta
+type Story = StoryObj<typeof meta>
 
 const image = {
     src: imageFile,
     alt: 'my image',
-};
+}
 
 export const FabSave: Story = {
     args: {
         image: '/public/storkiconwhite.svg',
     },
-};
+}
 
 export const FabFavorite: Story = {
     args: {
         image: '/public/storkiconblack.svg',
     },
-};
+}

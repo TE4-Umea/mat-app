@@ -26,7 +26,7 @@
 .navButton {
     display: flex;
     flex-direction: column;
-    color: #B6B6B6;
+    color: #b6b6b6;
     font-family: var(--font-title);
     font-weight: 500;
     align-items: center;
@@ -43,7 +43,6 @@
     font-weight: 600;
     font-family: var(--font-title);
     align-items: center;
-
 }
 
 .navBar a {
@@ -59,9 +58,8 @@
 
 .navButton svg {
     margin-bottom: -4px;
-    fill: #B6B6B6;
+    fill: #b6b6b6;
 }
-
 
 .plus {
     width: 26px;

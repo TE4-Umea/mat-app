@@ -1,19 +1,18 @@
-.bakk{
+.bakk {
     background-color: var(--color-tertiary);
     padding-left: var(--space-m);
     padding-top: var(--space-3xs);
     padding-bottom: var(--space-xs);
     padding-right: var(--space-2xl);
     font-size: var(--step-0);
-    
 }
 
-.title{
+.title {
     font-weight: 600;
     margin-top: var(--space-3xs);
     font-family: var(--font-title);
 }
-.text{
+.text {
     color: var(--color-gray);
     font-size: var(--step--1);
     font-family: var(--font-title);
@@ -22,7 +21,7 @@
     margin: var(--space-3xs);
 }
 
-.ruta{
+.ruta {
     background-color: var(--color-bg);
     padding-left: var(--space-s);
     padding-right: var(--space-3xl);
@@ -36,7 +35,7 @@
     font-weight: 500;
 }
 
-.textruta{
+.textruta {
     margin-top: var(--space-3xs);
     margin-bottom: var(--space-3xs);
     font-family: var(--font-body);

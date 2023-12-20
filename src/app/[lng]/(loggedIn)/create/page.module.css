@@ -74,9 +74,6 @@ input.title::placeholder {
     min-height: 150px;
 }
 
-
-
-
 .iconTitle {
     color: var(--color-primary);
 
@@ -86,7 +83,6 @@ input.title::placeholder {
 
     text-align: center;
 }
-
 
 .iconsContainer {
     margin-bottom: 120px;
@@ -106,7 +102,6 @@ input.title::placeholder {
     background-color: var(--color-tertiary);
 }
 
-
 .iconsContainer label svg {
     width: 46px;
     height: auto;
@@ -118,16 +113,15 @@ input.title::placeholder {
     display: none;
 }
 
-.iconsRadio:checked+label {
+.iconsRadio:checked + label {
     background-color: var(--color-secondary);
 }
 
-.iconsRadio:checked+label svg {
+.iconsRadio:checked + label svg {
     fill: var(--color-bg);
 }
 
 .savebutton {
-
     margin-bottom: 10rem;
     margin-inline: 10rem;
 }
@@ -135,5 +129,4 @@ input.title::placeholder {
 .deletebutton {
     margin-bottom: 10rem;
     margin-inline: 10rem;
-
 }

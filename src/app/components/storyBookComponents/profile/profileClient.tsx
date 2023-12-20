@@ -1,16 +1,18 @@
 'use client'
-import { signIn, signOut } from "next-auth/react";
-import { Session } from "next-auth";
-import Link from "next/link";
-import './profile.css';
+import './profile.css'
+
+import Link from 'next/link'
+import { Session } from 'next-auth'
+import { signIn, signOut } from 'next-auth/react'
+
 import { LogOut } from '../logOut/logOut'
 
-
-export default function ProfileClient({ session, lng }: {
+export default function ProfileClient({
+    session,
+    lng,
+}: {
     session: Session | null
 }) {
-
-
     if (session) {
         return (
             <>
@@ -22,10 +24,8 @@ export default function ProfileClient({ session, lng }: {
     } else if (!session) {
         return (
             <>
-                <Link href="/api/auth/signin">
-                    Sign in
-                </Link>
+                <Link href="/api/auth/signin">Sign in</Link>
             </>
-        );
+        )
     }
 }

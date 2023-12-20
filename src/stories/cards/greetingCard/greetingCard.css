@@ -13,7 +13,7 @@
 
 .light span {
     font-weight: 300;
-    color: var(--color-bg)
+    color: var(--color-bg);
 }
 
 .dark span {

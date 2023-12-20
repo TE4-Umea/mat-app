@@ -1,5 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { Card } from './planCarouselCard';
+import type { Meta, StoryObj } from '@storybook/react'
+
+import { Card } from './planCarouselCard'
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -15,23 +16,21 @@ const meta = {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} satisfies Meta<typeof Card>;
+} satisfies Meta<typeof Card>
 
-export default meta;
-type Story = StoryObj<typeof meta>;
-
-
+export default meta
+type Story = StoryObj<typeof meta>
 
 export const planCarouselCardLunch: Story = {
     args: {
         label: 'Korv och makaroner',
         lunch: true,
     },
-};
+}
 
 export const planCarouselCardDinner: Story = {
     args: {
         label: 'Kebabråtta med grus',
         lunch: false,
     },
-};
+}
