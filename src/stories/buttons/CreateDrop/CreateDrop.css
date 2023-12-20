@@ -10,10 +10,7 @@
     font-weight: 600;
     font-size: var(--step--1);
     color: var(--color-fg);
-
-   
 }
-
 
 div img {
     width: 10%;
@@ -25,7 +22,7 @@ div img {
 }
 
 .rotate {
-    transform: rotate(90deg)
+    transform: rotate(90deg);
 }
 
 .dropdownContent {

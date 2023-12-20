@@ -1,6 +1,29 @@
 {
-  "extends": [
-    "next/core-web-vitals",
-    "plugin:storybook/recommended"
-  ]
+    "extends": [
+        "next/core-web-vitals",
+        "plugin:storybook/recommended",
+        "eslint:recommended",
+        "plugin:prettier/recommended"
+    ],
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 8,
+        "sourceType": "module",
+        "impliedStrict": true
+    },
+    "plugins": ["prettier", "simple-import-sort"],
+    "rules": {
+        "prettier/prettier": [
+            "error",
+            {},
+            {
+                "usePrettierrc": true
+            }
+        ],
+        "simple-import-sort/imports": "error",
+        "simple-import-sort/exports": "error"
+    }
 }

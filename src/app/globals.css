@@ -33,18 +33,18 @@
 
     --border-small: 6px;
     --border-medium: 12px;
-    --border-large: 48px; 
+    --border-large: 48px;
 
-    --color-bg: #FFFCF9;
+    --color-bg: #fffcf9;
     --color-fg: #111111;
-    --color-primary: #46539C;
-    --color-secondary: #6290C8;
-    --color-tertiary: #EFEFEF;
-    --color-delete: #EA3E49;
-    --color-gradient-d: #4E82C2;
-    --color-gradient-l: #92C0F9;
+    --color-primary: #46539c;
+    --color-secondary: #6290c8;
+    --color-tertiary: #efefef;
+    --color-delete: #ea3e49;
+    --color-gradient-d: #4e82c2;
+    --color-gradient-l: #92c0f9;
     --color-gray: #818181;
-    --color-border: #B9B9B9;
+    --color-border: #b9b9b9;
     --color-gayer: #444444;
 
     --shadow1: 2px 2px 4px 2px #00000040;
@@ -53,7 +53,6 @@
     --font-title: 'Lexend Deca', sans-serif;
     --font-body: 'Karla', sans-serif;
 }
-
 
 html {
     scroll-behavior: smooth;

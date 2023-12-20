@@ -1,6 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from './DropDown';
+import type { Meta, StoryObj } from '@storybook/react'
+
 import imageFile from '../../assets/github.svg'
+import { Button } from './DropDown'
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -16,19 +17,19 @@ const meta = {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof Button>
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default meta
+type Story = StoryObj<typeof meta>
 
 export const Diet: Story = {
     args: {
         options: ['Köttätare', 'Vegetarian', 'Vegan', 'Pescetarian', 'Normal'],
     },
-};
+}
 
 export const Language: Story = {
     args: {
         options: ['English', 'Svenska'],
     },
-};
+}

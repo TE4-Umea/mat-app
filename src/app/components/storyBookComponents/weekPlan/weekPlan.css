@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+#weekPlanFlex {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+}
+
+.weekPlanBakk {
+    background-color: var(--color-tertiary);
+    padding: var(--space-s);
+    font-size: var(--step-0);
+}
+
+.weekPlanBakk:nth-child(even) {
+    background-color: var(--color-bg);
+}
+
+.weekPlanTitle {
+    font-weight: 600;
+    font-family: var(--font-title);
+    font-size: var(--step-1);
+}
+
+.weekPlanDate {
+    font-weight: 500;
+    margin-top: var(--space-3xs);
+    font-family: var(--font-body);
+    font-size: var(--step-1);
+    color: var(--color-gray);
+}
+
+.weekPlanText {
+    color: var(--color-gray);
+    font-size: var(--step--1);
+    font-family: var(--font-title);
+    font-weight: 500;
+
+    margin: var(--space-3xs) 0px;
+}
+
+.weekPlanAddRuta {
+    background-color: var(--color-bg);
+    width: 51%;
+    padding: 6px 0px;
+
+    border-radius: 5px 0px 0px 5px;
+    border-style: solid;
+    border-right: none;
+    border-width: 2px;
+    border-color: var(--color-secondary);
+
+    text-align: center;
+    font-size: var(--step--1);
+    font-weight: 500;
+    font-family: var(--font-body);
+}
+
+.weekPlanGenerate {
+    background-color: var(--color-secondary);
+    width: 51%;
+    padding: 6px 0px;
+
+    border-radius: 0px 5px 5px 0px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--color-secondary);
+
+    text-align: center;
+    font-size: var(--step--1);
+    font-weight: 500;
+    color: var(--color-bg);
+    font-family: var(--font-body);
+}
+
+.weekPlanGenerate .weekPlanTextruta {
+    color: var(--color-bg);
+}
+
+.weekPlanRuta {
+    text-align: left;
+    background-color: var(--color-bg);
+    padding: 6px var(--space-s);
+
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--color-border);
+
+    font-size: var(--step--1);
+    font-weight: 500;
+
+    justify-content: space-between;
+    width: 100%;
+}
+
+.weekPlanTextruta {
+    font-family: var(--font-body);
+}
+
+.weekPlanFave {
+    border-radius: 5px;
+    background-color: var(--color-secondary);
+    color: var(--color-bg);
+    padding-left: var(--space-xs);
+    padding-right: var(--space-xs);
+
+    font-size: var(--step--1);
+    font-weight: 600;
+
+    margin-left: var(--space-2xs);
+}
+
+.weekPlanDelete {
+    border-radius: 5px;
+    background-color: var(--color-delete);
+    color: var(--color-bg);
+    padding-left: var(--space-xs);
+    padding-right: var(--space-xs);
+
+    font-size: var(--step--1);
+    font-weight: 600;
+
+    margin-left: var(--space-2xs);
+}
+
+.weekPlanMiddag {
+    align-items: center;
+}

@@ -1,69 +1,67 @@
 .main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6rem;
+    min-height: 100vh;
 }
 
 .startText {
-  font-size: var(--step-1);
-  text-align: left;
-  font-family: var(--font-title);
-  margin: var(--space-s);
-  margin-top: var(--space-2xl);
-  margin-bottom: var(--space-l);
+    font-size: var(--step-1);
+    text-align: left;
+    font-family: var(--font-title);
+    margin: var(--space-s);
+    margin-top: var(--space-2xl);
+    margin-bottom: var(--space-l);
 }
 
 .buttonsSaved {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
-
-
 .primaryButtonTime {
-  position: absolute;
-  bottom: 4em;
-  right: 10em;
-  background-color: red;
-
+    position: absolute;
+    bottom: 4em;
+    right: 10em;
+    background-color: red;
 }
 
 .secondaryButtonTime {
-  position: absolute;
-  bottom: 4em;
-  left: 10em;
-  background-color: blue;
+    position: absolute;
+    bottom: 4em;
+    left: 10em;
+    background-color: blue;
 }
 
 .buttonContainer a {
-  border-radius: 1.5em;
-  text-transform: uppercase;
-  padding: 1em 1, 5em;
-
+    border-radius: 1.5em;
+    text-transform: uppercase;
+    padding:
+        1em 1,
+        5em;
 }
 
 .chosenMeals {
-  background-color: #EFEFEF;
-  margin-top: var(--space-xl);
+    background-color: #efefef;
+    margin-top: var(--space-xl);
 }
 
 .chosenMeals h1 {
-  color: var(--color-fg);
-  font-family: var(--font-title);
-  font-size: var(--step-1);
-  font-weight: 500;
-  padding: var(--space-s) 0 0 var(--space-s);
-  margin-bottom: 0;
+    color: var(--color-fg);
+    font-family: var(--font-title);
+    font-size: var(--step-1);
+    font-weight: 500;
+    padding: var(--space-s) 0 0 var(--space-s);
+    margin-bottom: 0;
 }
 
 .chosenMeals span {
-  color: var(--color-gray);
-  font-family: var(--font-body);
-  font-size: var(--step--1);
-  font-weight: 400;
-  padding: var(--space-s) 0 0 var(--space-s);
-  margin-top: 0;
+    color: var(--color-gray);
+    font-family: var(--font-body);
+    font-size: var(--step--1);
+    font-weight: 400;
+    padding: var(--space-s) 0 0 var(--space-s);
+    margin-top: 0;
 }
