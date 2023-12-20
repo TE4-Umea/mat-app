@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { getServerSession } from 'next-auth'
 
-import ProfileClient from '@/app/components/storyBookComponents/profile/ProfileClient'
+import ProfileClient from '@/app/components/storyBookComponents/profile/profileClient'
 import { useTranslation } from '@/app/i18n'
 
 import { DropDown } from '../../../components/storyBookComponents/dropDown/dropDown'
