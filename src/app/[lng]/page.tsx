@@ -1,14 +1,15 @@
-import styles from './page.module.css'
+import { redirect } from 'next/navigation'
+import { getServerSession } from "next-auth";
+
+import Carousel from '../components/backendComponents/carousel/carousel'
+import CarouselMIS from '../components/backendComponents/carouselMIS/carouselMIS'
+import BackgroundClouds from '../components/backgroundClouds';
 import { GreetingCard } from '../components/storyBookComponents/greetingCard/greetingCard';
 import { NavBar } from '../components/storyBookComponents/navbar/navBar';
 import { SavedMeals } from '../components/storyBookComponents/savedMeals/savedMeals';
-import { redirect } from 'next/navigation'
-import { getServerSession } from "next-auth";
-import Carousel from '../components/backendComponents/carousel/carousel'
-import CarouselMIS from '../components/backendComponents/carouselMIS/carouselMIS'
-import Fetch from '../lib/matFetch'
 import { useTranslation } from '../i18n'
-import BackgroundClouds from '../components/backgroundClouds';
+import Fetch from '../lib/matFetch'
+import styles from './page.module.css'
 
 export default async function Home({ params: { lng } }) {
   const session = await getServerSession();

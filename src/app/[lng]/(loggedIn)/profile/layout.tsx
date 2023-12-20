@@ -8,7 +8,6 @@ import { getServerSession } from "next-auth";
 import { Profile } from '../../../components/storyBookComponents/profile/profile'
 import { NavProfile } from '../../../components/storyBookComponents/navProfile/navProfile'
 import { NavBar } from '../../../components/storyBookComponents/navbar/navBar';
-import BackgroundTime from '../../../components/backendComponents/timeDepender/backgroundTimeSmall';
 import { dir } from 'i18next'
 import { languages } from '../../../i18n/settings'
 
