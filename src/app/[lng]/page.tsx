@@ -1,5 +1,5 @@
 import styles from './page.module.css'
-import { GreetingCardTime } from '../components/backendComponents/timeDepender/greetingCardTime'
+import { GreetingCard } from '../components/storyBookComponents/greetingCard/greetingCard';
 import { NavBar } from '../components/storyBookComponents/navbar/navBar';
 import { SavedMeals } from '../components/storyBookComponents/savedMeals/savedMeals';
 import { redirect } from 'next/navigation'
@@ -26,7 +26,7 @@ export default async function Home({ params: { lng } }) {
         <BackgroundClouds size={'large'} light={today.getHours() <= 15 ? true : false} />
 
         <h1 className={styles.startText}>
-          <GreetingCardTime lng={lng}></GreetingCardTime>
+          <GreetingCard lng={lng} dark={today.getHours() <= 15 ? false : true}>{ }</GreetingCard>
         </h1>
 
         <Carousel></Carousel>
