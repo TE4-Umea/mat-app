@@ -1,10 +1,8 @@
 import { MealCard } from '../../storyBookComponents/mealCard/mealCard'
 import styles from '../carousel/carousel.module.css'
 
-
 export default function CarouselMIS() {
     return (
-
         <>
             <div className={styles.scroll}>
                 <div className={styles.buttonContainer}>

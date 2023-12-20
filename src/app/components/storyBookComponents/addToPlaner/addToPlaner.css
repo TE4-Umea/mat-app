@@ -8,9 +8,9 @@
     background-color: var(--color-secondary);
 
     font-size: var(--step--1);
-    font-family: var(--font-body);  
+    font-family: var(--font-body);
 
     box-shadow: var(--shadow1);
     border-radius: 25px;
     border-style: none;
-  }
+}

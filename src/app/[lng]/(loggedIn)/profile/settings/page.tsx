@@ -1,21 +1,21 @@
-import ProfileClient from '../../../../components/storyBookComponents/profile/profileClient'
-import { getServerSession } from "next-auth";
-import { Switch } from '../../../../components/storyBookComponents/switch/switch'
+import Link from 'next/link'
+import { getServerSession } from 'next-auth'
+import { Trans } from 'react-i18next/TransWithoutContext'
+
 import { Delete } from '../../../../components/storyBookComponents/deleteAcc/deleteAcc'
 import { DropDown } from '../../../../components/storyBookComponents/dropDown/dropDown'
-import styles from './page.module.css'
-import { Trans } from 'react-i18next/TransWithoutContext'
-import { languages } from '../../../../i18n/settings'
+import ProfileClient from '../../../../components/storyBookComponents/profile/profileClient'
+import { Switch } from '../../../../components/storyBookComponents/switch/switch'
 import { useTranslation } from '../../../../i18n'
-import Link from 'next/link'
+import { languages } from '../../../../i18n/settings'
+import styles from './page.module.css'
 
 export default async function ProfilePage({ params: { lng } }) {
-    const session = await getServerSession();
+    const session = await getServerSession()
     const { t } = await useTranslation(lng, ['glossary', 'common'])
 
     return (
         <main>
-
             <h1 className={styles.h1}>{t('common:diet')}</h1>
             <DropDown options={['Normal', 'Vegetarian']}></DropDown>
 
@@ -29,16 +29,16 @@ export default async function ProfilePage({ params: { lng } }) {
             <Trans i18nKey="languageSwitcher" t={t}>
                 Switch from <strong>{{ lng }}</strong> to:{' '}
             </Trans>
-            {languages.filter((l) => lng !== l).map((l, index) => {
-                return (
-                    <span key={l}>
-                        {index > 0 && (' or ')}
-                        <Link href={`/${l}`}>
-                            {l}
-                        </Link>
-                    </span>
-                )
-            })}
+            {languages
+                .filter((l) => lng !== l)
+                .map((l, index) => {
+                    return (
+                        <span key={l}>
+                            {index > 0 && ' or '}
+                            <Link href={`/${l}`}>{l}</Link>
+                        </span>
+                    )
+                })}
 
             <h1 className={styles.h1}>{t('common:account')}</h1>
             <div>

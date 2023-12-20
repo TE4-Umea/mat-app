@@ -1,19 +1,20 @@
-import React from 'react';
-import './greetingCard.css';
-import '/src/app/globals.css';
+import './greetingCard.css'
+import '/src/app/globals.css'
+
+import React from 'react'
 
 interface ButtonProps {
     /**
      * What background color to use
      */
-    backgroundColor?: string;
+    backgroundColor?: string
     /**
      * Contents
      */
-    timeOfDay: string;
-    name: string;
-    label: string;
-    dark: boolean;
+    timeOfDay: string
+    name: string
+    label: string
+    dark: boolean
 }
 
 export const Card = ({
@@ -24,11 +25,14 @@ export const Card = ({
     dark = false,
     ...props
 }: ButtonProps) => {
-    const mode = dark ? 'dark' : 'light';
+    const mode = dark ? 'dark' : 'light'
     return (
-        <div className={['greetingCard', mode].join(' ')}
-            {...props}>
-            <h1>{timeOfDay}<span>{name}</span>{label}</h1>
+        <div className={['greetingCard', mode].join(' ')} {...props}>
+            <h1>
+                {timeOfDay}
+                <span>{name}</span>
+                {label}
+            </h1>
         </div>
-    );
-};
+    )
+}

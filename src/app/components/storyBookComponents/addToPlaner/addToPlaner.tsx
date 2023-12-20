@@ -1,13 +1,8 @@
-import React from 'react';
-import './addToPlaner.css';
-import '/src/app/globals.css';
+import './addToPlaner.css'
+import '/src/app/globals.css'
+
+import React from 'react'
 
 export function AddToPlaner() {
-  return (
-    <button
-      type="button"
-      className={['addToPlaner'].join(' ')}
-    >
-    </button>
-  );
-};
+    return <button type="button" className={['addToPlaner'].join(' ')}></button>
+}

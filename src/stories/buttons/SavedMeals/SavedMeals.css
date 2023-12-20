@@ -3,14 +3,11 @@
     font-weight: 600;
     font-size: var(--step-1);
     font-family: var(--font-title);
-    background-color: var(--color-bg);  
+    background-color: var(--color-bg);
     box-shadow: var(--shadow1);
     border-radius: 12px;
     width: 80vw;
     padding-top: var(--space-s);
     padding-bottom: var(--space-s);
     border-style: none;
-    
-  }
-
-  
+}

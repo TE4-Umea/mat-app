@@ -49,7 +49,7 @@ h3 {
     left: var(--space-s);
 }
 
-.WeekplanText>div p {
+.WeekplanText > div p {
     color: var(--color-gayer);
     overflow: hidden;
     text-overflow: ellipsis;
@@ -63,23 +63,20 @@ h3 {
     width: 49%;
 }
 
-.WeekplanTitle> svg {
+.WeekplanTitle > svg {
     width: 35px;
     transition: transform 0.2s;
     transform: rotate(-90deg);
 }
 
-#WeekplanActivate:checked+.WeekplanDropdown .WeekplanTitle> svg {
+#WeekplanActivate:checked + .WeekplanDropdown .WeekplanTitle > svg {
     transform: rotate(0deg);
 }
 
-#WeekplanActivate:checked+.WeekplanDropdown .WeekplanContent {
+#WeekplanActivate:checked + .WeekplanDropdown .WeekplanContent {
     height: 225px;
 }
 
-
-
-
 .hidden {
     display: none;
-  }
+}

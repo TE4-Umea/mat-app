@@ -1,8 +1,3 @@
-
 export default async function ProfilePage() {
-    return (
-        <>
-        </>
-    )
+    return <></>
 }
-

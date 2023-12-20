@@ -13,7 +13,7 @@
 }
 
 .h2 {
-    font-size: var(--step-3)
+    font-size: var(--step-3);
 }
 
 .step2 {
@@ -56,7 +56,11 @@
 }
 
 .colorgr {
-    background-image: linear-gradient(to right, var(--color-gradient-d), var(--color-gradient-l));
+    background-image: linear-gradient(
+        to right,
+        var(--color-gradient-d),
+        var(--color-gradient-l)
+    );
     width: 80%;
 }
 
