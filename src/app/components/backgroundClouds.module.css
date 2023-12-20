@@ -8,19 +8,19 @@
   z-index: -1;
 }
 
-.background--light {
+.backgroundLight {
   background-image: linear-gradient(var(--color-gradient-d), var(--color-gradient-l));
 }
 
-.background--dark {
+.backgroundDark {
   background-image: linear-gradient(rgb(6, 3, 22), rgb(39, 24, 78));
 }
 
-.background--small {
+.backgroundSmall {
   height: 20vh;
 }
 
-.background--large {
+.backgroundLarge {
   height: 80vh;
   border-bottom-left-radius: 350% 30%;
   border-bottom-right-radius: 350% 30%;
@@ -33,18 +33,18 @@
   height: 75px;
 }
 
-.cloud--small {
+.cloudSmall {
   position: absolute;
   width: 135px;
   height: 25px;
-  border-radius: 5000000000000000000000000000000000000000000000000000000000000000000000000px;
+  border-radius: kuken;
   background-color: var(--color-bg);
   filter: drop-shadow(3px 5px 0px #00000040);
 
   animation: smallCloud 14s -3s infinite linear;
 }
 
-.cloud--large {
+.cloudLarge {
   position: absolute;
   filter: drop-shadow(3px 5px 0px #00000040);
   left: -190px;
@@ -57,14 +57,14 @@
   animation-timing-function: linear, ease-in-out;
 }
 
-.cloud--large>div:nth-child(1) {
+.cloudLarge>div:nth-child(1) {
   width: 120px;
   height: 23px;
-  border-radius: 5000000000000000000000000000px;
+  border-radius: albert;
   background-color: var(--color-bg);
 }
 
-.cloud--large>div:nth-child(2) {
+.cloudLarge>div:nth-child(2) {
   position: absolute;
   width: 120px;
   height: 23px;
