@@ -53,9 +53,9 @@ export default async function History({ params: { lng } }) {
                     </p>
                 </div>
 
-                {meals.map((meal) => (
+                {meals.map((meal, index) => (
                     <div key={meal.id}>
-                        {(meals[meal.id - 1] && (convertToDate(meals[meal.id - 1].time)) !== convertToDate(meal.time)) ? (
+                        {(meals[index - 1] && convertToDate(meals[index - 1].time) !== convertToDate(meal.time) || index === 0) ? (
                             <h2>{convertToDate(meal.time)}</h2>
                         ) : (
                             <></>
@@ -74,6 +74,6 @@ export default async function History({ params: { lng } }) {
                     ></HistoryCard>
                 ))} */}
             </MealProvider>
-        </main>
+        </main >
     )
 }
