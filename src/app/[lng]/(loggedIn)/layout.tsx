@@ -1,11 +1,11 @@
 import '@/app/globals.css'
 
-import { dir } from 'i18next'
+// import { dir } from 'i18next'
+// import { useTranslation } from 'next-i18next'
 import type { Metadata } from 'next'
 import { Karla, Lexend_Deca } from 'next/font/google'
 import { redirect } from 'next/navigation'
 import { getServerSession } from 'next-auth'
-import { useTranslation } from 'next-i18next'
 
 import BackgroundClouds from '@/app/components/backgroundClouds'
 import { NavBar } from '@/app/components/storyBookComponents/navbar/navBar'
