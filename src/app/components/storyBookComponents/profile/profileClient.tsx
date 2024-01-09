@@ -3,7 +3,6 @@ import './profile.css'
 
 import Link from 'next/link'
 import { Session } from 'next-auth'
-import { signIn, signOut } from 'next-auth/react'
 
 import { LogOut } from '../logOut/logOut'
 
