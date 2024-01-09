@@ -17,6 +17,29 @@ export default async function History({ params: { lng } }) {
         return newDate.toLocaleString('default', { weekday: 'long' })
     }
 
+    async function fetchMeals() {
+        const response = await fetch(`http://jupiter.umea-ntig.se:3008/api/meal`, {
+            method: 'GET',
+            headers: {
+                authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdW5kbWFya2hqYWxtYXJAZ21haWwuY29tIiwiaWF0IjoxNzAyNDU1MTAzfQ.O9LhDq-P1jFVwDlToU8p_VUrRjsqQ60R1bybCa0B9yI',
+            },
+        })
+        let data = await response.json()
+        console.log(data)
+
+        // Filter out meals that are in the future
+        data = data.filter((meal) => {
+            return new Date(meal.time).getTime() < new Date().getTime()
+        })
+        return data
+    }
+
+    const meals = await fetchMeals()
+
+    function convertToDate(time) {
+        return new Date(time).toLocaleDateString('sv-SE')
+    }
+
     return (
         <main>
             <MealProvider currentDay={''}>
@@ -30,15 +53,27 @@ export default async function History({ params: { lng } }) {
                     </p>
                 </div>
 
-                {data.map((offset) => (
+                {meals.map((meal, index) => (
+                    <div key={meal.id}>
+                        {(meals[index - 1] && convertToDate(meals[index - 1].time) !== convertToDate(meal.time) || index === 0) ? (
+                            <h2>{convertToDate(meal.time)}</h2>
+                        ) : (
+                            <></>
+                        )}
+                        {/* <h2>{convertToDate(meal.time)}</h2> */}
+                        <p>{meal.dish.name} till {meal.type}</p>
+                    </div>
+                ))}
+
+                {/* {data.map((offset) => (
                     <HistoryCard
                         key={offset}
                         today={today}
                         todayaswell={todayaswell + offset - 1}
                         currentDay={getDayOfWeek(date, offset - 1)}
                     ></HistoryCard>
-                ))}
+                ))} */}
             </MealProvider>
-        </main>
+        </main >
     )
 }

@@ -15,7 +15,6 @@ export default async function SavedMeals({ params: { lng } }) {
             }
         )
         const data = await response.json()
-        console.log(data)
         return data
     }
 
@@ -24,10 +23,9 @@ export default async function SavedMeals({ params: { lng } }) {
     return (
         <>
             <h1>{t('glossary:saved_button')}</h1>
-            <p>en potatis</p>
             {data.map((item) => (
                 <div key={item.id}>
-                    <h1>{item.dish.name}</h1>
+                    <h2>{item.dish.name}</h2>
                     <button>taborticon</button>
                 </div>
             ))}
