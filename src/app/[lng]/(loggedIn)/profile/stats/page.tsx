@@ -1,4 +1,4 @@
-import { StatsBar } from '../../../../components/storyBookComponents/statsBar/statsBar'
+// import { StatsBar } from '../../../../components/storyBookComponents/statsBar/statsBar'
 import styles from './page.module.css'
 
 export default function Stats({ params: { lng } }) {
