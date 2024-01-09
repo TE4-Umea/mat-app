@@ -6,6 +6,7 @@ import type { Metadata } from 'next'
 import { Karla, Lexend_Deca } from 'next/font/google'
 import { redirect } from 'next/navigation'
 import { getServerSession } from 'next-auth'
+import React from 'react'
 
 import BackgroundClouds from '@/app/components/backgroundClouds'
 import { NavBar } from '@/app/components/storyBookComponents/navbar/navBar'
