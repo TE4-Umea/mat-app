@@ -1,8 +1,8 @@
 'use client'
 import React from 'react'
 
-import DropDown from '../../../components/backendComponents/dropDown/dropDown'
-import { MealProvider } from '../../../components/backendComponents/dropDown/mealContext'
+// import DropDown from '../../../components/backendComponents/dropDown/dropDown'
+// import { MealProvider } from '../../../components/backendComponents/dropDown/mealContext'
 import { WeekPlan } from '../../../components/storyBookComponents/weekPlan/weekPlan'
 import styles from './page.module.css'
 // import { useTranslation } from '@/app/i18n'
