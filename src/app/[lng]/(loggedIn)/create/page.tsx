@@ -4,7 +4,7 @@
 
 import Form from './form'
 
-export default async function History({ params: { lng } }) {
+export default async function History(/*{ params: { lng } }*/) {
     // const { t } = await useTranslation(lng, ['glossary', 'common'])
 
     return (
