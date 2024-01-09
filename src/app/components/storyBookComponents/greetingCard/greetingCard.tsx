@@ -25,9 +25,8 @@ export const GreetingCard = async ({ lng, dark }) => {
         <div className={['greetingCard', mode].join(' ')}>
             <h1>
                 {greeting}
-                <span>{session?.user?.name}</span>!
+                <span>{session?.user?.name}</span>! {t('glossary:eat.today')}
             </h1>
-            <p>{t('glossary:eat.today')}</p>
         </div>
     )
 }
