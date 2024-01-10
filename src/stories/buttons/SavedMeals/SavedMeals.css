@@ -5,7 +5,7 @@
     font-family: var(--font-title);
     background-color: var(--color-bg);  
     box-shadow: var(--shadow1);
-    border-radius: 12px;
+    border-radius: var(--border-medium);
     width: 80vw;
     padding-top: var(--space-s);
     padding-bottom: var(--space-s);

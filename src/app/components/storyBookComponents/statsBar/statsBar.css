@@ -1,7 +1,7 @@
 .statsBar {
     height: 6px;
     background-color: var(--color-secondary);
-    border-radius: 100px;
+    border-radius: var(--border-round);
     grid-area: 1 / 1;
 }
 
@@ -10,7 +10,7 @@
     width: 50vw;
     height: 6px;
     background-color: var(--color-border);
-    border-radius: 100px;
+    border-radius: var(--border-round);
     grid-area: 1 / 1;
 }
 

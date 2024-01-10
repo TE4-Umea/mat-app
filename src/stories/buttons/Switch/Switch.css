@@ -9,7 +9,7 @@
   background-color: var(--color-border);
 
   box-shadow: var(--shadow2);
-  border-radius: 25px;
+  border-radius: var(--border-large);
   border-style: none;
   transition: 0.5s
 }
@@ -21,7 +21,7 @@
   background-color: var(--color-bg);
   width: 22px;
   height: 22px;
-  border-radius: 25px;
+  border-radius: var(--border-large);
   border-style: none;
   transition: 0.5s
 }

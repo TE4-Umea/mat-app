@@ -3,7 +3,7 @@
     overflow-y: auto;
     background-color: #F5F5F5;
     border: 1px solid #DDDDDD;
-    border-radius: 4px 0 4px 0;
+    border-radius: var(--border-small) 0 var(--border-small) 0;
     font-size: 14px;
     font-weight: bold;
     padding: 10px 7px 5px;

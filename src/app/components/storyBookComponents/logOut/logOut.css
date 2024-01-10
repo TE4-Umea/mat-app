@@ -14,7 +14,7 @@
   font-weight: 500;
 
   box-shadow: var(--shadow2);
-  border-radius: 25px;
+  border-radius: var(--border-medium);
   border-style: none;
   transition: transform 0.2s;
 

@@ -14,7 +14,7 @@
     display: flex;
     justify-content: space-between;
     background-color: var(--color-bg);
-    border-radius: 20px 20px 0px 0px;
+    border-radius: var(--border-large) var(--border-large) 0px 0px;
     padding: var(--space-s) var(--space-m) var(--space-m) var(--space-m);
     margin-top: var(--space-5xl);
     box-sizing: border-box;

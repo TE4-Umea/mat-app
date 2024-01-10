@@ -7,9 +7,10 @@
 
 .mealCard img {
     overflow: hidden;
-    border-radius: var(--border-medium) var(--border-medium) 0px 0px;
+    border-radius: var(--border-medium) 12px 0px 0px;
     width: 100%;
     height: 8rem;
+    padding: 0;
 }
 
 .mealCard div {

@@ -12,7 +12,7 @@
     font-weight: 500;
   
     box-shadow: var(--shadow2);
-    border-radius: 45px;
+    border-radius: var(--border-round);
     border-style: none;
     transition: transform 0.2s
   }

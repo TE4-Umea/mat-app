@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     transition: background-color 0.2s;
-    border-radius: 6px;
+    border-radius: var(--border-small);
     aspect-ratio: 1;
     background-color: var(--color-tertiary);
 }

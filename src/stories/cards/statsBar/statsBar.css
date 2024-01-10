@@ -1,14 +1,14 @@
 .statsBar {
     height: 6px;
     background-color: var(--color-secondary);
-    border-radius: 100px;
+    border-radius: var(--border-round);
 }
 
 .statsBackDrop {
     width: 140px;
     height: 6px;
     background-color: var(--color-border);
-    border-radius: 100px;
+    border-radius: var(--border-round);
 }
 
 .dflex {

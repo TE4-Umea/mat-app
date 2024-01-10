@@ -25,7 +25,7 @@
 
 .prison{
     background-color: var(--color-bg);
-    border-radius: 20px 20px 0px 0px;
+    border-radius: var(--border-large) var(--border-large) 0px 0px;
     padding-bottom: var(--space-2xs);
     padding-left: var(--space-s);
     

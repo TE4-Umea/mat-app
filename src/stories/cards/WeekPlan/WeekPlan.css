@@ -49,7 +49,7 @@ p {
     width: 51%;
     padding: 6px 0px;
 
-    border-radius: 5px 0px 0px 5px;
+    border-radius: var(--border-small) 0px 0px var(--border-small);
     border-style: solid;
     border-right: none;
     border-width: 2px;
@@ -66,7 +66,7 @@ p {
     width: 51%;
     padding: 6px 0px;
 
-    border-radius: 0px 5px 5px 0px;
+    border-radius: 0px var(--border-small) var(--border-small) 0px;
     border-style: solid;
     border-width: 2px;
     border-color: var(--color-secondary);
@@ -89,7 +89,7 @@ p {
     padding-left: var(--space-s);
     padding-right: var(--space-3xl);
 
-    border-radius:  5px;
+    border-radius: var(--border-small);
     border-style: solid;
     border-width: 2px;
     border-color: var(--color-border);
@@ -108,7 +108,7 @@ p {
 
 
 .weekPlanFave{
-    border-radius: 5px;
+    border-radius: var(--border-small);
     background-color: var(--color-secondary);
     color: var(--color-bg);
     padding-left: var(--space-xs);
@@ -121,7 +121,7 @@ p {
 }
 
 .weekPlanDelete{
-    border-radius: 5px;
+    border-radius: var(--border-small);
     background-color: var(--color-delete);
     color: var(--color-bg);
     padding-left: var(--space-xs);

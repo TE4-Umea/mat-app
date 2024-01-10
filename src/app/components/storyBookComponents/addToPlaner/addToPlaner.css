@@ -11,6 +11,6 @@
     font-family: var(--font-body);  
 
     box-shadow: var(--shadow1);
-    border-radius: 25px;
+    border-radius: var(--border-medium);
     border-style: none;
   }

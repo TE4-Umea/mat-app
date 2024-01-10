@@ -1,7 +1,7 @@
 .planCarouselCard {
     background-color: var(--color-bg);
     width: 12rem;
-    border-radius: 12px;
+    border-radius: var(--border-medium);
     box-shadow: var(--shadow1);
     padding: var(--space-xs);
 }
@@ -25,7 +25,7 @@
 } */
 
 .planCarouselCard button {
-    border-radius: 12px;
+    border-radius: var(--border-medium);
     border-style: none;
     padding: var(--space-2xs);
     box-shadow: var(--shadow2);

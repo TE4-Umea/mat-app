@@ -1,7 +1,7 @@
 .dropDown {
     width: 90vw;
     padding: var(--space-2xs);
-    border-radius: 100px;
+    border-radius: var(--border-round);
     border-style: none;
     color: var(--font-fg);
     background-color: var(--font-bg);

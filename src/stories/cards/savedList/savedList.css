@@ -33,7 +33,7 @@
 }
 
 .del{
-    border-radius: 7px;
+    border-radius: var(--border-small);
     background-color: var(--color-delete);
     color: var(--color-bg);
 

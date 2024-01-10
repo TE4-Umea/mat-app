@@ -76,7 +76,7 @@
 }
 
 .button {
-    border-radius: 12px;
+    border-radius: var(--border-medium);
     width: 80%;
     padding-top: var(--space-xs);
     padding-bottom: var(--space-xs);

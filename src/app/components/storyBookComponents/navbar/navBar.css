@@ -74,7 +74,7 @@
     align-items: center;
     height: 46px;
     width: 46px;
-    border-radius: 100px;
+    border-radius: var(--border-large);
     box-shadow: var(--shadow2);
     background-color: var(--color-bg);
 }
@@ -85,7 +85,7 @@
     align-items: center;
     height: 46px;
     width: 46px;
-    border-radius: 100px;
+    border-radius:var(--border-large);
     box-shadow: var(--shadow2);
     background-color: var(--color-primary);
 }

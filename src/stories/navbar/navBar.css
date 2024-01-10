@@ -8,7 +8,7 @@
     height: 90px;
     left: 0;
     bottom: 0;
-    border-radius: 40px 40px 0 0;
+    border-radius: var(--border-large) var(--border-large) 0 0;
     box-shadow: var(--shadow2);
 }
 

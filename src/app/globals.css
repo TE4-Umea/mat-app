@@ -33,7 +33,8 @@
 
     --border-small: 6px;
     --border-medium: 12px;
-    --border-large: 48px; 
+    --border-large: 24px; 
+    --border-round: 128px;
 
     --color-bg: #FFFCF9;
     --color-fg: #111111;
