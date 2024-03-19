@@ -1,0 +1,33 @@
+.GoogleLoggIn {
+  padding-left: var(--space-3xl);
+  padding-top: var(--space-m);
+  padding-bottom: var(--space-m);
+  padding-right: var(--space-3xl);
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  color: var(--color-fg);
+  background-color: var(--color-bg);
+
+  font-size: var(--step--1);
+  font-family: var(--font-title);
+  font-weight: 500;
+
+  box-shadow: var(--shadow2);
+  border-radius: 45px;
+  border-style: none;
+  transition: transform 0.2s;
+
+  background-image: url(./Google_\ G\ _logo.svg);
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: var(--space-l);
+
+}
+
+
+.GoogleLoggIn:active {
+  transform: scale(0.95);
+}
